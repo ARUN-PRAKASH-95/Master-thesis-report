@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage{amsmath}
+    \usepackage[utf8]{inputenc}
+    \usepackage{titlepic}
+    \usepackage{stackengine}
+    \usepackage{lipsum}
+    \usepackage{graphicx}
+    \usepackage{booktabs}
+    \usepackage{cite}
+	\usepackage{caption}
+	\usepackage{float}
+	\usepackage{subcaption}
+    \usepackage{multirow}
+    \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+    \usepackage{fancyhdr}
+    \usepackage{relsize}
+	\makeatletter
+    \setlength{\@fptop}{0pt}
+    \makeatother
+
+
+\usepackage{titling}
+\pretitle{\begin{center}\fontsize{18bp}{18bp}\selectfont}
+    \posttitle{\vspace{25bp}\par\includegraphics[width=60mm]{logo.png}\par\end{center}}
+\preauthor{\begin{center}\fontsize{14bp}{14bp}\selectfont}
+    \postauthor{\par\end{center}}
+\predate{\begin{center}}
+    \postdate{\par\end{center}}  
+
+\title{\Huge{\textbf{Development and implementation of material subroutine for fibre reinforced plastics in a commercial FEM software}}\\[1.3cm]\smaller \textbf{Master thesis \\[0.5cm] Winter semester 2018/19}\vspace*{1cm}}
+
+
+\author{
+\vspace{2cm}
+\Large{Presented by: Arun prakash Ganapathy}
+\\[0.4cm]
+\Large{Supervised by: Dr.-Ing Dominik Laveuve}
+\\[0.4cm]
+\Large{Mat.Nr: 63876}
+\\[0.4cm]
+\Large{E-mail: arun-prakash.ganapathy@student.tu-freiberg.de}}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+\subsection{Background and motivation}
+\indent\indent Composite materials are made of two or more dissimilar materials of different physical or chemical properties when combined, create a material with properties unlike the individual constituent materials. The earliest use of composite materials date back to 3400 B.C when Mesopotamians glued wood strips at different angles to create plywood. Another notable example is the bow made by Mongols during 1200 A.D, which is made from a combination of bamboo, wood, cattle tendons and silk bonded with natural resin. In the early, 1900s bakelite based composites were developed for its non-conductivity and heat resistant properties and widely used in industrial and consumer applications. Now a days advanced composite materials are widely used in structural design in various industries such as aerospace, automobile, marine, petrochemical etc., due to their superior properties over traditional engineering materials.\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{{composite plane.jpg}}
+ \caption{Composite materials used in a Boeing 787 'Dreamliner'}
+ \label{fig:Composite plane}
+\end{center}
+\end{figure}\\
+ Composite material are attractive because of their high strength, stiffness, high stiffness-to-density ratio, light weight properties etc., Another important reason for using composite materials is the ability to tailor the stiffness and strength to specific design load flexibly. Despite their superior physical properties, composite materials are fragile and can be easily damaged from number of sources, both during initial processing and in operation. Since composite materials possess elastic brittle properties with negligible margin of safety through ductility as offered by metals and accumulate damage before structural collapse, the development of damage must be understood for predicting failure of such materials. For example fibre-reinforced plastics exhibit local damage such as fibre breakage, matrix cracks, fibre matrix debonds etc., under normal operating conditions which may contribute to the failure. Therefore the ability to predict the initiation and growth of damage is important for predicting the performance of the composite materials for safe and reliable use of such materials. Continuum damage mechanics (CDM) has been considered as a reliable candidate for creating numerical models which predict the onset and evolution of the damage in the composite materials.
+\section{Continuum damage mechanics}
+\indent\indent\indent Continuum damage mechanics (CDM) is a theory for analyzing damage and fracture processes in materials from continuum mechanics point of view. Continuum damage mechanics (CDM) provides a continuum perspective for microflaws initiation, propagation, and their coalescence that eventually results in macroscopic faults and fractures. CDM uses state variables to represent the effect of damage on the stiffness and remaining life of the material that is damaging as a result of load and ageing. A Damage activation function is required to predict the initiation of damage. Damage evolution does not progress spontaneously after initiation therefore a mathematical model is required.  In plasticity formulations, the damage evolution is controlled by a hardening function but this requires additional phenomenological parameters that must be found through experimentation, which is expensive and time consuming. On the other hand, micromechanics of damage formulations are able to predict both damage initiation and evolution without additional material properties.
+\subsection{Damage}
+\indent\indent\indent  Consider a body B of Fig. \ref{fig:Damage}  where a crack of length a has developed due to an external load F.  If we take an arbitrary point P($x$) near the crack tip, a number of microscopic cavities or microcracks would be observed around the region.
+These cavities can be nucleated usually as a result of breakage of atomic bonds, or of some defects in atomic array. From microscopic point of view, fracture of materials is a process of nucleation of microcavities or microcracks due to the breakage of atomic bonds. From macroscopic point of view, it is a process of extension of cracks brought about by the coalescence of these microcracks. From mesoscopic point of view, which exists between microscopic and macroscopic scale, it is a process of nucleation, growth and the coalescence of microscopic cavities leads to the initiation of macroscopic crack. The development of microscopic, mesoscopic and the macroscopic processes of fracture in materials together with the resulting deterioration in their mechanical properties is called damage. Continuum damage mechanics, in particular, aims at the analysis of the damage development in mesoscopic and macroscopic fracture processes in the framework of continuum mechanics.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{{1. Damage.png}}
+ \caption{Scales of damage observation}
+ \label{fig:Damage}
+\end{center}
+\end{figure}
+\newpage
+The seperation of atomic bonds is induced either by shear or tensile decohesion. However the separation of material at the microscopic level consists of four damage mechanisms namely Cleavage, Growth and Coalescence of Microvoids, Glide plane decohesion and Void Growth due to Grain-Boundary diffusion.  The aspects of damage vary largely by difference in materials and loading conditions. The damage may be classified phenomenologically as follows
+\begin{itemize}
+\item Ductile Damage
+\item Brittle Damage
+\item Creep Damage
+\item Low Cycle Fatigue
+\item Very Low Cycle Fatigue
+\item High Cycle fatigue damage
+\item Very High Cycle fatigue damage
+\item Creep Damage
+\end{itemize}
+\subsection{Representative Volume Element(RVE)}
+\indent\indent\indent  In order to discuss the effects of microscopic discontinuities in  a material by means of CDM we must homogenize the mechanical effects of microstructure and represent them as a macroscopic continuous field in the material. For this purpose we take a small region of a mesoscale around the material point P($x$) in a body B as showin in Fig. \ref{fig:Damage}. We assume that the  material with discontinuous structures in this region can be statistically homogeneous and the mechanical state of the material in this region can be represented by the statistical average of the mechanical variables in that region. This region is said to be the Representative Volume Element(RVE). For such RVE, the following two conditions must be satisfied:
+\begin{itemize}
+\item  For the material in the RVE to be statistically homogeneous, the RVE should be large enough to contain a sufficient number of discontinuities
+\item In order to represent a non-uniform macroscopic mechanical field by means of a continuum, the size of RVE should be sufficiently small so that the variation of the macroscopic variable in it may be insignificantly small
+\end{itemize}
+The size of RVE depends on the microstructure of the relevant material and their typical sizes are as follows
+\begin{itemize}
+\item Metals and ceramics  \;    -    \; 0.1$mm^3$
+\item Polymer and composites \;   -   \; 1$mm^3$
+\item Timber\; - \; 10$mm^3$
+\item Concrete \; - \; 100$mm^3$
+\end{itemize}
+\newpage
+\subsection{Concept of Continuum damage mechanics (CDM)}
+\end{document}
