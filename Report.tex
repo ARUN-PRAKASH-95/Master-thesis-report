@@ -93,4 +93,72 @@ The size of RVE depends on the microstructure of the relevant material and their
 \end{itemize}
 \newpage
 \subsection{Concept of Continuum damage mechanics (CDM)}
+\indent\indent\indent The basic concept of CDM is to that microstructural defects in a material can be represented by a set of damage variables.  Continuum damage mechanics first represent the damage state of a material in terms of damage variables and then describe the mechanical behaviour of the damaged material and then development of damage by use of these damage variables.
+Let us consider a body B of Fig. \ref{fig:Damage2} and take a representative volume element(RVE) at an arbitrary point $P(x)$ in B. If the total void area in $dA$ is  $ dA_{D} $, the mechanical effect of $dA$ will be decreased by $dA_{D}$. Then the area,
+\begin{equation}
+  d\tilde{A} = dA  - dA_{D} 
+\end{equation}
+may be interpreted as the area which carries the internal force and is called as $effective area$. Thus the damage variable D can be specified as 
+\begin{equation}
+  D = \frac{dA - d\tilde{A}}{dA} = \frac{dA_{D}}{dA}
+\end{equation}
+where the damage variable D takes value between 0 and 1 ($0 \leq D \leq 1$). $D = 0$ representing initial undamaged state and $D=1$ represents fully damaged state.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{{Damage2.png}}
+ \caption{Effective area reduction due to microcracks}
+ \label{fig:Damage2}
+ \end{center}
+\end{figure}
+Suppose a cylindrical bar of cross-sectional area $dA$ is subject to a tensile load $dF$ the actual load carrying area is $ d\tilde{A}$ rather than $dA$. According to eqn (1) and (2) the effective area $ d\tilde{A}$ is given by,
+\begin{equation}
+ d\tilde{A} = (1-D)dA
+\end{equation}
+The decrease in load-carrying area increase the effect of stress $\sigma$ induced by the external force $dF$. Due to eqn (3) the magnified stress $\tilde{\sigma}$ is given by,
+\begin{equation}
+\tilde{\sigma} = \frac{dF}{d\tilde{A}} = \frac{\sigma}{1 - D}
+\end{equation} 
+\newpage
+Since the stress $\tilde{\sigma}$ represents the effect of stress magnified by the net area reduction due to damage, it is called as effective stress. From eqn (3) and (4) we can postulate that the damaged cylindrical bar of Fig.\ref{fig:Damage3}b with the cross-section $dA$ subject to force $dF$ is mechanically equivalent to the fictious undamaged bar of Fig.\ref{fig:Damage3}c which is subject to force $dF$ , has the cross-section $ {d\tilde{A}} $ and hence stress has the stress $\tilde{\sigma}$  
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{{3. Damage_cylinder.png}}
+ \caption{Damage of bar under tensile load}
+ \label{fig:Damage3}
+ \end{center}
+\end{figure}
+
+\subsubsection{Modelling by variation of elastic modulus} 
+\indent\indent\indent Since the development of microcracks induces the reduction in stiffness of material, the damage state can be characterized by variation in elastic modulus. Let us consider the bar (b) and (c) of Fig\ref{fig:Damage3} are in damaged and fictitious undamaged state respectively. Then the elastic strain $\epsilon$ in the bar (c) caused by stress $\tilde{\sigma}$ should be equal to the $\epsilon$ of the bar (b) under stress $\sigma$; i.e.,\\
+\begin{equation}
+   \tilde{\sigma} = E_{0}\epsilon, \;\;  \sigma = E(D)\epsilon 
+\end{equation}
+\\
+\begin{equation}
+\epsilon = \frac{\sigma}{E(D)} = \frac{\tilde{\sigma}}{E_{0}}
+\end{equation}
+where $E_{0}$ and $E(D)$ denote young's modulus of the material in the initial undamaged state and that in damaged state after loading, respectively. Therefore, eqn(6) defines another effective stress\\
+\begin{equation}
+\epsilon = \frac{E_{0}}{E(D)}\sigma
+\end{equation}
+By combining Eqn(4) and (6) we get,
+\begin{equation}
+E(D) = (1 - D) E_{0}
+\end{equation}
+\begin{equation}
+D  = 1 - \frac{E(D)}{E_{0}}
+\end{equation}
+Therefore, the damage variable $D$ is characterized by the variation in Young's modulus $E(D)$. The modelling of damage by means of reduction in stiffness can be applied also the anisotropic damage of brittle materials like composite materials, concrete, rocks etc.,
+\subsection{Mechanical representation of three dimesnional damage state}
+\indent\indent\indent The deformation of a material basically depends on the direction of applied stress or strain and hence it is an anisotropic phenomenon. Therefore different theories have been developed for modelling 3-D anisotropic damage phenomenon. Some fundamental theories that describes 3-D damage state are given below 
+\subsubsection*{Scalar Damage Variable}
+\indent\indent\indent In case of random or isotropic distribution of microcracks or voids , the damage state is usually considered as isotropic. the damage state in this case may be represented by means of scalar damage variable D. When microvoids  have oriented distribution the damage state is anisotropic and the scalar damage variable cannot be applied accurately. Howvevr, when void density is small the global mechanical properties can be approximated as nearly isotropic. thus isotropic damage theory based on isotropic damage variable has been often applied to 3-D problems of creep, elastic-plastic, ductile and fatigue damage
+\subsubsection{Plural Scalar damage variables}
+\indent\indent\indent A single scalar damage variable is often insufficient to describe the variation in mechanical properties of the damaged materials, even if the distribution of microcracks are isotropic. Plural scalar damage variables are often employed to characterize several different microscopic mechanisms of the relevant damage development.
+\subsubsection{Vector damage variable}
+\indent\indent\indent The damage state can be specified by the decrease in load carrying effective area due to void development. hence it is easy to postulate a vector damage variable. Kachanov (1974, 1986) tried to extend the definition of damage to anisotropic damage by noting a surface element in an arbitrary direction $n$, he proposed a vector damage variabl $ \omega = \omega_{n}n$, where $\omega_{n}$ is the effective area fraction. However the damage variable $D(n)$ discussed at the beginning representing the damage state of a plane with specific unit normal vector $n$ should be unchanged irrespective of the  chane in the sense of $n$ and hence we have the requirement,
+\begin{equation}
+ D(n) = D(-n)
+\end{equation}
+
 \end{document}
