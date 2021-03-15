@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.22)  11 MAR 2021 20:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.22)  15 MAR 2021 20:22
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -78,6 +78,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
+)
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
@@ -285,20 +293,20 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 (Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -361,29 +369,42 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 45.
+(Font)              size <17.28> substituted on input line 46.
 
 <logo.png, id=1, 1204.5pt x 1187.43625pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 45.
+Package pdftex.def Info: logo.png  used on input line 46.
 (pdftex.def)             Requested size: 170.71652pt x 168.28737pt.
 <composite plane.jpg, id=3, 2710.125pt x 1212.53pt>
 File: composite plane.jpg Graphic file (type jpg)
 <use composite plane.jpg>
-Package pdftex.def Info: composite plane.jpg  used on input line 51.
+Package pdftex.def Info: composite plane.jpg  used on input line 52.
 (pdftex.def)             Requested size: 362.37569pt x 162.13034pt.
 [1
 
 {C:/Users/aruns/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo.png>]
 [2 <./composite plane.jpg>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
+
+
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
+
+
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 <1. Damage.png, id=15, 366.77025pt x 365.56575pt>
 File: 1. Damage.png Graphic file (type png)
 <use 1. Damage.png>
-Package pdftex.def Info: 1. Damage.png  used on input line 64.
+Package pdftex.def Info: 1. Damage.png  used on input line 65.
 (pdftex.def)             Requested size: 181.18439pt x 180.59024pt.
- [3 <./1. Damage.png>] [4]
-Overfull \hbox (11.28229pt too wide) in paragraph at lines 100--102
+
+[3 <./1. Damage.png>] [4]
+Overfull \hbox (11.28229pt too wide) in paragraph at lines 101--103
 \OT1/cmr/m/n/12 may be in-ter-preted as the area which car-ries the in-ter-nal 
 force and is called as $\OML/cmm/m/it/12 effectivearea$\OT1/cmr/m/n/12 .
  []
@@ -391,61 +412,80 @@ force and is called as $\OML/cmm/m/it/12 effectivearea$\OT1/cmr/m/n/12 .
 <Damage2.png, id=26, 449.88075pt x 287.27325pt>
 File: Damage2.png Graphic file (type png)
 <use Damage2.png>
-Package pdftex.def Info: Damage2.png  used on input line 108.
+Package pdftex.def Info: Damage2.png  used on input line 109.
 (pdftex.def)             Requested size: 362.37569pt x 231.39694pt.
 [5 <./Damage2.png>]
 <3. Damage_cylinder.png, id=33, 471.56175pt x 292.09125pt>
 File: 3. Damage_cylinder.png Graphic file (type png)
 <use 3. Damage_cylinder.png>
-Package pdftex.def Info: 3. Damage_cylinder.png  used on input line 125.
+Package pdftex.def Info: 3. Damage_cylinder.png  used on input line 126.
 (pdftex.def)             Requested size: 362.37569pt x 224.4697pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
 [6 <./3. Damage_cylinder.png>]
-Overfull \hbox (7.91826pt too wide) in paragraph at lines 152--152
-[]\OT1/cmr/bx/n/14.4 Mechanical rep-re-sen-ta-tion of three dimes-nional dam-ag
-e state 
+Overfull \hbox (7.91826pt too wide) in paragraph at lines 153--153
+[]\OT1/cmr/bx/n/14.4 Mechanical rep-re-sen-ta-tion of three di-men-sional dam-a
+ge state 
  []
 
-[7] (Report.aux)
+<4. Damage.png, id=38, 387.24675pt x 250.536pt>
+File: 4. Damage.png Graphic file (type png)
+<use 4. Damage.png>
+Package pdftex.def Info: 4. Damage.png  used on input line 168.
+(pdftex.def)             Requested size: 226.48395pt x 146.53046pt.
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+[8 <./4. Damage.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+[9] (Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 5186 strings out of 479616
- 83744 string characters out of 2865001
- 494316 words of memory out of 3000000
- 22287 multiletter control sequences out of 15000+200000
- 409907 words of font info for 49 fonts, out of 3000000 for 9000
+ 5287 strings out of 479616
+ 85288 string characters out of 2865001
+ 495751 words of memory out of 3000000
+ 22373 multiletter control sequences out of 15000+200000
+ 411142 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,6n,75p,1310b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\aruns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aruns/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/aruns/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aruns/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (7 pages, 783440 bytes).
+ic/amsfonts/cm/cmex10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aruns/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aruns/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/aruns/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aru
+ns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb>
+Output written on Report.pdf (9 pages, 897422 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

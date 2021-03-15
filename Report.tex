@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt]{article}
     \usepackage{amsmath}
+    \usepackage{amsfonts}
     \usepackage[utf8]{inputenc}
     \usepackage{titlepic}
     \usepackage{stackengine}
@@ -149,16 +150,62 @@ E(D) = (1 - D) E_{0}
 D  = 1 - \frac{E(D)}{E_{0}}
 \end{equation}
 Therefore, the damage variable $D$ is characterized by the variation in Young's modulus $E(D)$. The modelling of damage by means of reduction in stiffness can be applied also the anisotropic damage of brittle materials like composite materials, concrete, rocks etc.,
-\subsection{Mechanical representation of three dimesnional damage state}
+\subsection{Mechanical representation of three dimensional damage state}
 \indent\indent\indent The deformation of a material basically depends on the direction of applied stress or strain and hence it is an anisotropic phenomenon. Therefore different theories have been developed for modelling 3-D anisotropic damage phenomenon. Some fundamental theories that describes 3-D damage state are given below 
 \subsubsection*{Scalar Damage Variable}
-\indent\indent\indent In case of random or isotropic distribution of microcracks or voids , the damage state is usually considered as isotropic. the damage state in this case may be represented by means of scalar damage variable D. When microvoids  have oriented distribution the damage state is anisotropic and the scalar damage variable cannot be applied accurately. Howvevr, when void density is small the global mechanical properties can be approximated as nearly isotropic. thus isotropic damage theory based on isotropic damage variable has been often applied to 3-D problems of creep, elastic-plastic, ductile and fatigue damage
+\indent\indent\indent In case of random or isotropic distribution of microcracks or voids , the damage state is usually considered as isotropic. the damage state in this case may be represented by means of scalar damage variable D. When microvoids  have oriented distribution the damage state is anisotropic and the scalar damage variable cannot be applied accurately. However, when void density is small the global mechanical properties can be approximated as nearly isotropic. thus isotropic damage theory based on isotropic damage variable has been often applied to 3-D problems of creep, elastic-plastic, ductile and fatigue damage
 \subsubsection{Plural Scalar damage variables}
 \indent\indent\indent A single scalar damage variable is often insufficient to describe the variation in mechanical properties of the damaged materials, even if the distribution of microcracks are isotropic. Plural scalar damage variables are often employed to characterize several different microscopic mechanisms of the relevant damage development.
 \subsubsection{Vector damage variable}
-\indent\indent\indent The damage state can be specified by the decrease in load carrying effective area due to void development. hence it is easy to postulate a vector damage variable. Kachanov (1974, 1986) tried to extend the definition of damage to anisotropic damage by noting a surface element in an arbitrary direction $n$, he proposed a vector damage variabl $ \omega = \omega_{n}n$, where $\omega_{n}$ is the effective area fraction. However the damage variable $D(n)$ discussed at the beginning representing the damage state of a plane with specific unit normal vector $n$ should be unchanged irrespective of the  chane in the sense of $n$ and hence we have the requirement,
+\indent\indent\indent The damage state can be specified by the decrease in load carrying effective area due to void development. Hence it is easy to postulate a vector damage variable. Kachanov (1974, 1986) tried to extend the definition of damage to anisotropic damage by noting a surface element in an arbitrary direction $n$, he proposed a vector damage variable $ \omega = \omega_{n}n$, where $\omega_{n}$ is the effective area fraction. However the damage variable $D(n)$ discussed at the beginning representing the damage state of a plane with specific unit normal vector $n$ should be unchanged irrespective of the  change in the sense of $n$ and hence we have the requirement,
 \begin{equation}
  D(n) = D(-n)
 \end{equation}
-
+\subsubsection{Damage tensor of second order}
+\indent\indent\indent In order to describe an anisotropic damage state, damage variable of second or higher order tensor is required. Eqn. (3) suggests that the damage state (1 - D) is specified by the transformation of the surface element $dA$ of Fig. \ref{fig:Damage3}b of the damage state into the corresponding surface element $d\tilde{A}$ in the fictitious undamaged state of Fig. \ref{fig:Damage3}c 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{{4. Damage.png}}
+ \caption{Surface element in RVE of a damaged material}
+ \label{fig:Damage4}
+ \end{center}
+\end{figure}
+In order to express damage as a second order tensor, we first consider an arbitrary surface element $PQR$ in RVE in the current damaged configuration $B_{t}$ of Fig. \ref{fig:Damage4}a . The unit normal vector and area of $PQR$ are denoted by $\nu$ and $dA$. We further postulate the fictitious undamaged configuration $B_{f}$ of Fig. \ref{fig:Damage4}b mechanically equivalent to $B_{t}$, and the surface element and its area vector are denoted by $\tilde{P}\tilde{Q}\tilde{R}$ and $\tilde{\nu}d\tilde{A}$ respectively. According to Eqn.(3) the damage variable of second-order tensor $D$ should be defined by linear transformation from area vector $\nu dA$ in $B_{t}$ into $\tilde{\nu}d\tilde{A}$ in $B_{f}$, i.e.,
+\begin{equation}
+\tilde{\nu}d\tilde{A} = (I - D)\nu dA
+\end{equation}
+where $I$ is the second order identity tensor. Since the damage tensor $D$ is symmetric, it can be expressed by its spectral decomposition
+\begin{equation}
+D = \sum_{i = 1}^{3} D_{i}n_{i}  \otimes D_{i}n_{i}
+\end{equation}
+where $D_{i}$ and $n_{i}$ are the principal value and principal direction of $D$. 
+\subsubsection{Damage tensors of Fourth order and eighth order}
+\indent\indent\indent Let us consider the fourth-order elastic modulus tensor of an undamaged and the damaged material be denoted by $\mathbb{C}_{0}$ and $\mathbb{C}(D)$. Then the elastic constitutive equation of these materials is given by \\
+\begin{equation}
+  \sigma  =  \mathbb{C}_{0} : \epsilon  \;\;\;  \sigma = \mathbb{C}(D) : \epsilon
+\end{equation}
+where (:) denotes the double contraction. Since the the elastic strain in a damaged material under stress $\sigma$ is equal to the equivalent fictitious undamaged material subject to effective stress $\sigma$, we have
+\begin{equation}
+ \tilde{\sigma}  = \mathbb{C}_{0} : \epsilon
+\end{equation}
+Form Eqn (13) and (14) we can represent effective stress as 
+\begin{equation}
+\tilde{\sigma}  = [\mathbb{C}_{0} : \mathbb{C}(D)^{-1}] : \sigma
+\end{equation}
+From equation (13), the damage tensor $D$ may be viewed as an eighth-order tensor which transforms fourth order elasticity tensor $\mathbb{C}_{0}$ of an undamaged material into another fourth-order tensor $\mathbb{C}(D)$ of the damaged material. Since mathematical operation of eighth-order tensor is highly complicated an alternative fourth-order damage tensor $\mathbb{D}$ has been proposed and the transformation between elastic moduli is given by,
+\begin{equation}
+\mathbb{C}(\mathbb{D})  =  (\mathbb{I}  - \mathbb{D}) : \mathbb{C}_{0}
+\end{equation}
+where $\mathbb{I}$ denotes the fourth-order identity tensor. The fourth order damage tesnor $\mathbb{D}$ and the effecctive stress tensor $\tilde{\sigma}$ are given by the following relations
+\begin{equation}
+\mathbb{D}  = \mathbb{I} - \mathbb{C}(\mathbb{D}) : \mathbb{C}_{0}^{-1}
+\end{equation}\\
+\begin{equation}
+\tilde{\sigma} =  (\mathbb{I} - \mathbb{D})^{-1} : \sigma
+\end{equation}
+Since the damage tensor $\mathbb{D}$ given by Eqn(17) is asymmetric, Chaboche(1993) later employed an alternative transformation,
+\begin{equation}
+\mathbb{C}(\hat{\mathbb{D}}) = \frac{1}{2}\; [(\mathbb{I} - \hat{\mathbb{D}}) : \mathbb{C}_{0} + \mathbb{C}_{0} : (\mathbb{I} - \hat{\mathbb{D}}  ]
+\end{equation}
+and proposed a new fourth-order symmetric tensor $\hat{\mathbb{D}}$.
 \end{document}
