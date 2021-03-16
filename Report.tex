@@ -208,4 +208,36 @@ Since the damage tensor $\mathbb{D}$ given by Eqn(17) is asymmetric, Chaboche(19
 \mathbb{C}(\hat{\mathbb{D}}) = \frac{1}{2}\; [(\mathbb{I} - \hat{\mathbb{D}}) : \mathbb{C}_{0} + \mathbb{C}_{0} : (\mathbb{I} - \hat{\mathbb{D}}  ]
 \end{equation}
 and proposed a new fourth-order symmetric tensor $\hat{\mathbb{D}}$.
+\subsection{Effective Stress Tensors}
+\indent\indent\indent The effective stresses are  used to describe the mechanical behaviour of the damaged material. Some of the effective stresses postulated in damage mechanics are given below
+\subsubsection{Effective Stress Tensor for Isotropic Damage}
+\indent\indent\indent If the damage state is isotropic then the effective stress tensor of three-dimensional state is given by
+\begin{equation}
+\tilde{\sigma} = (1 - D)^{-1} \; \sigma
+\end{equation}
+where D is the scalar damage variable and $\sigma$ is the Cauchy stress tensor. This effective stress simplifies damage theory and can be applied to number of damage problems like ductile damage. But this cannot be applied to damage of significant anisotropy, such as brittle damage due to microcrack distribution\\
+\subsubsection{Asymmetric Effective Stress Tensor for Anisotropic Damage}
+\indent\indent\indent The increase in stress effect caused by the net area reduction in case of anisotropic damage is given by
+\begin{equation}
+\tilde{\sigma} = (I - D)^{-1} \; \sigma
+\end{equation}
+where I and D are second order identity tensor and the second order damage tensor respectively. In the actual development of anisotropic damage, the stress induced in RVE of damage material is asymmetric. But asymmetric stress tensor makes the numerical analysis complicated and thus different methods of symmetrization has been proposed. Few of them are described as follows
+\newpage
+\subsubsection{Symmetrized Effective Stress Tensor for Anisotropic Damage 1 (Murakami and Ohno 1981)} 
+\indent\indent\indent A simple symmetrization procedure of Eq. (21), the symmetric part of the Cartesian decomposition of Eq. (21) gives,
+\begin{equation}
+\tilde{\sigma} = \frac{1}{2} [(I - D)^{-1}\;\sigma + \sigma(I - D)^{-1}]
+\end{equation}\\
+\subsubsection{Symmetrized Effective Stress Tensor for Anisotropic Damage 2 (Cordebois and Sidoroff 1982a, b)}
+\indent\indent\indent Another form of symmetrization was proposed by Cordebois and Sidoroff:
+\begin{equation}
+\tilde{\sigma} =  (I - D)^{-1/2}\sigma(I - D)^{-1/2}
+\end{equation}
+where $\sigma$ and $D$ are co-axial. Moreover, unless the development of damage is large, the difference between these effective stresses are known to be insignificant.\\
+\subsubsection{Symmetrized Effective Stress Tensor for Anisotropic Damage 3 ((Betten 1986)}
+\indent\indent\indent  Betten derived another effective stress tensor , ie.,
+\begin{equation}
+\tilde{\sigma} =  (I - D)^{-1}\sigma(I - D)^{-1}
+\end{equation} 
+Since tensors $(I - D)^{-1}$ and $(I - D)^{-1/2}$ are both second-order symmetric positive tensor, there is no essential difference between Eqs. (23) and (24). 
 \end{document}
