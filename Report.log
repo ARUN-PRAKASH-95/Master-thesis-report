@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.22)  16 MAR 2021 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.22)  18 MAR 2021 20:23
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -471,36 +471,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
-[10] (Report.aux)
+
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 250.
+
+
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 250.
+
+Missing character: There is no ´ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+[11] (Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 5287 strings out of 479616
- 85288 string characters out of 2865001
- 495751 words of memory out of 3000000
- 22373 multiletter control sequences out of 15000+200000
+ 5288 strings out of 479616
+ 85306 string characters out of 2865001
+ 501751 words of memory out of 3000000
+ 22374 multiletter control sequences out of 15000+200000
  411142 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,6n,75p,1310b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,8n,75p,1310b,346s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\aruns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmex10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aruns/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aruns/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/aruns/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aru
-ns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
-Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on Report.pdf (10 pages, 902036 bytes).
+X/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/aruns/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aruns/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aruns/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ar
+uns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/U
+sers/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pf
+b><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb>
+Output written on Report.pdf (11 pages, 926820 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

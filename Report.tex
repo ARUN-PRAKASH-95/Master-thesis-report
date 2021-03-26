@@ -240,4 +240,58 @@ where $\sigma$ and $D$ are co-axial. Moreover, unless the development of damage 
 \tilde{\sigma} =  (I - D)^{-1}\sigma(I - D)^{-1}
 \end{equation} 
 Since tensors $(I - D)^{-1}$ and $(I - D)^{-1/2}$ are both second-order symmetric positive tensor, there is no essential difference between Eqs. (23) and (24). 
+\section{Elastic Constitutive equation and Elastic modulus tensor}
+\subsection{Isotropic materials}
+\indent\indent\indent Isotropic materials are the materials which exhibit same material properties in all directions at a given point. This means when a load is applied at any point in the material it will exhibit same stress, strain, strength, hardness etc., The elastic constitutive equation of the isotropic material has the form, 
+\begin{equation}
+  \sigma = \mathbb{C}_{0} : \epsilon   \;\;\;  \sigma_{ij}  =  C^{0}_{ijkl}\epsilon_{kl},
+\end{equation}
+\begin{equation}
+\mathbb{C}_{0} =  \lambda I \otimes I  +  2\mu ´\mathbb{I}^{s}
+\end{equation}\\
+\\
+or
+\begin{equation}
+C^{0}_{ijkl} = \lambda\delta_{ij}\delta_{kl}  +  \mu(\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk})
+\end{equation}
+\newpage
+The fourth-order elastic modulus tensor $\mathbb{C}_{0}$ can be represented in matrix form as 
+\\
+\\
+$$
+[C^{0}_{pq}] =  \frac{E}{(1 + \nu)(1 - 2\nu)}
+ \begin{bmatrix}
+  1 - \nu & \nu & \nu & 0 & 0 & 0 \\
+  \nu & 1-\nu & \nu & 0 & 0 & 0 \\
+  \nu & \nu & 1-\nu & 0 & 0 & 0 \\
+  0 & \nu & \nu & 1 - 2\nu & 0 & 0 \\
+  0 & \nu & \nu & 0 & 1 - 2\nu& 0 \\
+  0& \nu & \nu & 0 & 0 &1 - 2\nu  
+ \end{bmatrix}
+ $$
+ 
+\subsection{Orthotropic materials}
+\indent\indent\indent Orthotropic materials are materials which exhibit different material properties along three mutually-orthogonal axis. They are a special form of anisotropic materials, because their properties change when measured from different directions. Some examples of orthotropic materials are wood, composite materials etc., Orthotropic materials require 9 independent variables in order to express their constitutive matrix. The 9 elastic constants are three Young's moduli $E_{x},E_{y},E_{z}$, the three Poisson's ratios $\nu_{xy},\nu_{yz},\nu_{zx}$, and three shear moduli $G_{xy},G_{yz},G_{zx}$. The elastic stiffness matrix of orthotropic material has the form,
+\\
+\\
+$$
+[C^{0}_{pq}] =  
+ \begin{bmatrix}
+  \frac{1 - \nu_{yz}\nu_{zy}}{E_{y}E_{z}\Delta} & \frac{\nu_{xy} + \nu_{xz}\nu_{zy}}{E_{y}E_{z}\Delta}  & \frac{\nu_{xz} + \nu_{xy}\nu_{yz}}{E_{y}E_{z}\Delta}  & 0 & 0 & 0 \\
+ 
+   \frac{\nu_{yx} + \nu_{yz}\nu_{zx}}{E_{x}E_{z}\Delta}  &  \frac{1 - \nu_{xz}\nu_{zx}}{E_{1}E_{z}\Delta}  & \frac{\nu_{yz} +\nu_{yx}\nu_{xz}}{E_{1}E_{z}\Delta}   & 0 & 0 & 0 \\
+  
+    \frac{\nu_{zx} + \nu_{yx}\nu_{zy}}{E_{x}E_{y}\Delta}  &   \frac{\nu_{zy} + \nu_{xy}\nu_{zx}}{E_{x}E_{y}\Delta} & \frac{1 - \nu_{xy}\nu_{yx}}{E_{x}E_{y}\Delta}  & 0 & 0 & 0 \\ 
+
+
+ 
+  0 & \nu & \nu & G_{xy} & 0 & 0 \\
+  0 & \nu & \nu & 0 & G_{yz} & 0 \\
+  0& \nu & \nu & 0 & 0 & G_{zx} 
+ \end{bmatrix}
+ $$\\
+ 
+ where $\Delta = (1 - \nu_{xy}\nu_{yx} - \nu_{yz}\nu_{zy} - \nu_{zx}\nu_{xz} - 2\nu_{xy}\nu_{yz}\nu_{zx})/E_{x}E_{y}E_{z}$ and 
+  $ \frac{\nu_{xy}}{E_{y}} = \frac{\nu_{yx}}{E_{x}}, \frac{\nu_{yz}}{E_{z}} = \frac{\nu_{zy}}{E_{y}}, \frac{\nu_{xz}}{E_{z}} = \frac{\nu_{zx}}{E_{x}},  $
+
 \end{document}
