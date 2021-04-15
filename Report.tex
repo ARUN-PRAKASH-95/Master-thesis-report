@@ -582,7 +582,7 @@ $$
 
 \begin{equation}
 \psi = \frac{\sigma_{1}^{2}}{2(1 - d_{1})E_{1}} + \frac{\sigma_{2}^{2}}{2(1 - d_{2})E_{2}}  +  \frac{\nu_{12}}{E_{1}}\sigma_{1}\sigma_{2}  +  \frac{\sigma_{12}^{2}}{2(1 - d_{4})G_{12}} 
-\end{equation}
+\end{equation}\\
 where $E_{1}$,$G_{12}$, and $\nu_{12}$  are the Young's modulus, shear modulus and Poisson's ratio for the undamaged elastic material respectively. The damage variables $d_{1}$, $d_{2}$, and $d_{4}$ ensures that the composite ply maintains the original plane of material symmetry regardless of the damage state of the material. The variable $d_{1}$ is associated with the fibre failure, $d_{2}$  with the transverse matrix cracking and $d_{4}$ is influenced by longitudinal and transverse cracks. To ensure the thermodynamically irreversibility of the damage evolution, the rate of change of complementary free energy $\dot{G}$ minus the externally supplied work $\dot{\sigma}:\epsilon$, must not be negative:
 \begin{equation}
 \dot{G} - \dot{\sigma}:\epsilon  \geq 0
@@ -607,4 +607,35 @@ H \;=\;  \frac{\partial^{2} G}{\partial \sigma^{2}}\; =\;
  
  \end{bmatrix}
  $$
+The complementary free energy density for a 3D case is given by
+\begin{equation}
+\psi \;=\; \frac{\sigma_{1}^{2}}{2(1 - d_{1})E_{1}} + \frac{\sigma_{2}^{2}}{2(1 - d_{2})E_{2}}\;  + \; \frac{\sigma_{3}^{2}}{2(1 - d_{3})E_{3}}\; + \; \frac{\nu_{12}}{E_{1}}\sigma_{1}\sigma_{2}\; +\; \frac{\nu_{13}}{E_{1}}\sigma_{1}\sigma_{3} \; +\; 
+\end{equation}
+\begin{align*}
+\frac{\nu_{23}}{E_{2}}\sigma_{2}\sigma_{3}\; + \; \frac{\sigma_{12}^{2}}{2(1 - d_{4})G_{12}}\; + \; \frac{\sigma_{23}^{2}}{2(1 - d_{5})G_{23}}\; +  \; \frac{\sigma_{13}^{2}}{2(1 - d_{6})G_{13}}
+\end{align*}
+\newpage
+The compliance tensor $H$ for 3D case can be given as
+$$
+H \; = \; 
+ \begin{bmatrix}
+  \frac{1}{(1 - d_{1})E_{1}} & -\frac{\nu_{12}}{E_{1}} & -\frac{\nu_{13}}{E_{1}} & 0 & 0 & 0 \\
+  \\
+  -\frac{\nu_{21}}{E_{2}} & \frac{1}{(1 - d_{2})E_{2}} & -\frac{\nu_{23}}{E_{2}} & 0 & 0 & 0 \\
+	\\  
+  -\frac{\nu_{31}}{E_{3}} & -\frac{\nu_{32}}{E_{3}} & \frac{1}{(1 - d_{3})E_{3}} & 0 & 0 & 0 \\
+  \\
+  0 & 0 & 0 & \frac{1}{(1 - d_{4})G_{12}} & 0 & 0 \\
+  \\
+  0 & 0 & 0 & 0 & \frac{1}{(1 - d_{5})G_{23}} & 0 \\
+  \\
+  0& 0 & 0 & 0 & 0 & \frac{1}{(1 - d_{5})G_{13}} 
+ \end{bmatrix}
+ $$
+\subsection{Damage activation functions}
+\indent\indent\indent Damage activation function(DAF) defines the elastic domain with in which the material is linearly elastic. The determination of the domain of elastic response under stress states is an essential component of accurate damage model. The DAF can be defined as
+\begin{equation}
+g_{m} \; = \; \hat{g_{m}} \; - \; \hat{\gamma_{m}}  \leq  0
+\end{equation} 
+where $\hat{g_{m}}$ is the positive loading function that depends on stress states and $\hat{\gamma_{m}}$ is the updated threshold function and $m$ refers to the failure mode.
 \end{document}
