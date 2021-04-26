@@ -638,4 +638,72 @@ H \; = \;
 g_{m} \; = \; \hat{g_{m}} \; - \; \hat{\gamma_{m}}  \leq  0
 \end{equation} 
 where $\hat{g_{m}}$ is the positive loading function that depends on stress states and $\hat{\gamma_{m}}$ is the updated threshold function and $m$ refers to the failure mode.
+\newpage
+\section{Three dimensional Continuum damage mechanics model}
+\indent\indent\indent A symmetric second order tensor D, has been chosen as the damage tensor and its principal directions are assumed to coincide with the principal material directions. The $i^{th}$ eigen value $d_{i}$ represents the effective fractional reduction in load carrying area on planes that are perpendicular to the $i^{th}$ principal material direction. The first principal direction coincides with the fiber direction and the second and the third material direction are made to coincide with the transverse and ply stacking direction. The eigen value of the damage tensor must be in the range $0 \leq d_{i} \leq  1  $, where $d_{i}$ = 0 means complete lack of microcracks in the $i^{th}$ principal material direction, while $d_{i}$ = 1 means complete separation of material across the planes that are normal to the $i^{th}$ principal material direction.
+
+$$
+D \; = \; 
+ \begin{bmatrix}
+  d_{1} & 0 & 0  \\
+  \\
+  0 & d_{2} & 0  \\
+  \\  
+  0 & 0 & d_{3} \\
+  
+ \end{bmatrix}
+ $$  
+ 
+The effective stress tensor can be defined as 
+\begin{equation}
+   \bar{\sigma} \; = \; M(D) : \sigma
+\end{equation}  
+where
+\begin{equation*}
+M(D) \; = \; diag\;[1/\omega_{11}\;\;1/\omega_{22}\;\;1/\omega_{33}\;\;1/\omega_{12}\;\;1/\omega_{13}\;\;1/\omega_{23}\;]
+\end{equation*}
+\begin{equation*}
+\omega_{11}\; = \; 1 - d_{1}, \;\; \omega_{22}\; = \; 1 - d_{2}, \;\;\omega_{33}\; = \; 1 - d_{3} \;\; \omega_{12}\; = \; \sqrt{(1 - d_{1})(1 - d_{2})} \;\;
+\end{equation*}
+\begin{equation*}
+ \omega_{13}\; = \; \sqrt{(1 - d_{1})(1 - d_{3})} \;\;  \omega_{23}\; = \; \sqrt{(1 - d_{2})(1 - d_{3})} \;\;
+\end{equation*}
+The effective stress is introduced into the strain energy equivalence principle. The strain energy of the material without damage can be expressed as 
+\begin{equation}
+W = \frac{1}{2}\sigma:C^{-1}:\sigma
+\end{equation}
+The equivalence of strain energy for damaged material is given by
+\begin{equation}
+W^{d} = \frac{1}{2}\bar{\sigma}:C^{-1}:\bar{\sigma} \; = \; \frac{1}{2}\sigma: M^{T}:C^{-1}:M:\sigma
+\end{equation}
+So the strain can be calculated as follows
+\begin{equation}
+\epsilon = \frac{\partial W^{d}}{\partial \sigma} = (M^{T}:C^{-1}:M):\sigma
+\end{equation}
+The constitutive equation of the damaged composite laminates is given as 
+\begin{equation}
+C^{d}\; = \; M^{-1}:C:M^{T,-1}
+\end{equation}
+\newpage
+The stiffness matrix of the damaged composite lamina in matrix form can be represented as follows
+\begin{tiny}
+\begin{equation*}
+C^{d} \; = \; 
+ \begin{bmatrix}
+  C_{11}(1 - d_{1})^{2} & C_{12}(1 - d_{1})(1 - d_{2}) & C_{13}(1 - d_{1})(1 - d_{3})  & 0 & 0 & 0 \\
+  \\
+  C_{21}(1 - d_{2})(1 - d_{1}) & C_{22}(1 - d_{2})^{2}  & C_{23}(1 - d_{2})(1 - d_{3}) & 0 & 0 & 0 \\
+ \\  
+  C_{31}(1 - d_{3})(1 - d_{1}) & C_{32}(1 - d_{3})(1 - d_{2}) & C_{33}(1 - d_{3})^{2}  & 0 & 0 & 0 \\
+  \\
+  0 & 0 & 0 & C_{44}(1 - d_{1})(1 - d_{2})   & 0 & 0 \\
+  \\
+  0 & 0 & 0 & 0 & C_{55}(1 - d_{1})(1 - d_{3}) & 0 \\
+  \\
+  0& 0 & 0 & 0 & 0 & C_{66}(1 - d_{2})(1 - d_{3}) 
+ \end{bmatrix}
+\end{equation*}
+\end{tiny}
+
+ 
 \end{document}
