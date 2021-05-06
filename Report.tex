@@ -704,6 +704,67 @@ C^{d} \; = \;
  \end{bmatrix}
 \end{equation*}
 \end{tiny}
+\subsection{Damage initiation criteria}
+\indent\indent\indent   The failure modes considered here include fiber tension or compression failure, matrix tension or compression failure,delamination. Since tension and compression failure in each direction cannot happen at the same integration  point at same time, three failure modes, $F_{f}, F_{m}, F_{z} $ are used for the failure modes in three principal directions. The failure criteria utilized here are in the form of 3D hashin criteria in quadratic strain
+\begin{equation}
+F_{f}^{2} =  
+	\begin{cases}
+	\Big(\frac{\epsilon_{11}}{\epsilon_{11}^{f,t}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{12}}{\epsilon_{12}^{f}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{13}}{\epsilon_{13}^{f}}\Big)^{2} \; \geq  \; 0  \; \; \; \; \;  (\epsilon_{11}  >  0)  \\
+	\\
+	\Big(\frac{\epsilon_{11}}{\epsilon_{11}^{f,c}}\Big)^{2}  \; \geq  \; 0 \; \; \; \; \; \; \;  \; \; \; \;  (\epsilon_{11}  <  0) 
+	
+	\end{cases}
+\end{equation}
 
- 
+\begin{equation}
+F_{m}^{2} =  
+	\begin{cases}
+	
+	\frac{(\epsilon_{22} + \epsilon_{33} )^{2}}{\epsilon_{22}^{f,t} \epsilon_{33}^{f,t}} \;  - \; \frac{\epsilon_{22}\epsilon_{33}}{(\epsilon_{23}^{f})^{2}} \; + \; \Big(\frac{\epsilon_{12}}{\epsilon_{12}^{f}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{13}}{\epsilon_{13}^{f}}\Big)^{2} \;  + \; \Big(\frac{\epsilon_{23}}{\epsilon_{23}^{f}}\Big)^{2} \;\geq  \; 0 \; \; \; \; \;  (\epsilon_{22}  >  0) \\
+	\\
+	
+	\frac{(\epsilon_{22} + \epsilon_{33} )^{2}}{\epsilon_{22}^{f,c} \epsilon_{33}^{f,c}} \; +  \;  \frac{\epsilon_{22} + \epsilon_{33}}{\epsilon_{22}^{f,c}}\Big(\frac{\epsilon_{22}^{f,c}}{2\epsilon_{12}^{f}} \; - \; 1\Big) \;  - \; \frac{\epsilon_{22}\epsilon_{33}}{(\epsilon_{23}^{f})^{2}} \; + \; \Big(\frac{\epsilon_{12}}{\epsilon_{12}^{f}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{13}}{\epsilon_{13}^{f}}\Big)^{2} \;  + \; \Big(\frac{\epsilon_{23}}{\epsilon_{23}^{f}}\Big)^{2} \;\geq \; 0 \; \; \; \; \; \;  (\epsilon_{22}  >  0) 
+	 
+	
+	\end{cases}
+\end{equation}
+
+
+\begin{equation}
+F_{z}^{2} =  
+	\begin{cases}
+
+	\Big(\frac{\epsilon_{33}}{\epsilon_{33}^{f,t}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{13}}{\epsilon_{13}^{f}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{23}}{\epsilon_{23}^{f}}\Big)^{2} \; \geq  \; 0 \; \; \; \; \;  (\epsilon_{33}  >  0) \\
+
+\\
+	\Big(\frac{\epsilon_{33}}{\epsilon_{33}^{f,c}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{13}}{\epsilon_{13}^{f}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{23}}{\epsilon_{23}^{f}}\Big)^{2} \; \geq  \; 0 \; \; \; \; \;  (\epsilon_{33}  >  0) \\
+
+
+
+	\end{cases}
+\end{equation}
+\\
+\\
+in which \; $\epsilon_{ii}^{f,t}  =   \frac{\sigma_{i}^{f,t}}{C_{ii}}$, \; $\epsilon_{ii}^{f,c}  =   \frac{\sigma_{i}^{f,c}}{C_{ii}} \;\;\; (i = 1,2,3)$, \; $\epsilon_{12}^{f}  =   \frac{\sigma_{12}^{f}}{C_{44}}$,  \; $\epsilon_{13}^{f}  =  \frac{\sigma_{13}^{f}}{C_{55}}$, \; $\epsilon_{23}^{f}  =   \frac{\sigma_{23}^{f}}{C_{66}}$,
+
+\subsection{Damage evolution law}
+\indent\indent\indent  If the failure is detected at a material point, the properties of the material must be degraded according to a material property degradation model. A number of post-failure material property degradation model has been proposed for progressive failure analysis. Most of these material degradation models belong to on of three general categories: instantaneous unloading, gradual unloading, or constant stress at failure material point. The most simple damage model for laminated composites is the ply discount method in which the material stiffness is removed completely when the failure is detected at material point. This method can be used to get rough estimate of the final failure of a composite structure. However, continuum damage mechanics is a more accurate methodology, in which gradual unloading of a ply after the onset of damage is simulated by means of a material degradation model. The standard implementation of strain-softening constitutive models results in mesh-dependent results i.e., the solution is non-objective with respect to the mesh refinement and the computed dissipated energy decreases with the reduction of the element size. So the fracture energy is introduced into the damage evolution law to reduce mesh sensitivity. The damage evolution equations are given below
+\\
+\\
+In fibre direction,
+\begin{equation}
+d_{1} = 1 - \frac{e^{(-\sigma_{11}^{f}\epsilon_{11}^{f}L^{c}(F_{f} - 1))    /G_{c,1}}}{F_{f}}   
+\end{equation}
+\\
+In matrix direction,
+\begin{equation}
+d_{2} = 1 - \frac{e^{(-\sigma_{22}^{f}\epsilon_{22}^{f}L^{c}(F_{m} - 1))    /G_{c,2}}}{F_{m}}   
+\end{equation}
+\\
+In ply stacking direction,
+\begin{equation}
+d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L^{c}(F_{z} - 1))    /G_{c,3}}}{F_{z}}   
+\end{equation}
+\\
+
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  26 APR 2021 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  28 APR 2021 20:21
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -922,7 +922,27 @@ Overfull \hbox (22.60757pt too wide) detected at line 705
 \OML/cmm/m/it/6 C[]  \OT1/cmr/m/n/6 =  []
  []
 
-[23] (Report.aux)
+
+Overfull \hbox (57.60703pt too wide) detected at line 730
+\OML/cmm/m/it/12 F[] \OT1/cmr/m/n/12 = []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--749
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--755
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 767--769
+
+ []
+
+[24] (Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
@@ -931,11 +951,11 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  16772 strings out of 479321
  338348 string characters out of 2856583
- 715665 words of memory out of 3000000
+ 722665 words of memory out of 3000000
  33910 multiletter control sequences out of 15000+600000
  411787 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,9n,89p,1480b,754s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,11n,89p,1480b,754s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\aruns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -955,9 +975,9 @@ ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aruns/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/aruns/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aruns/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Report.pdf (23 pages, 1157057 bytes).
+Output written on Report.pdf (24 pages, 1165045 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
+ 168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
