@@ -1,6 +1,8 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,14pt]{extarticle}
     \usepackage{amsmath}
+    \usepackage{nccmath}
     \usepackage{amsfonts}
+    \usepackage{lscape}
     \usepackage[utf8]{inputenc}
     \usepackage{titlepic}
     \usepackage{stackengine}
@@ -12,7 +14,7 @@
 	\usepackage{float}
 	\usepackage{subcaption}
     \usepackage{multirow}
-    \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+    \usepackage[top=1in, bottom=1.1in, left=1in, right=1in]{geometry}
     \usepackage{fancyhdr}
     \usepackage{relsize}
     \usepackage{tikz}
@@ -20,9 +22,9 @@
 	\makeatletter
     \setlength{\@fptop}{0pt}
     \makeatother
-    \tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 4cm, minimum height=1cm, text centered, draw = black, fill=blue!10]    
-     \tikzstyle{process} = [rectangle,  minimum width = 4cm, minimum height=1cm, text centered, text width = 4cm,draw = black, fill = blue!10]  
-	 \tikzstyle{decision} = [diamond, minimum width = 4cm, minimum height=1cm, text centered, draw = black, fill = blue!10]  
+    \tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 4cm, minimum height=1cm, text centered,text width = 5cm, draw = black, fill=white!10]    
+     \tikzstyle{process} = [rectangle,  minimum width = 4cm, minimum height=1cm, text centered, text width = 5cm,draw = black, fill = white!10]  
+	 \tikzstyle{decision} = [diamond, minimum width = 4cm, minimum height=1cm, text centered,text width = 3cm, draw = black, fill = white!10]  
      \tikzstyle{arrow} = [thick,->,>=stealth]  
 
 
@@ -34,20 +36,19 @@
 \predate{\begin{center}}
     \postdate{\par\end{center}}  
 
-\title{\Huge{\textbf{Development and implementation of material subroutine for fibre reinforced plastics in a commercial FEM software}}\\[1.3cm]\smaller \textbf{Master thesis \\[0.5cm] Winter semester 2018/19}\vspace*{1cm}}
+\title{\LARGE{\textbf{Development and implementation of material subroutine for fibre reinforced plastics in a commercial FEM software}}\\[0.7cm]\smaller \textbf{Master thesis \\[0.5cm] Winter semester 2018/19}\vspace*{1cm}}
 
 
 \author{
 \vspace{2cm}
-\Large{Presented by: Arun prakash Ganapathy}
+\large{Presented by: Arun prakash Ganapathy}
 \\[0.4cm]
-\Large{Supervised by: Dr.-Ing Dominik Laveuve}
+\large{Supervised by: Dr.-Ing Dominik Laveuve}
 \\[0.4cm]
-\Large{Mat.Nr: 63876}
+\large{Mat.Nr: 63876}
 \\[0.4cm]
-\Large{E-mail: arun-prakash.ganapathy@student.tu-freiberg.de}}
+\large{E-mail: arun-prakash.ganapathy@student.tu-freiberg.de}}
 \date{}
-
 \begin{document}
 \maketitle
 \section{Introduction}
@@ -61,12 +62,13 @@
 \end{center}
 \end{figure}\\
  Composite material are attractive because of their high strength, stiffness, high stiffness-to-density ratio, light weight properties etc., Another important reason for using composite materials is the ability to tailor the stiffness and strength to specific design load flexibly. Despite their superior physical properties, composite materials are fragile and can be easily damaged from number of sources, both during initial processing and in operation. Since composite materials possess elastic brittle properties with negligible margin of safety through ductility as offered by metals and accumulate damage before structural collapse, the development of damage must be understood for predicting failure of such materials. For example fibre-reinforced plastics exhibit local damage such as fibre breakage, matrix cracks, fibre matrix debonds etc., under normal operating conditions which may contribute to the failure. Therefore the ability to predict the initiation and growth of damage is important for predicting the performance of the composite materials for safe and reliable use of such materials. Continuum damage mechanics (CDM) has been considered as a reliable candidate for creating numerical models which predict the onset and evolution of the damage in the composite materials.
+\newpage
 \section{Continuum damage mechanics}
 \indent\indent\indent Continuum damage mechanics (CDM) is a theory for analyzing damage and fracture processes in materials from continuum mechanics point of view. Continuum damage mechanics (CDM) provides a continuum perspective for microflaws initiation, propagation, and their coalescence that eventually results in macroscopic faults and fractures. CDM uses state variables to represent the effect of damage on the stiffness and remaining life of the material that is damaging as a result of load and ageing. A Damage activation function is required to predict the initiation of damage. Damage evolution does not progress spontaneously after initiation therefore a mathematical model is required.  
 
 \subsection{Damage}
 \indent\indent\indent  Consider a body B of Fig. \ref{fig:Damage}  where a crack of length a has developed due to an external load F.  If we take an arbitrary point P($x$) near the crack tip, a number of microscopic cavities or microcracks would be observed around the region.
-These cavities can be nucleated usually as a result of breakage of atomic bonds, or of some defects in atomic array. From microscopic point of view, fracture of materials is a process of nucleation of microcavities or microcracks due to the breakage of atomic bonds. From macroscopic point of view, it is a process of extension of cracks brought about by the coalescence of these microcracks. From mesoscopic point of view, which exists between microscopic and macroscopic scale, it is a process of nucleation, growth and the coalescence of microscopic cavities leads to the initiation of macroscopic crack. The development of microscopic, mesoscopic and the macroscopic processes of fracture in materials together with the resulting deterioration in their mechanical properties is called damage. Continuum damage mechanics, in particular, aims at the analysis of the damage development in mesoscopic and macroscopic fracture processes in the framework of continuum mechanics.
+These cavities can be nucleated usually as a result of breakage of atomic bonds, or of some defects in atomic array. From microscopic point of view, fracture of materials is a process of nucleation of microcavities or microcracks due to the breakage of atomic bonds. From macroscopic point of view, it is a process of extension of cracks brought about by the coalescence of these microcracks.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.4\textwidth]{{1. Damage.png}}
@@ -74,7 +76,8 @@ These cavities can be nucleated usually as a result of breakage of atomic bonds,
  \label{fig:Damage}
 \end{center}
 \end{figure}
-\newpage
+ From mesoscopic point of view, which exists between microscopic and macroscopic scale, it is a process of nucleation, growth and the coalescence of microscopic cavities leads to the initiation of macroscopic crack. The development of microscopic, mesoscopic and the macroscopic processes of fracture in materials together with the resulting deterioration in their mechanical properties is called damage. Continuum damage mechanics, in particular, aims at the analysis of the damage development in mesoscopic and macroscopic fracture processes in the framework of continuum mechanics.
+
 The seperation of atomic bonds is induced either by shear or tensile decohesion. However the separation of material at the microscopic level consists of four damage mechanisms namely Cleavage, Growth and Coalescence of Microvoids, Glide plane decohesion and Void Growth due to Grain-Boundary diffusion.  The aspects of damage vary largely by difference in materials and loading conditions. The damage may be classified phenomenologically as follows
 \begin{itemize}
 \item Ductile Damage
@@ -99,7 +102,7 @@ The size of RVE depends on the microstructure of the relevant material and their
 \item Timber\; - \; 10$mm^3$
 \item Concrete \; - \; 100$mm^3$
 \end{itemize}
-\newpage
+
 \subsection{Concept of Continuum damage mechanics (CDM)}
 \indent\indent\indent The basic concept of CDM is that the  microstructural defects in a material can be represented by a set of damage variables.  Continuum damage mechanics first represent the damage state of a material in terms of properly defined damage variables and then describe the mechanical behaviour of the damaged material and then development of damage by use of these damage variables. The mechanical behaviour of a damaged material can be described using the notion of effective stress, together with hypothesis of mechanical equivalence between damaged and undamaged material. The concept of effective stress and mechanical equivalence will be discussed in the following sections.
 \subsubsection{Modelling by Effective Area Reduction}
@@ -241,7 +244,7 @@ where D is the scalar damage variable and $\sigma$ is the Cauchy stress tensor. 
 \tilde{\sigma} = (I - D)^{-1} \; \sigma
 \end{equation}
 where I and D are second order identity tensor and the second order damage tensor respectively. In the actual development of anisotropic damage, the stress induced in RVE of damage material is asymmetric. But asymmetric stress tensor makes the numerical analysis complicated and thus different methods of symmetrization has been proposed. Few of them are described as follows
-\newpage
+
 \subsubsection{Symmetrized Effective Stress Tensor for Anisotropic Damage 1 (Murakami and Ohno 1981)} 
 \indent\indent\indent A simple symmetrization procedure of Eq.(\ref{eqn: Murakami and Ohno}), the symmetric part of the Cartesian decomposition of Eq.(\ref{eqn: Murakami and Ohno}) gives,
 \begin{equation}
@@ -379,7 +382,7 @@ where $\mathbb{S}_{0}$ and $\mathbb{S}(D)$  are fourth-order elastic compliance 
 \end{equation}
 \begin{equation}
 \mathbb{S}(D) = \mathbb{S}_{0}\; : \mathbb{M} (D)
-\label{eqn:S_HSeq}
+ \label{eqn:S_HSeq}
 \end{equation}
 where $\mathbb{M} (D)$ is the damage effect tensor which is given by 
 \begin{equation}
@@ -422,7 +425,7 @@ Thus the constitutive equation for the undamaged and damaged material
  \label{fig:Strain_energy_eq}
  \end{center}
 \end{figure}
-\newpage
+
 Suppose a damaged material of Fig.(\ref{fig:Strain_energy_eq})a subject to stress $\sigma$, and represent the damage and internal state due to inelastic deformation by $D$ and $\alpha$, respectively. Then the strain energy function $V(\sigma,D,\alpha)$ of the damaged material is given by replacing $\sigma$ in the corresponding function $V_{0}(\sigma,\alpha)$ of the undamaged material of Fig.(\ref{fig:Strain_energy_eq})b with effective stress $\tilde{\sigma}$
 \\
 \begin{equation*}
@@ -544,20 +547,22 @@ $$
 \indent\indent\indent  In fibre-reinforced plastics, the largest portion of the load is resisted by fibres. When the fibres fail, the load must redistribute to other areas of the structure, and may cause structural collapse. In composites where strain to failure for resin matrix is higher than one of the reinforcing fibre, longitudinal failures start by isolated fibre fractures in weak zones. This kind of localized fractures increase the normal and interfacial shear stress in fibres and promote matrix cracking, fibre matrix debonding, conical shear failures etc., When the load is further increased it may lead to final collapse. Longitudinal tensile failure occurs in both constituents, and a fracture occurs along a plane whose normal is parallel to the fibre direction. A simple maximum stress or maximum strain can usually provide an accurate measure of longitudinal tensile failure. Longitudinal compressive failure occurs from the collapse of the fibres as a result of shear kinking and damage of the supporting matrix. Fibre misalignment causes shear stress between fibres that rotate fibres, which increases shear stress further and leads to instability. 
 
 \subsubsection{Transverse failure}
-\indent\indent\indent  Transverse failure happens due to matrix cracking and fibre-matrix debonding. Under the presence of in-plane shear stress and transverse tensile stress, the combined effects of defects such as resin rich regins, fibre-resin debonds, and resin voids, trigger a transverse crack that extends through the thickness. The transverse cracks are formed at fibre-resin interface without affecting the fibres. When and unidirectional fibre composite is loaded in shear, a non-linear shear stress-strain behaviour is observed before the material fails by through thickness matrix cracking. This non-linear behaviour is due to the visco-plastic behaviour of the matrix, and from the nucleation of microvoids. Experimental results have shown that moderate compression has beneficial effects on the strength of the material (Soden et al., 1998), when the transverse compressive stress value is smaller compared to the in-plane shear stress, the fracture plane is perpendicular to the mid-plane of the ply. Increasing the compressive stress changes angle of the fracture plane. For glass-epoxy and carbon-epoxy composites when loaded in pure tranverse compression, the fracture plane is at an angle of 53° $\pm$ 3° wiht respect to thickness direction. Therefore, the matrix cracking does not occur in the plane of maximum transverse shear stress (45°).
+\indent\indent\indent  Transverse failure happens due to matrix cracking and fibre-matrix debonding. Under the presence of in-plane shear stress and transverse tensile stress, the combined effects of defects such as resin rich regins, fibre-resin debonds, and resin voids, trigger a transverse crack that extends through the thickness. The transverse cracks are formed at fibre-resin interface without affecting the fibres. When and unidirectional fibre composite is loaded in shear, a non-linear shear stress-strain behaviour is observed before the material fails by through thickness matrix cracking. This non-linear behaviour is due to the visco-plastic behaviour of the matrix, and from the nucleation of microvoids.\\
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.7\textwidth]{{5. FRP failure.png}}
+\includegraphics[width=0.5\textwidth]{{5. FRP failure.png}}
  \caption{Fracture planes in FRP material}
  \label{fig:FRP failure}
  \end{center}
-\end{figure}
+\end{figure}\\
+
+ Experimental results have shown that moderate compression has beneficial effects on the strength of the material (Soden et al., 1998), when the transverse compressive stress value is smaller compared to the in-plane shear stress, the fracture plane is perpendicular to the mid-plane of the ply. Increasing the compressive stress changes angle of the fracture plane. For glass-epoxy and carbon-epoxy composites when loaded in pure tranverse compression, the fracture plane is at an angle of 53° $\pm$ 3° wiht respect to thickness direction. Therefore, the matrix cracking does not occur in the plane of maximum transverse shear stress (45°).
+
 
 \newpage
 \section{Failure analysis of composite materials}
 \subsection{Damage initiation criteria}
 \indent\indent\indent  Damage initiation criteria refers to the onset of damage at a material point. Since the properties of the orthotropic materials change in mutually perpendicular direction three failure mode index, $F_{f}, F_{m}, F_{z}$, are used for failure modes in three principal material directions. Since the failure due to tension and compression in each direction cannot happen at same integration point and at the same time, the failure mode index must be calculated based on whether the material direction is under tension or compression. Both strain and stress based damage initiation criteria can be employed based on the application. Some of the damage initiation criteria are given as follows
-\\
 \subsubsection{Maximum strain criteria}
 \indent\indent\indent The maximum strain criterion just checks whether the strain in the given material direction exceeds the failure strain or not. The maximum strain criterion for each material direction is given below
 \\
@@ -587,7 +592,7 @@ $$
 where $\epsilon_{ti}$ and $\epsilon_{ci}$ are failure strains in tension and compression respectively, in each material direction. 
 \\
 \subsubsection{Maximum stress criteria}
-\indent\indent\indent Since the load-carrying area decreases due to increase in damage, the effective of stress gets magnified in the damaged material. Therefore, in case of maximum stress criteria normal stress components of the effective stress are checked against the failure strength in each principal material direction. The effective stress can computed using the Eqn.(\ref{eqn:effective_stress_tensor}). The maximum stress criteria for each material direction is given in the table below
+\indent\indent\indent Since the load-carrying area decreases due to increase in damage, the effective of stress gets magnified in the damaged material. Therefore, in case of maximum stress criteria normal stress components of the effective stress($\tilde{\sigma}$) are checked against the failure strength in each principal material direction. The effective stress can computed using the Eqn.(\ref{eqn:effective_stress_tensor}). The maximum stress criteria for each material direction is given in the table below
 \\
 \\
 \begin{table}[h!]
@@ -613,7 +618,8 @@ where $\epsilon_{ti}$ and $\epsilon_{ci}$ are failure strains in tension and com
   \end{center}
 \end{table}\\
 \\
-where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,$ Y_{C} $ and $Z_{C}$ are failure strength in compression in each principal material direction respectively.
+where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,$ Y_{C} $ and $Z_{C}$ are failure strength in compression in each principal material direction respectively.\\
+\\
 
 \subsubsection{3D Hashin's quadratic strain criteria}
 \indent\indent\indent Hashin's quadratic strain criteria includes shear strain components in addition to the normal strain components. The criteria for each material direction is given below\\
@@ -624,9 +630,11 @@ Fibre direction 1,
 \begin{equation}
 \large{F_{f}^{2} =  
 	\begin{cases}
-	\Big(\frac{\epsilon_{11}}{\epsilon_{11}^{f,t}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{12}}{\epsilon_{12}^{f}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{13}}{\epsilon_{13}^{f}}\Big)^{2} \; \geq  \; 1  \; \; \; \; \;  (\epsilon_{11}  >  0)  \\
+	
+		\Big(\frac{\epsilon_{11}}{\epsilon_{11}^{f,t}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{12}}{\epsilon_{12}^{f}}\Big)^{2} \; + \; \Big(\frac{\epsilon_{13}}{\epsilon_{13}^{f}}\Big)^{2} \; \geq  \; 1  \; \; \; \; \;  (\epsilon_{11}  >  0)  \\
 	\\
 	\Big(\frac{\epsilon_{11}}{\epsilon_{11}^{f,c}}\Big)^{2}  \; \geq  \; 1 \; \; \; \; \; \; \;  \; \; \; \;  (\epsilon_{11}  <  0) 
+
 	
 	\end{cases}}
 \end{equation}
@@ -648,7 +656,8 @@ Matrix direction 2,
 	
 	\end{cases}}
 \end{equation}
-\newpage
+\\
+\\
 Matrix direction 3,
 \\
 \begin{equation}
@@ -666,7 +675,50 @@ Matrix direction 3,
 \end{equation}
 \\
 \\
-in which \; \large{$\epsilon_{ii}^{f,t}=\frac{\sigma_{i}^{f,t}}{C_{ii}}$,  $\epsilon_{ii}^{f,c}  =   \frac{\sigma_{i}^{f,c}}{C_{ii}} \; (i = 1,2,3)$,  $\epsilon_{12}^{f}  =   \frac{\sigma_{12}^{f}}{C_{44}}$,   $\epsilon_{13}^{f}  =  \frac{\sigma_{13}^{f}}{C_{55}}$,  $\epsilon_{23}^{f}  =   \frac{\sigma_{23}^{f}}{C_{66}}$}
+in which  $\LARGE{\epsilon_{ii}^{f,t}=\frac{\sigma_{i}^{f,t}}{C_{ii}}}$,  $\epsilon_{ii}^{f,c}  =   \frac{\sigma_{i}^{f,c}}{C_{ii}} \; (i = 1,2,3)$,  $\epsilon_{12}^{f}  =   \frac{\sigma_{12}^{f}}{C_{44}}$,   $\epsilon_{13}^{f}  =  \frac{\sigma_{13}^{f}}{C_{55}}$,  $\epsilon_{23}^{f}  =   \frac{\sigma_{23}^{f}}{C_{66}}$
+\subsubsection{3D Hashin's stress criteria}
+\indent\indent\indent Hashin's stress criteria for each principal material direction is given as follows
+\\
+\\
+Fibre direction 1,
+\\
+\begin{equation}
+\large{F_{f}^{2} =  
+	\begin{cases}
+	\Big(\frac{\tilde{\sigma}_{11}}{X_{T}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{12}}{S_{12}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{13}}{S_{13}}\Big)^{2} \; \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma}_{11}  >  0)  \\
+	\\
+	\Big(\frac{\tilde{\sigma}_{11}}{X_{C}}\Big)^{2}  \; \geq  \; 1 \; \; \; \; \; \; \;  \; \; \; \;  (\tilde{\sigma}_{11}  <  0) 
+	
+	\end{cases}}
+\end{equation}
+\\
+\\
+Matrix direction 2,
+\\
+\begin{equation}
+\large{F_{m}^{2} =  
+	\begin{cases} 
+		\Big(\frac{\tilde{\sigma}_{22}}{Y_{T}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{12}}{S_{12}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{23}}{S_{23}}\Big)^{2} \; \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma}_{22}  >  0)  \\
+		\\
+		\Big(\frac{\tilde{\sigma}_{22}}{Y_{C}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{12}}{S_{12}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{23}}{S_{23}}\Big)^{2} \; \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma}_{22}  <  0)  \\		
+	\end{cases}}
+\end{equation}
+\\
+\\
+Matrix direction 3,
+\\
+\begin{equation}
+\large{F_{z}^{2} =  
+	\begin{cases} 
+		\Big(\frac{\tilde{\sigma}_{33}}{Y_{T}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{13}}{S_{13}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{23}}{S_{23}}\Big)^{2} \; \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma}_{33}  >  0)  \\
+		\\
+		\Big(\frac{\tilde{\sigma}_{33}}{Y_{C}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{13}}{S_{13}}\Big)^{2} \; + \; \Big(\frac{\tilde{\sigma}_{23}}{S_{23}}\Big)^{2} \; \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma}_{33}  <  0)  \\		
+	\end{cases}}
+\end{equation}
+\\
+\\
+\\
+where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,$ Y_{C} $ and $Z_{C}$ are failure strength in compression in each principal material direction respectively. $S_{12}$, $S_{23}$, and $S_{13}$ are shear strengths.
 \newpage
 \subsection{Types of damage evolution}
 \indent\indent\indent Once damage is initiated in a material point of composite material, the material property must be degraded. This results in strain-softening of the composite materials rather than strain hardening which is observed in conventional materials like metals. A number of post-damage models are proposed for progressive failure analysis and most of them belong to one of the following categories: instantaneous unloading, gradual loading, or constant stress at failure material point as shown in Fig.(\ref{fig:Types_of_damage_evolution}) \\  
@@ -684,32 +736,33 @@ in which \; \large{$\epsilon_{ii}^{f,t}=\frac{\sigma_{i}^{f,t}}{C_{ii}}$,  $\eps
 \indent\indent\indent In case of isotropic distribution of cracks, the damage state is usually considered to be isotropic and only a scalar variable D is required to represent the damage state of the material. In this work, a damage evolution law of following form is considered for calculating damage, once the damage has initiated.\\
 \\
 \begin{equation}
-  \Large{ D \; = \; 1 - e^{-P(\epsilon - \epsilon_{f})}}
+  \large{ D \; = \; 1 - e^{-P(\tilde{\epsilon} - k)}}
   \label{eqn: isotropic_damage}
 \end{equation} 
 \\
-where $P$ is the softening parameter which determines slope of the damage evolution, $\epsilon$ is 1D strain value and $\epsilon_{f}$ is the failure strain. Since the Eqn.(\ref{eqn: isotropic_damage}) is an exponential equation, the damage D evolves exponentially from 0 to 1 and the strain-softening will be an exponential decay function. Once the damage starts to evolve the material property must be degraded. Therefore the material stiffness matrix of the  damaged material is given by,\\
+where $P$ is the softening parameter which determines slope of the damage evolution, $\tilde{\epsilon}$ is 1D equivalent strain  and $k$ is the threshold value. Since the Eqn.(\ref{eqn: isotropic_damage}) is an exponential equation, the damage D evolves exponentially from 0 to 1 and the strain-softening will be an exponential decay function. Once the damage starts to evolve the material property must be degraded. Therefore the material stiffness matrix of the  damaged material is given by,\\
 \begin{equation}
-\Large{\mathbb{C}(D) \; = \; (1  - D) \mathbb{C}_{0} }
+\large{\mathbb{C}(D) \; = \; (1  - D) \mathbb{C}_{0} }
 \end{equation} 
 where $\mathbb{C}_{0}$ is the material stiffness matrix of the undamaged material. Therefore the stress-strain relation for a strain softening model is given by,\\
 \begin{equation}
-\Large{\sigma \; = \; \mathbb{C}(D) : \epsilon }  
+\large{\sigma \; = \; \mathbb{C}(D) : \epsilon }  
 \end{equation}
 \\
 The finite element equations obtained for strain-softening model is non-linear and therefore Newton-Raphson technique is used to solve the resulting system of non-linear equations. To ensure the robustness of the Newton-Raphson method, it is important to compute the material tangent constitutive tensor $\mathbb{C}_{T}$. It can be derived as follows,\\
 \begin{equation*}
-\Large{ \mathbb{C}_{T}  \; = \;\frac{\partial \sigma}{\partial \epsilon}  }
+\large{ \mathbb{C}_{T}  \; = \;\frac{\partial \sigma}{\partial \epsilon}  }
 \end{equation*}
 
 \begin{equation*}
-\Large{\sigma  \; = \; f(\epsilon, D) }
+\large{\sigma  \; = \; f(\epsilon, D) }
 \end{equation*}
 
 \begin{equation}
-\Large{\mathbb{C}_{T}  \; = \; \mathbb{C}(D) + \Big(-\mathbb{C}_{0} : \epsilon \otimes \frac{\partial D}{\partial \epsilon }\Big)    }
+\large{\mathbb{C}_{T}  \; = \; \mathbb{C}(D) + \Big(-\mathbb{C}_{0} : \epsilon \otimes \frac{\partial D}{\partial \epsilon }\Big)    }
 \end{equation}
 \\
+In the above equation, the first term $\mathbb{C}(D)$ is the damaged elasticity matrix and second term is due increased damage. In the absence of damage propagation in an increment(For eg., during unloading), the material tangent tensor is equal to the damaged elasticity matrix, so the response is linearly elastic.
 \subsubsection{Anisotropic damage}
 \indent\indent\indent In case of orthotropic materials, the material property changes in mutually orthogonal direction. Therefore it is more appropriate to chose a second order damage tensor. In this work, a symmetric second order tensor $\underline{D}$ is chosen , whose principal directions are assumed to coincide with the principal material directions. The eigen values of the damage tensor $\underline{D}$ have a simple physical interpretation i.e., the $i^{th}$ eigen value $d_{i}$ represents the effective fractional reduction in load carrying area on planes that are perpendicular to $i^{th}$ principal material direction. The damage tensor $\underline{D}$ can be represented as,\\
 $$
@@ -729,71 +782,64 @@ The relationship between damaged and undamaged material can be established in di
 \mathbb{C}(D) \; = \; \mathbb{M}^{-1} : \mathbb{C}_{0} :  \mathbb{M}^{T,-1}  
 \label{Damaged_elasticity_matrix_1}
 \end{equation}
-where $\mathbb{M}$ is the damage effect tensor from Section.(\ref{Matrix Representation of Damage effect tensors}). The matrix representation of the Eqn.(\ref{Damaged_elasticity_matrix_1}) is given as,
-\begin{tiny}
+where $\mathbb{M}$ is the damage effect tensor from Section.(\ref{Matrix Representation of Damage effect tensors}). 
 
-\begin{equation*}
- C^{d} \; = \; 
- \begin{bmatrix}
-  C_{11}(1 - d_{1})^{2} & C_{12}(1 - d_{1})(1 - d_{2}) & C_{13}(1 - d_{1})(1 - d_{3})  & 0 & 0 & 0 \\
-  \\
-  C_{21}(1 - d_{2})(1 - d_{1}) & C_{22}(1 - d_{2})^{2}  & C_{23}(1 - d_{2})(1 - d_{3}) & 0 & 0 & 0 \\
- \\  
-  C_{31}(1 - d_{3})(1 - d_{1}) & C_{32}(1 - d_{3})(1 - d_{2}) & C_{33}(1 - d_{3})^{2}  & 0 & 0 & 0 \\
-  \\
-  0 & 0 & 0 & C_{44}(1 - d_{1})(1 - d_{2})   & 0 & 0 \\
-  \\
-  0 & 0 & 0 & 0 & C_{55}(1 - d_{2})(1 - d_{3}) & 0 \\
-  \\
-  0& 0 & 0 & 0 & 0 & C_{66}(1 - d_{1})(1 - d_{3}) 
- \end{bmatrix}
-\end{equation*}
 
-\end{tiny}
-\newpage
- According to hypothesis of strain equivalence, from Eqn.(\ref{eqn: S_HSeq}) the elastic stiffness matrix of the damaged material can be derived as,\\
+
+
+
+ According to hypothesis of strain equivalence, from Eqn.(\ref{eqn:S_HSeq}) the elastic stiffness matrix of the damaged material can be derived as,\\
  \begin{equation}
 \mathbb{C}(D) \; = \; \mathbb{M}^{-1} : \mathbb{C}_{0}   
 \label{Damaged_elasticity_matrix_2}
 \end{equation}
-The matrix representation of the Eqn.(\ref{Damaged_elasticity_matrix_2}) is given as,
-\begin{tiny}
 
+
+A simple damage evolution law for each principal material direction in case of anisotropic damage is given as follows,
+\begin{equation}
+d_{i} = 1 - \frac{e^{-(F_{I} - 1)} }{F_{I}}  
+\end{equation}
+where $d_{i}$ (i = 1,2,3) and $F_{I}$ (I = 1,2,3) are damage evolution and failure undex in each principal material direction respectively.
+The material tangent stiffness tensor for anisotropic damage can also be derived in the same way as isotropic damage and it is given as follows
 \begin{equation*}
- C^{d} \; = \; 
- \begin{bmatrix}
-  C_{11}(1 - d_{1}) & C_{12}(1 - d_{1}) & C_{13}(1 - d_{1})  & 0 & 0 & 0 \\
-  \\
-  C_{21}(1 - d_{2}) & C_{22}(1 - d_{2})  & C_{23}(1 - d_{2}) & 0 & 0 & 0 \\
- \\  
-  C_{31}(1 - d_{3}) & C_{32}(1 - d_{3})) & C_{33}(1 - d_{3})  & 0 & 0 & 0 \\
-  \\
-  0 & 0 & 0 & C_{44} \sqrt{(1 - d_{1})(1 - d_{2})}   & 0 & 0 \\
-  \\
-  0 & 0 & 0 & 0 & C_{55}\sqrt{(1 - d_{2})(1 - d_{3})} & 0 \\
-  \\
-  0& 0 & 0 & 0 & 0 & C_{66}\sqrt{(1 - d_{1})(1 - d_{3})}
- \end{bmatrix}
+\large{ \mathbb{C}_{T}  \; = \;\frac{\partial \sigma}{\partial \epsilon}  }
 \end{equation*}
 
-\end{tiny}
+\begin{equation*}
+\large{\sigma  \; = \; f(\epsilon, \underline{D}) }
+\end{equation*}
 
-The standard implementation of strain-softening constitutive models results in mesh-dependent results i.e., the solution is non-objective with respect to the mesh refinement and the computed dissipated energy decreases with the reduction of the element size. So the fracture energy is introduced into the damage evolution law to reduce mesh sensitivity. The damage evolution equations are given below
-\\
-\\
-In fibre direction 1,
 \begin{equation}
-\large{ d_{1} = 1 - \frac{e^{(-\sigma_{11}^{f}\epsilon_{11}^{f}L^{c}(F_{f} - 1))    /G_{c,1}}}{F_{f}} }   
+\mathbb{C}_{T}  \; = \; \mathbb{C}(D) + \sum_{i = 1}^{3} \Big( \frac{\partial \mathbb{C}(D) }{\partial d_{i}} : \epsilon \otimes \frac{\partial d_{i}}{\partial \epsilon }\Big) 
 \end{equation}
-\\
-In matrix direction 2,
-\begin{equation}
-\large{ d_{2} = 1 - \frac{e^{(-\sigma_{22}^{f}\epsilon_{22}^{f}L^{c}(F_{m} - 1))    /G_{c,2}}}{F_{m}} }  
-\end{equation}
-\\
-In matrix direction 3,
-\begin{equation}
-\large{ d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L^{c}(F_{z} - 1))    /G_{c,3}}}{F_{z}} }  
-\end{equation}
-\\
+In the above equation, the second term(i.e., due to increased damage) must be computed only if the corresponding failure mode is active.
+
+
+\begin{center}
+\begin{tikzpicture}[node distance = 1.8cm]
+
+\node(straininc) [startstop] {Apply increment $\Delta\epsilon$};
+\node(strainadd) [process, below of = straininc] {$\epsilon_{n+1} = \epsilon_{n} + \Delta\epsilon $};
+\node(Failure)   [process, below of = strainadd] {Failure Criteria};
+\node(Damageon)  [decision, below of = Failure, yshift=-1.5cm] {Damage onset?};
+\node(Damagecalc) [process, below of = Damageon, yshift=-1.8cm] {Calculate damage variables};
+\node(Materialeqn)[process, below of = Damagecalc, yshift=-0.3cm] {Material constitutive equations};
+\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] {Updating: \; $\sigma = C_{d}.\; \epsilon_{n + 1}$ \\  $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
+\node(abaqus)[startstop, below of = Tangent, yshift=-0.5cm] {ANSYS solver};
+\node(Converge)[decision, below of = abaqus, yshift=-1cm] {Converged?};
+
+\draw [arrow] (straininc) -- (strainadd);
+\draw [arrow] (strainadd) -- (Failure);
+\draw [arrow] (Failure) -- (Damageon);
+\draw [arrow] (Damageon) -- (Damagecalc);
+\draw [arrow] (Damagecalc) -- (Materialeqn);
+\draw [arrow] (Materialeqn) -- (Tangent);
+\draw [arrow] (Tangent) -- (abaqus);
+\draw [arrow] (abaqus) -- (Converge);
+ 
+     
+     
+
+\end{tikzpicture}
+\end{center}
 \end{document}

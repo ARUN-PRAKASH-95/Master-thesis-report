@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  3 JUN 2021 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  30 MAY 2021 12:17
 entering extended mode
-**./Report.tex
-(Report.tex
+**./Report2.tex
+(Report2.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.cls
@@ -88,10 +88,6 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/ncctools\nccmath.sty
-Package: nccmath 2006/01/20 v1.3 Additional Math Commands (NCC)
-\NCC@fracrulewidth=\dimen149
-)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -100,24 +96,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-))) (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks20
 \inpenc@posthook=\toks21
@@ -149,8 +128,8 @@ sep char (CT)
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count268
 \calc@Bcount=\count269
-\calc@Adimen=\dimen150
-\calc@Bdimen=\dimen151
+\calc@Adimen=\dimen149
+\calc@Bdimen=\dimen150
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
@@ -197,28 +176,43 @@ Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-\Gin@req@height=\dimen152
-\Gin@req@width=\dimen153
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen154
-\lightrulewidth=\dimen155
-\cmidrulewidth=\dimen156
-\belowrulesep=\dimen157
-\belowbottomsep=\dimen158
-\aboverulesep=\dimen159
-\abovetopsep=\dimen160
-\cmidrulesep=\dimen161
-\cmidrulekern=\dimen162
-\defaultaddspace=\dimen163
+\heavyrulewidth=\dimen153
+\lightrulewidth=\dimen154
+\cmidrulewidth=\dimen155
+\belowrulesep=\dimen156
+\belowbottomsep=\dimen157
+\aboverulesep=\dimen158
+\abovetopsep=\dimen159
+\cmidrulesep=\dimen160
+\cmidrulekern=\dimen161
+\defaultaddspace=\dimen162
 \@cmidla=\count274
 \@cmidlb=\count275
-\@aboverulesep=\dimen164
-\@belowrulesep=\dimen165
+\@aboverulesep=\dimen163
+\@belowrulesep=\dimen164
 \@thisruleclass=\count276
 \@lastruleclass=\count277
-\@thisrulewidth=\dimen166
+\@thisrulewidth=\dimen165
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
 LaTeX Info: Redefining \cite on input line 302.
@@ -230,13 +224,13 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen167
-\captionmargin@=\dimen168
-\captionwidth=\dimen169
-\caption@tempdima=\dimen170
-\caption@indent=\dimen171
-\caption@parindent=\dimen172
-\caption@hangindent=\dimen173
+\captionmargin=\dimen166
+\captionmargin@=\dimen167
+\captionwidth=\dimen168
+\caption@tempdima=\dimen169
+\caption@indent=\dimen170
+\caption@parindent=\dimen171
+\caption@hangindent=\dimen172
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count278
@@ -259,7 +253,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip59
 \multirow@cntb=\count283
 \multirow@dima=\skip60
-\bigstrutjot=\dimen174
+\bigstrutjot=\dimen173
 ) (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -272,14 +266,14 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@cnth=\count284
 \Gm@cntv=\count285
 \c@Gm@tempcnt=\count286
-\Gm@bindingoffset=\dimen175
-\Gm@wd@mp=\dimen176
-\Gm@odd@mp=\dimen177
-\Gm@even@mp=\dimen178
-\Gm@layoutwidth=\dimen179
-\Gm@layoutheight=\dimen180
-\Gm@layouthoffset=\dimen181
-\Gm@layoutvoffset=\dimen182
+\Gm@bindingoffset=\dimen174
+\Gm@wd@mp=\dimen175
+\Gm@odd@mp=\dimen176
+\Gm@even@mp=\dimen177
+\Gm@layoutwidth=\dimen178
+\Gm@layoutheight=\dimen179
+\Gm@layouthoffset=\dimen180
+\Gm@layoutvoffset=\dimen181
 \Gm@dimlist=\toks25
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
@@ -307,8 +301,8 @@ y
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
 \pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen183
-\pgfutil@tempdimb=\dimen184
+\pgfutil@tempdima=\dimen182
+\pgfutil@tempdimb=\dimen183
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common-lists.tex))
@@ -340,16 +334,16 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 filtered.code.tex
 \pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen185
-\pgf@y=\dimen186
-\pgf@xa=\dimen187
-\pgf@ya=\dimen188
-\pgf@xb=\dimen189
-\pgf@yb=\dimen190
-\pgf@xc=\dimen191
-\pgf@yc=\dimen192
-\pgf@xd=\dimen193
-\pgf@yd=\dimen194
+\pgf@x=\dimen184
+\pgf@y=\dimen185
+\pgf@xa=\dimen186
+\pgf@ya=\dimen187
+\pgf@xb=\dimen188
+\pgf@yb=\dimen189
+\pgf@xc=\dimen190
+\pgf@yc=\dimen191
+\pgf@xd=\dimen192
+\pgf@yd=\dimen193
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
 \c@pgf@counta=\count287
@@ -414,7 +408,7 @@ code.tex
 code.tex)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen195
+\pgfmath@dimen=\dimen194
 \pgfmath@count=\count294
 \pgfmath@box=\box57
 \pgfmath@toks=\toks33
@@ -448,32 +442,32 @@ tex)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@picminx=\dimen196
-\pgf@picmaxx=\dimen197
-\pgf@picminy=\dimen198
-\pgf@picmaxy=\dimen199
-\pgf@pathminx=\dimen256
-\pgf@pathmaxx=\dimen257
-\pgf@pathminy=\dimen258
-\pgf@pathmaxy=\dimen259
-\pgf@xx=\dimen260
-\pgf@xy=\dimen261
-\pgf@yx=\dimen262
-\pgf@yy=\dimen263
-\pgf@zx=\dimen264
-\pgf@zy=\dimen265
+\pgf@picminx=\dimen195
+\pgf@picmaxx=\dimen196
+\pgf@picminy=\dimen197
+\pgf@picmaxy=\dimen198
+\pgf@pathminx=\dimen199
+\pgf@pathmaxx=\dimen256
+\pgf@pathminy=\dimen257
+\pgf@pathmaxy=\dimen258
+\pgf@xx=\dimen259
+\pgf@xy=\dimen260
+\pgf@yx=\dimen261
+\pgf@yy=\dimen262
+\pgf@zx=\dimen263
+\pgf@zy=\dimen264
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@path@lastx=\dimen266
-\pgf@path@lasty=\dimen267
+\pgf@path@lastx=\dimen265
+\pgf@path@lasty=\dimen266
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@shorten@end@additional=\dimen268
-\pgf@shorten@start@additional=\dimen269
+\pgf@shorten@end@additional=\dimen267
+\pgf@shorten@start@additional=\dimen268
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
@@ -486,14 +480,14 @@ File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgflinewidth=\dimen270
+\pgflinewidth=\dimen269
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@pt@x=\dimen271
-\pgf@pt@y=\dimen272
-\pgf@pt@temp=\dimen273
+\pgf@pt@x=\dimen270
+\pgf@pt@y=\dimen271
+\pgf@pt@temp=\dimen272
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -510,12 +504,12 @@ File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowsep=\dimen274
+\pgfarrowsep=\dimen273
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@max=\dimen275
+\pgf@max=\dimen274
 \pgf@sys@shading@range@num=\count297
 \pgf@shadingcount=\count298
 )
@@ -556,8 +550,8 @@ File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@nodesepstart=\dimen276
-\pgf@nodesepend=\dimen277
+\pgf@nodesepstart=\dimen275
+\pgf@nodesepend=\dimen276
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -578,8 +572,8 @@ Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
 .tex)
-\pgffor@iter=\dimen278
-\pgffor@skip=\dimen279
+\pgffor@iter=\dimen277
+\pgffor@skip=\dimen278
 \pgffor@stack=\toks36
 \pgffor@toks=\toks37
 ))
@@ -591,16 +585,16 @@ Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@plot@mark@count=\count299
-\pgfplotmarksize=\dimen280
+\pgfplotmarksize=\dimen279
 )
-\tikz@lastx=\dimen281
-\tikz@lasty=\dimen282
-\tikz@lastxsaved=\dimen283
-\tikz@lastysaved=\dimen284
-\tikz@lastmovetox=\dimen285
-\tikz@lastmovetoy=\dimen286
-\tikzleveldistance=\dimen287
-\tikzsiblingdistance=\dimen288
+\tikz@lastx=\dimen280
+\tikz@lasty=\dimen281
+\tikz@lastxsaved=\dimen282
+\tikz@lastysaved=\dimen283
+\tikz@lastmovetox=\dimen284
+\tikz@lastmovetoy=\dimen285
+\tikzleveldistance=\dimen286
+\tikzsiblingdistance=\dimen287
 \tikz@figbox=\box63
 \tikz@figbox@bg=\box64
 \tikz@tempbox=\box65
@@ -638,7 +632,7 @@ File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen289
+\arrowsize=\dimen288
 ))
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
@@ -646,35 +640,35 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmargin=\skip71
 \droptitle=\skip72
 )
-(Report.aux)
-\openout1 = `Report.aux'.
+(Report2.aux)
+\openout1 = `Report2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count308
-\scratchdimen=\dimen290
+\scratchdimen=\dimen289
 \scratchbox=\box67
 \nofMPsegments=\count309
 \nofMParguments=\count310
 \everyMPshowfont=\toks38
 \MPscratchCnt=\count311
-\MPscratchDim=\dimen291
+\MPscratchDim=\dimen290
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
 \everyMPtoPDFconversion=\toks39
@@ -702,11 +696,11 @@ Package caption Info: End \AtBeginDocument code.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 693.27942pt, 79.49744pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=452.9679pt
-* \textheight=693.27942pt
+* \textheight=700.50687pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-39.0pt
@@ -729,572 +723,41 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 53.
+(Font)              size <17.28> substituted on input line 52.
 
 <logo.png, id=4, 1204.5pt x 1187.43625pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 53.
+Package pdftex.def Info: logo.png  used on input line 52.
 (pdftex.def)             Requested size: 170.71652pt x 168.28737pt.
 [1
 
 {C:/Users/aruns/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo.png>]
-<composite plane.jpg, id=14, 2710.125pt x 1212.53pt>
-File: composite plane.jpg Graphic file (type jpg)
-<use composite plane.jpg>
-Package pdftex.def Info: composite plane.jpg  used on input line 59.
-(pdftex.def)             Requested size: 362.37569pt x 162.13034pt.
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
-[2 <./composite plane.jpg>] [3]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
-
-
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
-
-
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<1. Damage.png, id=21, 366.77025pt x 365.56575pt>
-File: 1. Damage.png Graphic file (type png)
-<use 1. Damage.png>
-Package pdftex.def Info: 1. Damage.png  used on input line 74.
-(pdftex.def)             Requested size: 181.18439pt x 180.59024pt.
-
-[4 <./1. Damage.png>] [5]
-Overfull \hbox (6.95985pt too wide) in paragraph at lines 106--106
-[]\OT1/cmr/bx/n/17.28 Concept of Con-tin-uum dam-age me-chan-ics (CDM) 
- []
-
-<Damage2.png, id=31, 449.88075pt x 287.27325pt>
-File: Damage2.png Graphic file (type png)
-<use Damage2.png>
-Package pdftex.def Info: Damage2.png  used on input line 122.
-(pdftex.def)             Requested size: 362.37569pt x 231.39694pt.
-[6]
-<3. Damage_cylinder.png, id=38, 471.56175pt x 292.09125pt>
-File: 3. Damage_cylinder.png Graphic file (type png)
-<use 3. Damage_cylinder.png>
-Package pdftex.def Info: 3. Damage_cylinder.png  used on input line 141.
-(pdftex.def)             Requested size: 362.37569pt x 224.4697pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
-
- []
-
-[7 <./Damage2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
-
- []
-
-[8 <./3. Damage_cylinder.png>] [9]
-<4. Damage.png, id=51, 387.24675pt x 250.536pt>
-File: 4. Damage.png Graphic file (type png)
-<use 4. Damage.png>
-Package pdftex.def Info: 4. Damage.png  used on input line 185.
-(pdftex.def)             Requested size: 226.48395pt x 146.53046pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-
- []
-
-[10 <./4. Damage.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
-
- []
-
-
-Overfull \hbox (6.62654pt too wide) in paragraph at lines 227--229
-\OT1/cmr/m/n/14.4 Since the dam-age ten-sor $\U/msb/m/n/14.4 D$ \OT1/cmr/m/n/14
-.4 given by Eqn(17[]) is asym-met-ric, Chaboche(1993)
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
-
- []
-
-
-Overfull \hbox (2.35005pt too wide) in paragraph at lines 248--248
-[]\OT1/cmr/bx/n/14.4 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam
--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
-
-Overfull \hbox (2.35005pt too wide) in paragraph at lines 254--254
-[]\OT1/cmr/bx/n/14.4 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam
--
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 259--261
-
- []
-
-
-Overfull \hbox (2.35005pt too wide) in paragraph at lines 261--261
-[]\OT1/cmr/bx/n/14.4 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam
--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--288
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--288
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 304--306
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--334
-
- []
-
-[14]
-<6. Strain_eq.png, id=72, 481.8pt x 233.07076pt>
-File: 6. Strain_eq.png Graphic file (type png)
-<use 6. Strain_eq.png>
-Package pdftex.def Info: 6. Strain_eq.png  used on input line 356.
-(pdftex.def)             Requested size: 362.37569pt x 175.30408pt.
- [15 <./6. Strain_eq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 400--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 404--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
-
- []
-
-[16]
-<7.Strain_energy_eq.png, id=80, 570.33075pt x 260.77425pt>
-File: 7.Strain_energy_eq.png Graphic file (type png)
-<use 7.Strain_energy_eq.png>
-Package pdftex.def Info: 7.Strain_energy_eq.png  used on input line 423.
-(pdftex.def)             Requested size: 362.37569pt x 165.69325pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--431
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--437
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 443--445
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--449
-
- []
-
-[17 <./7.Strain_energy_eq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--456
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 459--462
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 464--468
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 470--472
-
- []
-
-[18]
-
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 483.
-
-
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 483.
-
-Missing character: There is no ´ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 484--487
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 513--516
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 513--516
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 533--534
-
- []
-
-[20] [21]
-<5. FRP failure.png, id=99, 635.37375pt x 303.534pt>
-File: 5. FRP failure.png Graphic file (type png)
-<use 5. FRP failure.png>
-Package pdftex.def Info: 5. FRP failure.png  used on input line 553.
-(pdftex.def)             Requested size: 226.48395pt x 108.19763pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 550--558
-
- []
-
-[22] [23 <./5. FRP failure.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 567--594
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 567--594
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--623
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--623
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--623
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--623
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 625--630
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 625--630
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 625--630
-
- []
-
-[25]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 631.
-
-LaTeX Font Info:    Calculating math sizes for size <> on input line 640.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 640.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 640.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 640--645
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 640--645
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 646.
-
-
-Overfull \hbox (54.7907pt too wide) detected at line 658
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 658--663
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 658--663
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 664.
-
-
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 678.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 675--679
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 680--685
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 680--685
-
- []
-
-[26]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 686.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--698
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--698
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 699.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 705--710
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 705--710
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 711.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--722
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--722
-
- []
-
-[27]
-<8.Types_of_damage_evolution.png, id=120, 468.5505pt x 287.8755pt>
-File: 8.Types_of_damage_evolution.png Graphic file (type png)
-<use 8.Types_of_damage_evolution.png>
-Package pdftex.def Info: 8.Types_of_damage_evolution.png  used on input line 72
-8.
-(pdftex.def)             Requested size: 317.07614pt x 194.81711pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 736--738
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 736--738
-
- []
-
-[28 <./8.Types_of_damage_evolution.png>]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 739.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 741--744
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 745.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 746--748
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 749.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 750--753
-
  []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 754.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 758.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 762.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 767--768
-
- []
-
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 778--781
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 791--792
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 805.
-
-[30]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 809.
 
-[31] [32] (Report.aux)
+[2] (Report2.aux)
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 4.5pt have occurred.
+(Font)              up to 0.78749pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 16990 strings out of 479321
- 343661 string characters out of 2856583
- 716203 words of memory out of 3000000
- 34114 multiletter control sequences out of 15000+600000
- 417569 words of font info for 83 fonts, out of 8000000 for 9000
+ 16525 strings out of 479321
+ 335238 string characters out of 2856583
+ 696859 words of memory out of 3000000
+ 33689 multiletter control sequences out of 15000+600000
+ 405546 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,13n,89p,1480b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\aruns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1440.pk><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aruns/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aruns/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aruns/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/a
-runs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
-/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb>
-Output written on Report.pdf (32 pages, 1287989 bytes).
+ 87i,5n,89p,948b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb>
+Output written on Report2.pdf (2 pages, 157898 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
+ 27 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
