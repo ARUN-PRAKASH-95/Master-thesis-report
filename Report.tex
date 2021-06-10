@@ -23,7 +23,7 @@
     \setlength{\@fptop}{0pt}
     \makeatother
     \tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 4cm, minimum height=1cm, text centered,text width = 5cm, draw = black, fill=white!10]    
-     \tikzstyle{process} = [rectangle,  minimum width = 4cm, minimum height=1cm, text centered, text width = 5cm,draw = black, fill = white!10]  
+     \tikzstyle{process} = [rectangle,  minimum width = 4.2cm, minimum height=1.5cm, text centered, text width = 5cm,draw = black, fill = white!10]  
 	 \tikzstyle{decision} = [diamond, minimum width = 4cm, minimum height=1cm, text centered,text width = 3cm, draw = black, fill = white!10]  
      \tikzstyle{arrow} = [thick,->,>=stealth]  
 
@@ -535,6 +535,27 @@ $$
  where $\Delta = (1 - \nu_{xy}\nu_{yx} - \nu_{yz}\nu_{zy} - \nu_{zx}\nu_{xz} - 2\nu_{xy}\nu_{yz}\nu_{zx})/E_{x}E_{y}E_{z}$ and 
   $ \frac{\nu_{xy}}{E_{y}} = \frac{\nu_{yx}}{E_{x}}, \frac{\nu_{yz}}{E_{z}} = \frac{\nu_{zy}}{E_{y}}, \frac{\nu_{xz}}{E_{z}} = \frac{\nu_{zx}}{E_{x}},  $
 
+\newpage
+\vspace*{2cm}
+\section{Working environment}
+\vspace*{1cm}
+\indent\indent\indent  The user material subroutines (USERMAT) necessary for simulating progressive damage models must be programmed first using a programming language, compiled and then can be tested in a commercial FEM software. The programming language of choice for most commercial software is FORTRAN because they are simple and fast. In order to program the USERMAT an integrated development environment (IDE) and a compiler which is compatible with the version of the FEM software is required. In this chapter the tools required for creating USERMAT and how to compile and test the subroutines is described in detail.  
+\vspace*{1cm}
+\subsection{Software tools required}
+\begin{itemize}
+\item \textbf{OCTAVE}\\ \indent
+\hspace*{13mm} Octave is an open source version of programming language software MATLAB. Initially, the user material subroutines are developed on Octave and tested using simple tests like uniaxial tension with the help of constitutive driver routines
+\item \textbf{Visual studio community 2015}\\
+\hspace*{13mm} Visual studio is the IDE used for programming and debugging user material subroutines using FORTRAN programming language.
+\item \textbf{Intel parallel studio 2017}\\
+\hspace*{13mm} The compiler available in Intel parallel studio is used for compiling the USERMAT before testing them in an FEM software
+\item \textbf{ANSYS 19.1}\\
+\hspace*{13mm}ANSYS is the commercial FEM software chosen for creating specimens and analyzing how the subroutines behave in different test conditions
+\end{itemize}
+
+
+
+\newpage
 \subsection{Fibre-reinforced Composites}
 \indent\indent\indent  Fibre reinforced plastic composites is a term for large family of materials ranging from short fibre reinforced polyesters to unidirectional graphite fibre epoxies. Fibre reinforced composites consists of three components 1) the fibres as the discontinuous or dispersed phase 2) the matrix as the continuous phase and 3) the fine inter-phase region also known as the interface. The different combination of fibre and matrix material lead to different material properties and also the manifestation of the fibres and the manufacturing techniques. The first fibres used in fibre reinforced plastics are made of glass. Although the virgin strength of the glass is high, the actual strength is limited by the microscopic defects on the surface of the fibre. The graphite fibres are anisotropic due to their laminar structure. Graphite fibres maintain their strength even at high temperatures. Two types of plastics are commonly used as matrix materials, namely unsaturated polyesters and epoxies. The use of unsaturated polyesters is restricted to temperatures upto 100C. The main advantage of this material is the high amount of shrinkage at hardening , which causes high internal stress and decrease the strength of the material.  The characteristics of epoxy are better than polyester resins. The material can withstand temperatures upto 250C and shrinks only  2\%  at hardening. But epoxy resins are high in price compared to the polyesters.
 \subsection{Manufacturing techniques}
@@ -550,17 +571,17 @@ $$
 \indent\indent\indent  Transverse failure happens due to matrix cracking and fibre-matrix debonding. Under the presence of in-plane shear stress and transverse tensile stress, the combined effects of defects such as resin rich regins, fibre-resin debonds, and resin voids, trigger a transverse crack that extends through the thickness. The transverse cracks are formed at fibre-resin interface without affecting the fibres. When and unidirectional fibre composite is loaded in shear, a non-linear shear stress-strain behaviour is observed before the material fails by through thickness matrix cracking. This non-linear behaviour is due to the visco-plastic behaviour of the matrix, and from the nucleation of microvoids.\\
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{{5. FRP failure.png}}
+\includegraphics[width=0.7\textwidth]{{5. FRP failure.png}}
  \caption{Fracture planes in FRP material}
  \label{fig:FRP failure}
  \end{center}
 \end{figure}\\
 
- Experimental results have shown that moderate compression has beneficial effects on the strength of the material (Soden et al., 1998), when the transverse compressive stress value is smaller compared to the in-plane shear stress, the fracture plane is perpendicular to the mid-plane of the ply. Increasing the compressive stress changes angle of the fracture plane. For glass-epoxy and carbon-epoxy composites when loaded in pure tranverse compression, the fracture plane is at an angle of 53° $\pm$ 3° wiht respect to thickness direction. Therefore, the matrix cracking does not occur in the plane of maximum transverse shear stress (45°).
+ Experimental results have shown that moderate compression has beneficial effects on the strength of the material (Soden et al., 1998), when the transverse compressive stress value is smaller compared to the in-plane shear stress, the fracture plane is perpendicular to the mid-plane of the ply. Increasing the compressive stress changes angle of the fracture plane. For glass-epoxy and carbon-epoxy composites when loaded in pure tranverse compression, the fracture plane is at an angle of 53° $\pm$ 3° with respect to thickness direction. Therefore, the matrix cracking does not occur in the plane of maximum transverse shear stress (45°).
 
 
 \newpage
-\section{Failure analysis of composite materials}
+\section{Progressive Failure analysis }
 \subsection{Damage initiation criteria}
 \indent\indent\indent  Damage initiation criteria refers to the onset of damage at a material point. Since the properties of the orthotropic materials change in mutually perpendicular direction three failure mode index, $F_{f}, F_{m}, F_{z}$, are used for failure modes in three principal material directions. Since the failure due to tension and compression in each direction cannot happen at same integration point and at the same time, the failure mode index must be calculated based on whether the material direction is under tension or compression. Both strain and stress based damage initiation criteria can be employed based on the application. Some of the damage initiation criteria are given as follows
 \subsubsection{Maximum strain criteria}
@@ -812,34 +833,74 @@ The material tangent stiffness tensor for anisotropic damage can also be derived
 \begin{equation}
 \mathbb{C}_{T}  \; = \; \mathbb{C}(D) + \sum_{i = 1}^{3} \Big( \frac{\partial \mathbb{C}(D) }{\partial d_{i}} : \epsilon \otimes \frac{\partial d_{i}}{\partial \epsilon }\Big) 
 \end{equation}
-In the above equation, the second term(i.e., due to increased damage) must be computed only if the corresponding failure mode is active.
-
+In the above equation, the second term(i.e., due to increased damage) must be computed only if the corresponding failure mode is active. Since the damage evolution equation $d_{i}$ depends on failure index, the term $\frac{\partial d_{i}}{\partial \epsilon }$ must be computed based on whether the damage happened during tension or compression.
 
 \begin{center}
 \begin{tikzpicture}[node distance = 1.8cm]
 
 \node(straininc) [startstop] {Apply increment $\Delta\epsilon$};
-\node(strainadd) [process, below of = straininc] {$\epsilon_{n+1} = \epsilon_{n} + \Delta\epsilon $};
-\node(Failure)   [process, below of = strainadd] {Failure Criteria};
+\node(strainadd) [process, below of = straininc] {$\underline{\epsilon}_{n+1} = \underline{\epsilon}_{n} + \underline{\Delta\epsilon} $};
+\node(Failure)   [process, below of = strainadd] {Failure Criteria ($F_{I}(\underline{\epsilon}))$};
 \node(Damageon)  [decision, below of = Failure, yshift=-1.5cm] {Damage onset?};
 \node(Damagecalc) [process, below of = Damageon, yshift=-1.8cm] {Calculate damage variables};
 \node(Materialeqn)[process, below of = Damagecalc, yshift=-0.3cm] {Material constitutive equations};
-\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] {Updating: \; $\sigma = C_{d}.\; \epsilon_{n + 1}$ \\  $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
+\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] { $\underline{\sigma} = \mathbb{C}(D):\underline{\epsilon}_{n + 1}$ \\ $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
 \node(abaqus)[startstop, below of = Tangent, yshift=-0.5cm] {ANSYS solver};
 \node(Converge)[decision, below of = abaqus, yshift=-1cm] {Converged?};
 
 \draw [arrow] (straininc) -- (strainadd);
 \draw [arrow] (strainadd) -- (Failure);
 \draw [arrow] (Failure) -- (Damageon);
-\draw [arrow] (Damageon) -- (Damagecalc);
+\draw [arrow] (Damageon) -- node[anchor = west]{yes} (Damagecalc);
 \draw [arrow] (Damagecalc) -- (Materialeqn);
 \draw [arrow] (Materialeqn) -- (Tangent);
 \draw [arrow] (Tangent) -- (abaqus);
 \draw [arrow] (abaqus) -- (Converge);
- 
-     
-     
+\draw [arrow] (Damageon.east) node[xshift=0.6cm,anchor = south]{no} -| ++(1,-5.8) -- ++(-0.7,0)  (Materialeqn);
 
+\draw [arrow] (Converge.west)node[xshift=-1.7cm,yshift=-0.3cm,anchor = north]{yes} -| node[xshift=10cm,sloped,above]{Next increment until failure or end of analysis}++(-4.5,19.9) -- ++ (4,0) (straininc); 
+
+\draw [arrow] (Converge.east)node[xshift=1.7cm,yshift=-0.3cm,anchor = north]{no} -| node[xshift=10.5cm,sloped,below]{Iterate until convergence} ++(3.8,19.2)-- ++ (-5.9,0)  (straininc); 
+
+\draw [arrow] (0,-16.25)-|node[xshift=6.5cm,sloped,above]{Do for each integration point}++(-4.5,15.4)--(-0,-0.9);
+
+ 
+\end{tikzpicture}
+\end{center}
+
+
+
+
+\begin{center}
+\begin{tikzpicture}[node distance = 1.8cm]
+
+\node(straininc) [startstop] {Apply increment $\Delta\epsilon$};
+\node(strainadd) [process, below of = straininc] {Find effective stress \\ $\underline{\tilde{\sigma}}_{n+1} = \mathbb{C}_{0} : \underline{\epsilon}_{n+1} $};
+\node(Failure)   [process, below of = strainadd] {Failure Criteria ($F_{I}(\underline{\sigma}))$};
+\node(Damageon)  [decision, below of = Failure, yshift=-1.5cm] {Damage onset?};
+\node(Damagecalc) [process, below of = Damageon, yshift=-1.8cm] {Calculate damage variables};
+\node(Materialeqn)[process, below of = Damagecalc, yshift=-0.3cm] {Material constitutive equations};
+\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] {$\underline{\sigma} = M(D)^{-1}:\underline{\tilde{\sigma}}_{n+1}$ \\  $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
+\node(abaqus)[startstop, below of = Tangent, yshift=-0.5cm] {ANSYS solver};
+\node(Converge)[decision, below of = abaqus, yshift=-1cm] {Converged?};
+
+\draw [arrow] (straininc) -- (strainadd);
+\draw [arrow] (strainadd) -- (Failure);
+\draw [arrow] (Failure) -- (Damageon);
+\draw [arrow] (Damageon) -- node[anchor = west]{yes} (Damagecalc);
+\draw [arrow] (Damagecalc) -- (Materialeqn);
+\draw [arrow] (Materialeqn) -- (Tangent);
+\draw [arrow] (Tangent) -- (abaqus);
+\draw [arrow] (abaqus) -- (Converge);
+\draw [arrow] (Damageon.east) node[xshift=0.6cm,anchor = south]{no} -| ++(1,-5.8) -- ++(-0.7,0)  (Materialeqn);
+
+\draw [arrow] (Converge.west)node[xshift=-1.7cm,yshift=-0.3cm,anchor = north]{yes} -| node[xshift=10cm,sloped,above]{Next increment until failure or end of analysis}++(-4.5,19.9) -- ++ (4,0) (straininc); 
+
+\draw [arrow] (Converge.east)node[xshift=1.7cm,yshift=-0.3cm,anchor = north]{no} -| node[xshift=10.5cm,sloped,below]{Iterate until convergence} ++(3.8,19.2)-- ++ (-5.9,0)  (straininc); 
+
+\draw [arrow] (0,-16.25)-|node[xshift=6.5cm,sloped,above]{Do for each integration point}++(-4.5,15.4)--(-0,-0.9);
+
+ 
 \end{tikzpicture}
 \end{center}
 \end{document}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  10 JUN 2021 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  4 JUN 2021 13:29
 entering extended mode
-**./Report.tex
-(Report.tex
+**./flowchart.tex
+(flowchart.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.cls
@@ -639,30 +639,23 @@ File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 aryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \arrowsize=\dimen289
-))
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
-Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip70
-\thanksmargin=\skip71
-\droptitle=\skip72
-)
-(Report.aux)
-\openout1 = `Report.aux'.
+)) (flowchart.aux)
+\openout1 = `flowchart.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -727,574 +720,37 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 53.
-
-<logo.png, id=4, 1204.5pt x 1187.43625pt>
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 53.
-(pdftex.def)             Requested size: 170.71652pt x 168.28737pt.
-[1
-
-{C:/Users/aruns/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo.png>]
-<composite plane.jpg, id=14, 2710.125pt x 1212.53pt>
-File: composite plane.jpg Graphic file (type jpg)
-<use composite plane.jpg>
-Package pdftex.def Info: composite plane.jpg  used on input line 59.
-(pdftex.def)             Requested size: 362.37569pt x 162.13034pt.
-
-[2 <./composite plane.jpg>] [3]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<1. Damage.png, id=21, 366.77025pt x 365.56575pt>
-File: 1. Damage.png Graphic file (type png)
-<use 1. Damage.png>
-Package pdftex.def Info: 1. Damage.png  used on input line 74.
-(pdftex.def)             Requested size: 181.18439pt x 180.59024pt.
+[1
 
-[4 <./1. Damage.png>] [5]
-Overfull \hbox (6.95985pt too wide) in paragraph at lines 106--106
-[]\OT1/cmr/bx/n/17.28 Concept of Con-tin-uum dam-age me-chan-ics (CDM) 
- []
-
-<Damage2.png, id=31, 449.88075pt x 287.27325pt>
-File: Damage2.png Graphic file (type png)
-<use Damage2.png>
-Package pdftex.def Info: Damage2.png  used on input line 122.
-(pdftex.def)             Requested size: 362.37569pt x 231.39694pt.
-[6]
-<3. Damage_cylinder.png, id=38, 471.56175pt x 292.09125pt>
-File: 3. Damage_cylinder.png Graphic file (type png)
-<use 3. Damage_cylinder.png>
-Package pdftex.def Info: 3. Damage_cylinder.png  used on input line 141.
-(pdftex.def)             Requested size: 362.37569pt x 224.4697pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
-
- []
-
-[7 <./Damage2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
-
- []
-
-[8 <./3. Damage_cylinder.png>] [9]
-<4. Damage.png, id=51, 387.24675pt x 250.536pt>
-File: 4. Damage.png Graphic file (type png)
-<use 4. Damage.png>
-Package pdftex.def Info: 4. Damage.png  used on input line 185.
-(pdftex.def)             Requested size: 226.48395pt x 146.53046pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-
- []
-
-[10 <./4. Damage.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
-
- []
-
-
-Overfull \hbox (6.62654pt too wide) in paragraph at lines 227--229
-\OT1/cmr/m/n/14.4 Since the dam-age ten-sor $\U/msb/m/n/14.4 D$ \OT1/cmr/m/n/14
-.4 given by Eqn(17[]) is asym-met-ric, Chaboche(1993)
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
-
- []
-
-
-Overfull \hbox (2.35005pt too wide) in paragraph at lines 248--248
-[]\OT1/cmr/bx/n/14.4 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam
--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
-
-Overfull \hbox (2.35005pt too wide) in paragraph at lines 254--254
-[]\OT1/cmr/bx/n/14.4 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam
--
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 259--261
-
- []
-
-
-Overfull \hbox (2.35005pt too wide) in paragraph at lines 261--261
-[]\OT1/cmr/bx/n/14.4 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam
--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--288
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--288
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 304--306
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--334
-
- []
-
-[14]
-<6. Strain_eq.png, id=72, 481.8pt x 233.07076pt>
-File: 6. Strain_eq.png Graphic file (type png)
-<use 6. Strain_eq.png>
-Package pdftex.def Info: 6. Strain_eq.png  used on input line 356.
-(pdftex.def)             Requested size: 362.37569pt x 175.30408pt.
- [15 <./6. Strain_eq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 400--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 404--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
-
- []
-
-[16]
-<7.Strain_energy_eq.png, id=80, 570.33075pt x 260.77425pt>
-File: 7.Strain_energy_eq.png Graphic file (type png)
-<use 7.Strain_energy_eq.png>
-Package pdftex.def Info: 7.Strain_energy_eq.png  used on input line 423.
-(pdftex.def)             Requested size: 362.37569pt x 165.69325pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--431
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--437
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 443--445
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--449
-
- []
-
-[17 <./7.Strain_energy_eq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--456
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 459--462
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 464--468
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 470--472
-
- []
-
-[18]
-
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 483.
-
-
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 483.
-
-Missing character: There is no ´ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 484--487
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 513--516
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 513--516
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 533--534
-
- []
-
-[20] [21] [22]
-<5. FRP failure.png, id=102, 635.37375pt x 303.534pt>
-File: 5. FRP failure.png Graphic file (type png)
-<use 5. FRP failure.png>
-Package pdftex.def Info: 5. FRP failure.png  used on input line 574.
-(pdftex.def)             Requested size: 317.07614pt x 151.47946pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 571--579
-
- []
-
-[23] [24 <./5. FRP failure.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 588--615
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 588--615
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 616--644
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 616--644
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 616--644
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 616--644
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 646--651
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 646--651
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 646--651
-
- []
-
-[26]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 652.
-
-LaTeX Font Info:    Calculating math sizes for size <> on input line 661.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 661.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 661.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 661--666
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 661--666
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 667.
-
-
-Overfull \hbox (54.7907pt too wide) detected at line 679
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 679--684
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 679--684
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 685.
-
-
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 699.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 696--700
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 701--706
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 701--706
-
- []
-
-[27]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 707.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--719
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 714--719
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 720.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 726--731
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 726--731
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 732.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 738--743
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 738--743
-
- []
-
-[28]
-<8.Types_of_damage_evolution.png, id=123, 468.5505pt x 287.8755pt>
-File: 8.Types_of_damage_evolution.png Graphic file (type png)
-<use 8.Types_of_damage_evolution.png>
-Package pdftex.def Info: 8.Types_of_damage_evolution.png  used on input line 74
-9.
-(pdftex.def)             Requested size: 317.07614pt x 194.81711pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 757--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 757--759
-
- []
-
-[29 <./8.Types_of_damage_evolution.png>]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 760.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 762--765
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 766.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 767--769
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 770.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 771--774
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 775.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 779.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 783.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 799--802
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 812--813
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 826.
-
-[31]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 830.
-
-[32] [33] [34] (Report.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 4.5pt have occurred.
-
- ) 
+{C:/Users/aruns/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+(flowchart.aux) ) 
 Here is how much of TeX's memory you used:
- 17001 strings out of 479321
- 343863 string characters out of 2856583
- 716211 words of memory out of 3000000
- 34125 multiletter control sequences out of 15000+600000
- 417569 words of font info for 83 fonts, out of 8000000 for 9000
+ 16747 strings out of 479321
+ 339591 string characters out of 2856583
+ 703313 words of memory out of 3000000
+ 33900 multiletter control sequences out of 15000+600000
+ 406029 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,13n,89p,1480b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\aruns\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1440.pk><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aruns/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aruns/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aruns/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/a
-runs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
-/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb>
-Output written on Report.pdf (34 pages, 1293829 bytes).
+ 87i,8n,89p,437b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aruns/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on flowchart.pdf (1 page, 43782 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
+ 25 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
