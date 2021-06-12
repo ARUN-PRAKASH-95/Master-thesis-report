@@ -539,7 +539,7 @@ $$
 \vspace*{2cm}
 \section{Working environment}
 \vspace*{1cm}
-\indent\indent\indent  The user material subroutines (USERMAT) necessary for simulating progressive damage models must be programmed first using a programming language, compiled and then can be tested in a commercial FEM software. The programming language of choice for most commercial software is FORTRAN because they are simple and fast. In order to program the USERMAT an integrated development environment (IDE) and a compiler which is compatible with the version of the FEM software is required. In this chapter the tools required for creating USERMAT and how to compile and test the subroutines is described in detail.  
+\indent\indent\indent  The user material subroutines (USERMAT) necessary for simulating progressive damage models must be programmed first using a programming language, compiled and then can be tested in a commercial FEM software. The programming language of choice for most commercial FEM software is FORTRAN because they are simple and fast. In order to program the USERMAT an integrated development environment (IDE) and a compiler which is compatible with the version of the FEM software is required. In this chapter the tools required for creating USERMAT and how to use them in order to test the subroutines is described in detail.  
 \vspace*{1cm}
 \subsection{Software tools required}
 \begin{itemize}
@@ -553,14 +553,131 @@ $$
 \hspace*{13mm}ANSYS is the commercial FEM software chosen for creating specimens and analyzing how the subroutines behave in different test conditions
 \end{itemize}
 
+The following sections provide the reader a detailed description starting from how to develop the user defined material subroutine to how to implement and analyse the results in the ANSYS environment.  The flowchart below shows the steps involved in the whole process\\
+\begin{center}
+\begin{tikzpicture}[node distance = 3cm]
+
+\node(start) [process] {Programming the UMAT};
+\node(compile) [process, below of = start] {Compiling the UMAT};
+\node(Model)   [process, below of = compile] {Creating FE model};
+\node(solve) [process, below of = Model] {Testing the UMAT};
+\node(post)[process, below of = solve] {PostProcessing};
+
+
+\draw [arrow] (start) -- (compile);
+\draw [arrow] (compile) -- (Model);
+\draw [arrow] (Model) -- (solve);
+\draw [arrow] (solve) -- (post);
+
+
+\end{tikzpicture}
+\label{Schematic of UMAT implementation}
+\end{center}
+\vspace*{0.6cm}
+\subsection{Programming the UMAT}
+\indent\indent\indent  The user material subroutine is an ANSYS programmable feature which allows user to write their own material constitutive equations with in a newly developed general material framework. The subroutine is called at all material integration points of the element during solution phase. ANSYS uses FORTRAN as the programming language for creating user programmable features. Therefore Visual Studio is the IDE used for developing these FORTRAN subroutines.\\
+\indent\indent\indent ANSYS demands the necessary variables declared in certain way so that the USERMAT developed can work compatibly with ANSYS when it is called at each integration points. The guidelines for declaring input and output arguments can be found on ANSYS' usermat guide.  The following image shows the user subroutine interface with the set of possible input arguments that can accessed by USERMAT from ANSYS \\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{{9.Usermat_input}}
+ \caption{Usermat Interface}
+ \label{fig:Usermat Interface}
+ \end{center}
+\end{figure}\\
+
+For every Newton raphson iteration, the USERMAT is called at every material integration point and the ANSYS passes in strains, stresses and state variables at the beginning of the time increment and the current strain increment. The USERMAT then has to compute and update the necessary output arguments like stresses and state variables at the end of the increment and the material tangent stiffness matrix $\frac{\partial \sigma}{\partial \epsilon} $.
+\vspace*{0.6cm}
+\subsection{Compiling UMAT}
+\indent\indent\indent The user programmable subroutines must be compiled before testing them in ANSYS environment. The process of compilation first checks for errors in the source and then converts them into ANSYS executable files (.dll files) which then can be used by ANSYS. The compiler present in Intel parallel studio is used for this purpose. The step by step process of compiling the UMAT is given below\\
+\begin{itemize}
+\item Create an empty directory and copy the usermat file that you want to compile (.f files) into the empty directory.
+\item Change the name of your usermat file to $usermat$
+\item Go to "Control Panel$>$Search System$>$Edit the system environment variables$>$Environment variables" and click New in the user variables for your PC which opens a window
+\item In that window, type ANS\_USER\_PATH for variable name and for variable value, copy and paste the path to your working directory and click Ok
+\item Go to folder "C:\texttt{\textbackslash} Program Files\texttt{\textbackslash} ANSYS Inc\texttt{\textbackslash} v181\texttt{\textbackslash} ansys\texttt{\textbackslash} custom\texttt{\textbackslash} user\texttt{\textbackslash} win64" and copy the ANSUSERSHARED.bat file and paste it in the working directory
+\item Open command prompt and navigate to the working directory
+\item Type ANSUSERSHARED.bat and press enter. This opens the Intel compiler and asks for user-programmable feature source file name
+\item Type $usermat$ without extension and press Enter.
+\item If there is no error in the usermat file the compiler will show the message "usermatLib.dll has been successfully build." as shown in the Fig.(\ref{fig:Intelcompiler}) below 
+\item In order for the ANSYS to access these .dll files, open ANSYS Mechanical APDL product launcher and in the file management section browse to the current working directory
+\item Click run and in the Mechanical APDL output window you shoud see the message "Note - This ANSYS version was linked by Licensee". This indicates that you are using the shared library with the USERMAT\\
+\end{itemize} 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{{10.Intelcompiler}}
+ \caption{Intel compiler window}
+ \label{fig:Intelcompiler}
+ \end{center}
+\end{figure}
+\vspace*{0.6cm}
+\subsection{Creating FE model}
+\indent\indent\indent  The preprocessor section of the ANSYS mechanical APDL is used to create and mesh the FE model. The ANSYS user programmable feature can be used with 18x family elements, which include LINK180, PLANE 182, PLANE 183, SOLID 185, SOLID 186. The type of element required for creating FE model based on the problem can be chosen from the element type menu in preprocessor section. Once the element type is chosen the material model and the material properties can be entered in the $Material\; props$ section.  The $Modelling$ section can be utilised to create the geometry required for testing the subroutines and then can be meshed using the $Meshing$ option.\\ \indent\indent\indent In order to use the FE model again and again to test different material models with different material properties the FE model can be saved in the form of an APDL script. An APDL script is a simple text file which contains the command required to create and solve and FE model. A simple way to create an APDL script for an FE model is to copy the log of commands which were automatically created in the log file during the creation of your model and pasting it a new text file. This log file can be accessed by going to $List>Files>Logfile$. The created APDL script can then be accessed by going to $File>Read \;input\; from$ and navigate and select your file. A simple APDL script for creating a square with isotropic material properties under uniaxial tension is shown in the Fig.(\ref{fig:APDL_script}) below\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{{11.APDL_script}}
+ \caption{APDL Script}
+ \label{fig:APDL_script}
+ \end{center}
+\end{figure}
+
+\subsection{Testing UMAT}
+\indent\indent\indent  To use the user material option, the TB,USER command must be included in the APDL script so that the user material can be defined. The table command for USER material option is\\
+\\
+\textbf{TB,USER,matId,NTEMPS,NPTS}
+\\
+\\
+\indent matId - material reference number
+\\
+\\
+\indent NTEMPS - Number of temperature points 
+\\
+\\
+\indent NPTS  -  Number of material constants at a given temperature
+\\
+\\
+If state variables are used in the subroutine, the number of state variables need to be defined in the APDL script by the command TB,STATE\\
+\\
+\textbf{TB,STATE,matId,,NPTS}\\
+\\
+\indent matId - material reference number
+\\
+\\
+\indent NPTS - Number of state variables to be used in USERMAT
+\\
+\\
+A simple example for defining user material and two state variables is given int the Fig.(\ref{fig:Tb}) below
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.3\textwidth]{{12.Tb}}
+ \caption{Table (TB) commands}
+ \label{fig:Tb}
+ \end{center}
+\end{figure}
+\vspace*{0.4cm}
+Before defining boundary conditions (BCs) the entities required for solving the FE model such as time at the end of load step, number of steps, the results to be stored etc., must be defined. This can be done using $Sol'n\; Controls$ option in the solution menu. Once the BCs are defined the model can be solved by giving the command $SOLVE$. 
+\vspace*{0.6cm}
+\subsection{PostProcessing}
+\indent\indent\indent Once the FE model has finished solving, the results then can be analyzed using the 'General Postprocessor' option. The nodal and elemental solution for components like stress, strain, displacement etc., can be plotted using the 'contour plot' option which can be found on Plot results. By default this option plots the results at last sub step, so to plot the solution at the sub step of your choice one must navigate to $Read\;results>By\;pick$ and select the substep to be plotted. Then the results of that substep can be plotted using 'contour plot' option mentioned before. Since the  posprocessor of ANSYS doesnot have GUI option for plotting state variables the following command must be given: $ plnsol,svar,n $ where $n$ is the number of the state variable to be plotted.\\
+\indent\indent\indent  The time history of a certain variable such stress,reaction force, strain etc., at a node or an element can be plotted using $TimeHist\;Postpro$ option. On clicking the $TimeHist\;Postpro$ option a $Variable\;List$ window opens up. In order to add the variables to plot, click the green add symbol on the top-left corner which opens a window with the list of variables that can be added to the $Variable\;List$ window. Once the variables has been added the variables can be plotted against each other or against time. Fig.(\ref{fig:Timehist}) shows the $Variable\;List$ window with X-component of force and displacement of node 3 selected and plotted against each other.\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{{13.Timehist}}
+ \caption{Time history post processor window}
+ \label{fig:Timehist}
+ \end{center}
+\end{figure}
+\vspace*{0.6cm}
+The time history results of each variable at node or an element can also be saved as text file using $List\;Data$ option in the 
+$Variable\;List$ window. 
 
 
 \newpage
+\vspace*{2cm}
+\section{Progressive Failure analysis of composites }
+\vspace*{1cm}
 \subsection{Fibre-reinforced Composites}
 \indent\indent\indent  Fibre reinforced plastic composites is a term for large family of materials ranging from short fibre reinforced polyesters to unidirectional graphite fibre epoxies. Fibre reinforced composites consists of three components 1) the fibres as the discontinuous or dispersed phase 2) the matrix as the continuous phase and 3) the fine inter-phase region also known as the interface. The different combination of fibre and matrix material lead to different material properties and also the manifestation of the fibres and the manufacturing techniques. The first fibres used in fibre reinforced plastics are made of glass. Although the virgin strength of the glass is high, the actual strength is limited by the microscopic defects on the surface of the fibre. The graphite fibres are anisotropic due to their laminar structure. Graphite fibres maintain their strength even at high temperatures. Two types of plastics are commonly used as matrix materials, namely unsaturated polyesters and epoxies. The use of unsaturated polyesters is restricted to temperatures upto 100C. The main advantage of this material is the high amount of shrinkage at hardening , which causes high internal stress and decrease the strength of the material.  The characteristics of epoxy are better than polyester resins. The material can withstand temperatures upto 250C and shrinks only  2\%  at hardening. But epoxy resins are high in price compared to the polyesters.
-\subsection{Manufacturing techniques}
-\indent\indent\indent The manufacturing techniques depend on the way in which fibres are used. The fibres can be laid in unidirectional fashion or combined to fibre bundles, woven mats, mats with randomly distributed long curled fibres and binding between the fibres etc., For short fibres the method of spraying in which the cut fibres are sprayed in a mould together with the matrix resin is often used. The fibre orientation in this process is random which leads to nearly an isotropic material. If unidirectional fibre mats are placed in mould and resin is added the resulting material will be orthotropic. For graphite fibres combined with epoxy resin special type of reinforcement called prepegs in which fibres are already combined with a matrix material and hardened till they are dried. \\
-\indent\indent\indent  The hardening of the composite can take place under high temperature, high pressure or simply at room temperature for all procedures in which resin is added to the fibres in the mould, the so called wet process. In dry process the fibres are combined under high temperature or high pressure to let the matrix material completely harden as one.The hardening process influences the strength of the material. For example high temperature hardening leads to residual stress in material due to the temperature drop when the product is cooled to room temperature. Besides hardening the binging of the fibres and resin influences the material behaviour and thus failure strength. The binding can be improved by surface treatment of fibres which increases roughness.
+
 \subsection{Mechanisms of damage and failure in fibre reinforced composites}
 \indent\indent\indent The failure in fibre reinforced composites happens mainly due to matrix cracking or fibre failure. Therefore the failure can be divided mainly two types namely 1) Longitudinal failure and 2) Transverse failure. The mechanism of both failure mechanisms, its causes and its effects on material behaviour are discussed in detail below
 
@@ -580,8 +697,7 @@ $$
  Experimental results have shown that moderate compression has beneficial effects on the strength of the material (Soden et al., 1998), when the transverse compressive stress value is smaller compared to the in-plane shear stress, the fracture plane is perpendicular to the mid-plane of the ply. Increasing the compressive stress changes angle of the fracture plane. For glass-epoxy and carbon-epoxy composites when loaded in pure tranverse compression, the fracture plane is at an angle of 53° $\pm$ 3° with respect to thickness direction. Therefore, the matrix cracking does not occur in the plane of maximum transverse shear stress (45°).
 
 
-\newpage
-\section{Progressive Failure analysis }
+
 \subsection{Damage initiation criteria}
 \indent\indent\indent  Damage initiation criteria refers to the onset of damage at a material point. Since the properties of the orthotropic materials change in mutually perpendicular direction three failure mode index, $F_{f}, F_{m}, F_{z}$, are used for failure modes in three principal material directions. Since the failure due to tension and compression in each direction cannot happen at same integration point and at the same time, the failure mode index must be calculated based on whether the material direction is under tension or compression. Both strain and stress based damage initiation criteria can be employed based on the application. Some of the damage initiation criteria are given as follows
 \subsubsection{Maximum strain criteria}
