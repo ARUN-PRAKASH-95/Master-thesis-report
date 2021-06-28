@@ -1,4 +1,4 @@
-\documentclass[a4paper,14pt]{extarticle}
+\documentclass[a4paper,12pt]{extarticle}
     \usepackage{amsmath}
     \usepackage{nccmath}
     \usepackage{amsfonts}
@@ -14,7 +14,7 @@
 	\usepackage{float}
 	\usepackage{subcaption}
     \usepackage{multirow}
-    \usepackage[top=1in, bottom=1.1in, left=1in, right=1in]{geometry}
+    \usepackage[top=1in, bottom=1.1in, left=1.1in, right=1.1in]{geometry}
     \usepackage{fancyhdr}
     \usepackage{relsize}
     \usepackage{tikz}
@@ -51,6 +51,7 @@
 \date{}
 \begin{document}
 \maketitle
+\newpage
 \section{Introduction}
 \subsection{Background and motivation}
 \indent\indent Composite materials are made of two or more dissimilar materials of different physical or chemical properties when combined, create a material with properties unlike the individual constituent materials. The earliest use of composite materials date back to 3400 B.C when Mesopotamians glued wood strips at different angles to create plywood. Another notable example is the bow made by Mongols during 1200 A.D, which is made from a combination of bamboo, wood, cattle tendons and silk bonded with natural resin. In the early, 1900s bakelite based composites were developed for its non-conductivity and heat resistant properties and widely used in industrial and consumer applications. Now a days advanced composite materials are widely used in structural design in various industries such as aerospace, automobile, marine, petrochemical etc., due to their superior properties over traditional engineering materials.\\
@@ -673,7 +674,7 @@ $Variable\;List$ window.
 
 \newpage
 \vspace*{2cm}
-\section{Progressive Failure analysis of composites }
+\section{Progressive Failure analysis of Orthotropic composite materials }
 \vspace*{1cm}
 \subsection{Fibre-reinforced Composites}
 \indent\indent\indent  Fibre reinforced plastic composites is a term for large family of materials ranging from short fibre reinforced polyesters to unidirectional graphite fibre epoxies. Fibre reinforced composites consists of three components 1) the fibres as the discontinuous or dispersed phase 2) the matrix as the continuous phase and 3) the fine inter-phase region also known as the interface. The different combination of fibre and matrix material lead to different material properties and also the manifestation of the fibres and the manufacturing techniques. The first fibres used in fibre reinforced plastics are made of glass. Although the virgin strength of the glass is high, the actual strength is limited by the microscopic defects on the surface of the fibre. The graphite fibres are anisotropic due to their laminar structure. Graphite fibres maintain their strength even at high temperatures. Two types of plastics are commonly used as matrix materials, namely unsaturated polyesters and epoxies. The use of unsaturated polyesters is restricted to temperatures upto 100C. The main advantage of this material is the high amount of shrinkage at hardening , which causes high internal stress and decrease the strength of the material.  The characteristics of epoxy are better than polyester resins. The material can withstand temperatures upto 250C and shrinks only  2\%  at hardening. But epoxy resins are high in price compared to the polyesters.
@@ -936,7 +937,7 @@ A simple damage evolution law for each principal material direction in case of a
 \begin{equation}
 d_{i} = 1 - \frac{e^{-(F_{I} - 1)} }{F_{I}}  
 \end{equation}
-where $d_{i}$ (i = 1,2,3) and $F_{I}$ (I = 1,2,3) are damage evolution and failure undex in each principal material direction respectively.
+where $d_{i}$ (i = 1,2,3) and $F_{I}$ (I = f,m,z) are damage evolution and failure index in each principal material direction respectively.
 The material tangent stiffness tensor for anisotropic damage can also be derived in the same way as isotropic damage and it is given as follows
 \begin{equation*}
 \large{ \mathbb{C}_{T}  \; = \;\frac{\partial \sigma}{\partial \epsilon}  }
@@ -950,6 +951,28 @@ The material tangent stiffness tensor for anisotropic damage can also be derived
 \mathbb{C}_{T}  \; = \; \mathbb{C}(D) + \sum_{i = 1}^{3} \Big( \frac{\partial \mathbb{C}(D) }{\partial d_{i}} : \epsilon \otimes \frac{\partial d_{i}}{\partial \epsilon }\Big) 
 \end{equation}
 In the above equation, the second term(i.e., due to increased damage) must be computed only if the corresponding failure mode is active. Since the damage evolution equation $d_{i}$ depends on failure index, the term $\frac{\partial d_{i}}{\partial \epsilon }$ must be computed based on whether the damage happened during tension or compression.
+
+\subsection{Mesh dependency and Regularisation}
+\indent\indent\indent Finite element simulations which uses continuum damage models are susceptible to mesh dependency: when the finite element discretization  is refined, the numerical problems does not converge to a physically meaningful solution of the problem. When the material exhibits softening behaviour, which leads to strain localization and this formulation results in a strong mesh dependency i.e., the solution is non-objective with respective to mesh refinement and the energy dissipated  decreases with the decrease in finite element size. Merely improving the numerical solution schemes cannot alleviate the problem associated to mesh dependency and localisation. Even if the convergence to the actual solution is improved, the solution may not even make sense from physical point of view. Therefore the so called fracture energy approach is adopted in which fracture energy is included in the damage evolution equation in order to deal with the mesh dependency problem. In this approach the fracture energy of each element is preserved by including the characteristic length $(L_{c})$ of the element also in the damage evolution equation. The damage evolution equations based on fracture energy approach for each principal directions is shown below
+\\
+\\
+In fibre direction,
+\begin{equation}
+d_{1} = 1 - \frac{e^{(-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}(F_{f} - 1))    /G_{c,1}}}{F_{f}}   
+\end{equation}
+\\
+In matrix direction,
+\begin{equation}
+d_{2} = 1 - \frac{e^{(-\sigma_{22}^{f}\epsilon_{22}^{f}L_{c}(F_{m} - 1))    /G_{c,2}}}{F_{m}}   
+\end{equation}
+\\
+In ply stacking direction,
+\begin{equation}
+d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}(F_{z} - 1))    /G_{c,3}}}{F_{z}}   
+\end{equation}
+\\
+
+
 
 \begin{center}
 \begin{tikzpicture}[node distance = 1.8cm]
