@@ -259,13 +259,6 @@ where I and D are second order identity tensor and the second order damage tenso
 \tilde{\sigma} =  (I - D)^{-1/2}\sigma(I - D)^{-1/2}
 \end{equation}
 where $\sigma$ and $D$ are co-axial. Moreover, unless the development of damage is large, the difference between these effective stresses are known to be insignificant.\\
-\subsubsection{Symmetrized Effective Stress Tensor for Anisotropic Damage 3 ((Betten 1986)}
-\indent\indent\indent  Betten derived another effective stress tensor , ie.,
-\begin{equation}
-\label{eqn:Betten }
-\tilde{\sigma} =  (I - D)^{-1}\sigma(I - D)^{-1}
-\end{equation} 
-Since tensors $(I - D)^{-1}$ and $(I - D)^{-1/2}$ are both second-order symmetric positive tensor, there is no essential difference between Eqs.(\ref{eqn:Cordebois and Sidoroff }) and (\ref{eqn:Betten }).
 
 \subsection{Matrix Representation of Damage effect tensors}\label{Matrix Representation of Damage effect tensors}
 \indent\indent\indent The general form of an effective stress tensor $\tilde{\sigma}$ is given by the damage effect tensor $\mathbb{M}$ and the corresponding Cauchy stress tensor $\sigma$, i.e.,
@@ -473,7 +466,7 @@ V = \frac{1}{2}\sigma : \epsilon \; - \; \phi(\alpha) = \frac{1}{2}\tilde{\sigma
 \begin{equation}
 \tilde{\epsilon} \; = \; \mathbb{S}_{0} : \tilde{\sigma}
 \end{equation}
-\newpage 
+
 \subsection{Elastic Constitutive equation and Elastic modulus tensor}
 \subsubsection{Isotropic materials}
 \indent\indent\indent Isotropic materials are the materials which exhibit same material properties in all directions at a given point. This means when a load is applied at any point in the material it will exhibit same stress, strain, strength, hardness etc., The elastic constitutive equation of the isotropic material has the form, 
@@ -702,7 +695,7 @@ $Variable\;List$ window.
 \subsection{Damage initiation criteria}
 \indent\indent\indent  Damage initiation criteria refers to the onset of damage at a material point. Since the properties of the orthotropic materials change in mutually perpendicular direction three failure mode index, $F_{f}, F_{m}, F_{z}$, are used for failure modes in three principal material directions. Since the failure due to tension and compression in each direction cannot happen at same integration point and at the same time, the failure mode index must be calculated based on whether the material direction is under tension or compression. Both strain and stress based damage initiation criteria can be employed based on the application. Some of the damage initiation criteria are given as follows
 \subsubsection{Maximum strain criteria}
-\indent\indent\indent The maximum strain criterion just checks whether the strain in the given material direction exceeds the failure strain or not. The maximum strain criterion for each material direction is given below
+\indent\indent\indent The maximum strain criterion is a simple criterion which checks whether the strain in the given material direction exceeds the failure strain or not. The maximum strain criterion for each material direction is given below
 \\
 \\
 \begin{table}[h!]
@@ -763,7 +756,7 @@ where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,
 \indent\indent\indent Hashin's quadratic strain criteria includes shear strain components in addition to the normal strain components. The criteria for each material direction is given below\\
 \\
 \\
-Fibre direction 1,
+i) Fibre direction 1 ,
 \\
 \begin{equation}
 \large{F_{f}^{2} =  
@@ -778,7 +771,7 @@ Fibre direction 1,
 \end{equation}
 \\
 \\
-Matrix direction 2,
+ii) Matrix direction 2,
 \\
 \begin{equation}
 \large{F_{m}^{2} =  
@@ -796,7 +789,7 @@ Matrix direction 2,
 \end{equation}
 \\
 \\
-Matrix direction 3,
+iii) Matrix direction 3,
 \\
 \begin{equation}
 \large{F_{z}^{2} =  
@@ -818,7 +811,7 @@ in which  $\LARGE{\epsilon_{ii}^{f,t}=\frac{\sigma_{i}^{f,t}}{C_{ii}}}$,  $\epsi
 \indent\indent\indent Hashin's stress criteria for each principal material direction is given as follows
 \\
 \\
-Fibre direction 1,
+i) Fibre direction 1,
 \\
 \begin{equation}
 \large{F_{f}^{2} =  
@@ -831,7 +824,7 @@ Fibre direction 1,
 \end{equation}
 \\
 \\
-Matrix direction 2,
+ii) Matrix direction 2,
 \\
 \begin{equation}
 \large{F_{m}^{2} =  
@@ -843,7 +836,7 @@ Matrix direction 2,
 \end{equation}
 \\
 \\
-Matrix direction 3,
+iii) Matrix direction 3,
 \\
 \begin{equation}
 \large{F_{z}^{2} =  
@@ -857,6 +850,39 @@ Matrix direction 3,
 \\
 \\
 where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,$ Y_{C} $ and $Z_{C}$ are failure strength in compression in each principal material direction respectively. $S_{12}$, $S_{23}$, and $S_{13}$ are shear strengths.
+\subsubsection{Modified Hashin's failure criterion }
+\indent\indent\indent Modified Hashin's failure criterion for plane stress condition is given below
+\\
+\\
+i) Fibre direction 1,
+\\
+\begin{equation}
+\large{F_{f} =  
+	\begin{cases}
+	
+		\left[ \Big(\frac{\tilde{\sigma_{11}}} {X_{T}}\Big)^{2} \; + \;\alpha . \Big(\frac{\tilde{\sigma_{12}}}{S}\Big)^{2}\right]^{\frac{1}{2}} \;  \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma_{11}}  >  0)  \\
+	\\
+\left[ \Big(\frac{\tilde{\sigma_{11}}} {X_{C}}\Big)^{2} \; + \;\alpha . \Big(\frac{\tilde{\sigma_{12}}}{S}\Big)^{2}\right]^{\frac{1}{2}} \;  \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma_{11}}  <  0)
+	
+	\end{cases}}
+\end{equation}
+\\
+\\
+i) Matrix direction 1,
+\\
+\begin{equation}
+\large{F_{f} =  
+	\begin{cases}
+	
+	\left[ 	\Big(\frac{\tilde{\sigma_{22}}} {Y_{T}}\Big)^{2} \; + \;\alpha . \Big(\frac{\tilde{\sigma_{12}}}{S}\Big)^{2} \right]^{\frac{1}{2}} \;  \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma_{22}}  >  0)  \\
+	\\
+\left[ \Big(\frac{\tilde{\sigma_{22}}} {Y_{C}}\Big)^{2} \; + \;\alpha . \Big(\frac{\tilde{\sigma_{12}}}{S}\Big)^{2}\right]^{\frac{1}{2}} \;  \geq  \; 1  \; \; \; \; \;  (\tilde{\sigma_{22}}  <  0)
+	
+	\end{cases}}
+\end{equation}
+\\
+\\
+where the shear contribution factor $\alpha$ ranges from 0 to 1.
 \newpage
 \subsection{Types of damage evolution}
 \indent\indent\indent Once damage is initiated in a material point of composite material, the material property must be degraded. This results in strain-softening of the composite materials rather than strain hardening which is observed in conventional materials like metals. A number of post-damage models are proposed for progressive failure analysis and most of them belong to one of the following categories: instantaneous unloading, gradual loading, or constant stress at failure material point as shown in Fig.(\ref{fig:Types_of_damage_evolution}) \\  

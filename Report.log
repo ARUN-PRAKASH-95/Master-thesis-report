@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  28 JUN 2021 20:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  29 JUN 2021 20:55
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -846,33 +846,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--262
  []
 
 
-Overfull \hbox (4.64815pt too wide) in paragraph at lines 262--262
-[]\OT1/cmr/bx/n/12 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam-a
-ge 3 ((Bet-
+Underfull \hbox (badness 10000) in paragraph at lines 276--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--282
+
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 283--289
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--289
+Underfull \hbox (badness 10000) in paragraph at lines 305--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--307
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--316
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
 
  []
 
@@ -880,512 +874,543 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--335
 <6. Strain_eq.png, id=62, 481.8pt x 233.07076pt>
 File: 6. Strain_eq.png Graphic file (type png)
 <use 6. Strain_eq.png>
-Package pdftex.def Info: 6. Strain_eq.png  used on input line 357.
+Package pdftex.def Info: 6. Strain_eq.png  used on input line 350.
 (pdftex.def)             Requested size: 350.81174pt x 169.7099pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
 [12 <./6. Strain_eq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 401--403
+Underfull \hbox (badness 10000) in paragraph at lines 394--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--407
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--413
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--417
+Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
 <7.Strain_energy_eq.png, id=67, 570.33075pt x 260.77425pt>
 File: 7.Strain_energy_eq.png Graphic file (type png)
 <use 7.Strain_energy_eq.png>
-Package pdftex.def Info: 7.Strain_energy_eq.png  used on input line 424.
+Package pdftex.def Info: 7.Strain_energy_eq.png  used on input line 417.
 (pdftex.def)             Requested size: 350.81174pt x 160.40504pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--432
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+Underfull \hbox (badness 10000) in paragraph at lines 427--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--439
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 440--442
+Underfull \hbox (badness 10000) in paragraph at lines 441--443
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--446
+Underfull \hbox (badness 10000) in paragraph at lines 446--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--450
+Underfull \hbox (badness 10000) in paragraph at lines 453--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--457
+Underfull \hbox (badness 10000) in paragraph at lines 458--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--463
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
 
  []
 
+[14 <./7.Strain_energy_eq.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--469
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 471--473
-
- []
-
-[14 <./7.Strain_energy_eq.png>] [15]
-
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 484.
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 477.
 
 
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 484.
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 477.
 
 Missing character: There is no ´ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--481
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 485--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--495
+Underfull \hbox (badness 10000) in paragraph at lines 485--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--495
+Underfull \hbox (badness 10000) in paragraph at lines 503--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--513
+Underfull \hbox (badness 10000) in paragraph at lines 503--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--513
+Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--517
+Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--517
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 557--558
+<9.Usermat_input.png, id=86, 747.9945pt x 581.17125pt>
+File: 9.Usermat_input.png Graphic file (type png)
+<use 9.Usermat_input.png>
+Package pdftex.def Info: 9.Usermat_input.png  used on input line 576.
+(pdftex.def)             Requested size: 394.65901pt x 306.64476pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--581
 
  []
 
 [18]
-<9.Usermat_input.png, id=89, 747.9945pt x 581.17125pt>
-File: 9.Usermat_input.png Graphic file (type png)
-<use 9.Usermat_input.png>
-Package pdftex.def Info: 9.Usermat_input.png  used on input line 583.
-(pdftex.def)             Requested size: 394.65901pt x 306.64476pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--588
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
 
-Overfull \hbox (57.11244pt too wide) in paragraph at lines 596--597
+Overfull \hbox (57.11244pt too wide) in paragraph at lines 589--590
 []\OT1/cmr/m/n/12 Go to "Con-trol Panel$\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 Sear
 ch System$\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 Edit the sys-tem en-vi-ron-ment va
 riables$\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 Environment
  []
 
-[20 <./9.Usermat_input.png>]
+[19 <./9.Usermat_input.png>]
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-598.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 598.
+591.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 591.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbackslash' on input line 598.
+(Font)              for symbol `textbackslash' on input line 591.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--605
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
-<10.Intelcompiler.png, id=98, 661.87276pt x 382.42876pt>
+<10.Intelcompiler.png, id=95, 661.87276pt x 382.42876pt>
 File: 10.Intelcompiler.png Graphic file (type png)
 <use 10.Intelcompiler.png>
-Package pdftex.def Info: 10.Intelcompiler.png  used on input line 608.
+Package pdftex.def Info: 10.Intelcompiler.png  used on input line 601.
 (pdftex.def)             Requested size: 394.65901pt x 228.04102pt.
-<11.APDL_script.png, id=99, 334.851pt x 517.935pt>
+<11.APDL_script.png, id=96, 334.851pt x 517.935pt>
 File: 11.APDL_script.png Graphic file (type png)
 <use 11.APDL_script.png>
-Package pdftex.def Info: 11.APDL_script.png  used on input line 618.
+Package pdftex.def Info: 11.APDL_script.png  used on input line 611.
 (pdftex.def)             Requested size: 219.2565pt x 339.1432pt.
-[21 <./10.Intelcompiler.png>]
-<12.Tb.png, id=104, 209.583pt x 175.857pt>
+[20 <./10.Intelcompiler.png>]
+<12.Tb.png, id=101, 209.583pt x 175.857pt>
 File: 12.Tb.png Graphic file (type png)
 <use 12.Tb.png>
-Package pdftex.def Info: 12.Tb.png  used on input line 652.
+Package pdftex.def Info: 12.Tb.png  used on input line 645.
 (pdftex.def)             Requested size: 131.55524pt x 110.3853pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--660
+Underfull \hbox (badness 10000) in paragraph at lines 618--653
 
  []
 
-[22 <./11.APDL_script.png>]
-<13.Timehist.png, id=109, 895.54575pt x 422.7795pt>
+[21 <./11.APDL_script.png>]
+<13.Timehist.png, id=106, 895.54575pt x 422.7795pt>
 File: 13.Timehist.png Graphic file (type png)
 <use 13.Timehist.png>
-Package pdftex.def Info: 13.Timehist.png  used on input line 665.
+Package pdftex.def Info: 13.Timehist.png  used on input line 658.
 (pdftex.def)             Requested size: 350.81174pt x 165.6123pt.
- [23 <./12.Tb.png>] [24 <./13.Timehist.png>]
-Overfull \hbox (1.3249pt too wide) in paragraph at lines 682--682
+ [22 <./12.Tb.png>] [23 <./13.Timehist.png>]
+Overfull \hbox (1.3249pt too wide) in paragraph at lines 675--675
 []\OT1/cmr/bx/n/14.4 Mechanisms of dam-age and fail-ure in fi-bre re-in-forced 
 com-
  []
 
-[25]
-<5. FRP failure.png, id=122, 635.37375pt x 303.534pt>
+[24]
+<5. FRP failure.png, id=118, 635.37375pt x 303.534pt>
 File: 5. FRP failure.png Graphic file (type png)
 <use 5. FRP failure.png>
-Package pdftex.def Info: 5. FRP failure.png  used on input line 692.
+Package pdftex.def Info: 5. FRP failure.png  used on input line 685.
 (pdftex.def)             Requested size: 306.95775pt x 146.64412pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 689--697
+Underfull \hbox (badness 10000) in paragraph at lines 682--690
 
  []
 
-[26 <./5. FRP failure.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 705--732
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 705--732
+[25 <./5. FRP failure.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 698--725
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--761
+Underfull \hbox (badness 10000) in paragraph at lines 698--725
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--761
+Underfull \hbox (badness 10000) in paragraph at lines 726--754
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--761
+Underfull \hbox (badness 10000) in paragraph at lines 726--754
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--761
+Underfull \hbox (badness 10000) in paragraph at lines 726--754
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--754
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 763--768
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 756--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 763--768
+Underfull \hbox (badness 10000) in paragraph at lines 756--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 763--768
+Underfull \hbox (badness 10000) in paragraph at lines 756--761
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 769.
+LaTeX Font Warning: Command \large invalid in math mode on input line 762.
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 778.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 771.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 778.
+(Font)              size <5> substituted on input line 771.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--783
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 778--783
+Underfull \hbox (badness 10000) in paragraph at lines 771--776
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 784.
+Underfull \hbox (badness 10000) in paragraph at lines 771--776
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 777.
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 789--794
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 789--794
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 795.
+
+
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 809.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 806--810
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--816
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--816
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 817.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--829
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--829
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 830.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--841
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--841
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 842.
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 796--801
+Underfull \hbox (badness 10000) in paragraph at lines 848--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--801
+Underfull \hbox (badness 10000) in paragraph at lines 848--853
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 802.
-
-
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 816.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 813--817
+Underfull \hbox (badness 10000) in paragraph at lines 854--859
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--823
+Underfull \hbox (badness 10000) in paragraph at lines 854--859
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--823
+LaTeX Font Warning: Command \large invalid in math mode on input line 860.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 868--873
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 824.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 831--836
+Underfull \hbox (badness 10000) in paragraph at lines 868--873
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 831--836
+LaTeX Font Warning: Command \large invalid in math mode on input line 874.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 882--886
 
  []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 837.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 843--848
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 843--848
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 849.
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 855--860
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 855--860
-
- []
-
-[30]
-<8.Types_of_damage_evolution.png, id=143, 468.5505pt x 287.8755pt>
+<8.Types_of_damage_evolution.png, id=140, 468.5505pt x 287.8755pt>
 File: 8.Types_of_damage_evolution.png Graphic file (type png)
 <use 8.Types_of_damage_evolution.png>
-Package pdftex.def Info: 8.Types_of_damage_evolution.png  used on input line 86
-6.
+Package pdftex.def Info: 8.Types_of_damage_evolution.png  used on input line 89
+2.
 (pdftex.def)             Requested size: 306.95775pt x 188.59715pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--876
+Underfull \hbox (badness 10000) in paragraph at lines 900--902
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--876
+Underfull \hbox (badness 10000) in paragraph at lines 900--902
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 877.
+LaTeX Font Warning: Command \large invalid in math mode on input line 903.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--882
-
- []
-
-[31 <./8.Types_of_damage_evolution.png>]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 883.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 884--886
+Underfull \hbox (badness 10000) in paragraph at lines 905--908
 
  []
 
+[30 <./8.Types_of_damage_evolution.png>]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 887.
+LaTeX Font Warning: Command \large invalid in math mode on input line 909.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--891
+Underfull \hbox (badness 10000) in paragraph at lines 910--912
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 892.
+LaTeX Font Warning: Command \large invalid in math mode on input line 913.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 896.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 900.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 905--906
+Underfull \hbox (badness 10000) in paragraph at lines 914--917
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--919
+LaTeX Font Warning: Command \large invalid in math mode on input line 918.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 922.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 926.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 931--932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 942--945
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 955--956
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 969.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 973.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--986
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 929--930
+Underfull \hbox (badness 10000) in paragraph at lines 998--1000
 
  []
 
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 943.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 947.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 956--960
-
- []
-
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 972--974
-
- []
-
-[34] [35] [36] (Report.aux)
+[33] [34] [35] (Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -1395,10 +1420,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 17108 strings out of 479321
- 345448 string characters out of 2856583
- 723209 words of memory out of 3000000
- 34219 multiletter control sequences out of 15000+600000
+ 17107 strings out of 479321
+ 345435 string characters out of 2856583
+ 723199 words of memory out of 3000000
+ 34218 multiletter control sequences out of 15000+600000
  417736 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,13n,89p,1548b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1420,9 +1445,9 @@ blic/amsfonts/cm/cmr8.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aruns/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Report.pdf (36 pages, 1581391 bytes).
+Output written on Report.pdf (35 pages, 1581773 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
+ 213 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
