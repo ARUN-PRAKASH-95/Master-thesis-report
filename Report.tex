@@ -961,7 +961,7 @@ where $\mathbb{M}$ is the damage effect tensor from Section.(\ref{Matrix Represe
 
 A simple damage evolution law for each principal material direction in case of anisotropic damage is given as follows,
 \begin{equation}
-d_{i} = 1 - \frac{e^{-(F_{I} - 1)} }{F_{I}}  
+d_{i} = 1 - \frac{e^{-P(F_{I} - 1)} }{F_{I}}  
 \end{equation}
 where $d_{i}$ (i = 1,2,3) and $F_{I}$ (I = f,m,z) are damage evolution and failure index in each principal material direction respectively.
 The material tangent stiffness tensor for anisotropic damage can also be derived in the same way as isotropic damage and it is given as follows
@@ -978,7 +978,7 @@ The material tangent stiffness tensor for anisotropic damage can also be derived
 \end{equation}
 In the above equation, the second term(i.e., due to increased damage) must be computed only if the corresponding failure mode is active. Since the damage evolution equation $d_{i}$ depends on failure index, the term $\frac{\partial d_{i}}{\partial \epsilon }$ must be computed based on whether the damage happened during tension or compression.
 
-\subsection{Mesh dependency and Regularisation}
+\subsection{Localisation and Mesh Regularisation}
 \indent\indent\indent Finite element simulations which uses continuum damage models are susceptible to mesh dependency: when the finite element discretization  is refined, the numerical problems does not converge to a physically meaningful solution of the problem. When the material exhibits softening behaviour, which leads to strain localization and this formulation results in a strong mesh dependency i.e., the solution is non-objective with respective to mesh refinement and the energy dissipated  decreases with the decrease in finite element size. Merely improving the numerical solution schemes cannot alleviate the problem associated to mesh dependency and localisation. Even if the convergence to the actual solution is improved, the solution may not even make sense from physical point of view. Therefore the so called fracture energy approach is adopted in which fracture energy is included in the damage evolution equation in order to deal with the mesh dependency problem. In this approach the fracture energy of each element is preserved by including the characteristic length $(L_{c})$ of the element also in the damage evolution equation. The damage evolution equations based on fracture energy approach for each principal directions is shown below
 \\
 \\
@@ -1068,4 +1068,16 @@ d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}(F_{z} - 1))    /G_{
  
 \end{tikzpicture}
 \end{center}
+
+\newpage
+\section{Results and Discussion}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{{StressvsStrain.png}}
+ \caption{Types of degradation behaviour in damaged composite materials}
+ \label{fig:Types_of_damage_evolution}
+ \end{center}
+\end{figure}
+
+
 \end{document}
