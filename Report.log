@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  28 JUL 2021 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  29 JUL 2021 20:35
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -225,6 +225,14 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count278
+\float@exts=\toks23
+\float@box=\box54
+\@float@everytoks=\toks24
+\@floatcapt=\box55
+)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
@@ -239,16 +247,9 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen173
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count278
-\c@continuedfloat=\count279
-)
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count280
-\float@exts=\toks23
-\float@box=\box54
-\@float@everytoks=\toks24
-\@floatcapt=\box55
+\c@caption@flags=\count279
+\c@continuedfloat=\count280
+Package caption Info: float package is loaded.
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
@@ -648,13 +649,22 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 )
 (Report.aux
 
-LaTeX Warning: Label `fig:Types_of_damage_evolution' multiply defined.
+LaTeX Warning: Label `fig:X Component of Stress' multiply defined.
 
 
-LaTeX Warning: Label `fig:Types_of_damage_evolution' multiply defined.
+LaTeX Warning: Label `sub@fig:X Component of Stress' multiply defined.
 
 
-LaTeX Warning: Label `fig:Types_of_damage_evolution' multiply defined.
+LaTeX Warning: Label `fig:Y Component of Stress' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Y Component of Stress' multiply defined.
+
+
+LaTeX Warning: Label `fig:Z Component of Stress' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Z Component of Stress' multiply defined.
 
 )
 \openout1 = `Report.aux'.
@@ -700,7 +710,6 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 *geometry* driver: auto-detecting
@@ -1421,12 +1430,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 998--1000
  []
 
 [33] [34] [35]
-<StressvsStrain.png, id=161, 760.8425pt x 560.0925pt>
-File: StressvsStrain.png Graphic file (type png)
-<use StressvsStrain.png>
-Package pdftex.def Info: StressvsStrain.png  used on input line 1076.
-(pdftex.def)             Requested size: 219.2565pt x 161.40564pt.
- [36 <./StressvsStrain.png (PNG copy)>] (Report.aux)
+<14.Linear_SvsE.png, id=161, 953.5625pt x 710.655pt>
+File: 14.Linear_SvsE.png Graphic file (type png)
+<use 14.Linear_SvsE.png>
+Package pdftex.def Info: 14.Linear_SvsE.png  used on input line 1084.
+(pdftex.def)             Requested size: 263.11047pt x 196.08676pt.
+ [36 <./14.Linear_SvsE.png (PNG copy)>]
+<15.Ansys_SX.png, id=165, 495.0495pt x 362.5545pt>
+File: 15.Ansys_SX.png Graphic file (type png)
+<use 15.Ansys_SX.png>
+Package pdftex.def Info: 15.Ansys_SX.png  used on input line 1095.
+(pdftex.def)             Requested size: 144.71156pt x 105.97899pt.
+
+Overfull \hbox (13.15633pt too wide) in paragraph at lines 1095--1096
+ [][] 
+ []
+
+<16.Ansys_SY.png, id=166, 487.22025pt x 373.395pt>
+File: 16.Ansys_SY.png Graphic file (type png)
+<use 16.Ansys_SY.png>
+Package pdftex.def Info: 16.Ansys_SY.png  used on input line 1102.
+(pdftex.def)             Requested size: 144.71156pt x 110.90263pt.
+
+Overfull \hbox (13.15633pt too wide) in paragraph at lines 1102--1103
+ [][] 
+ []
+
+<17.Ansys_SZ.png, id=167, 469.15276pt x 379.4175pt>
+File: 17.Ansys_SZ.png Graphic file (type png)
+<use 17.Ansys_SZ.png>
+Package pdftex.def Info: 17.Ansys_SZ.png  used on input line 1109.
+(pdftex.def)             Requested size: 144.71156pt x 117.03346pt.
+
+Overfull \hbox (13.15633pt too wide) in paragraph at lines 1109--1110
+ [][] 
+ []
+
+<18.User_SX.png, id=168, 478.1865pt x 366.168pt>
+File: 18.User_SX.png Graphic file (type png)
+<use 18.User_SX.png>
+Package pdftex.def Info: 18.User_SX.png  used on input line 1123.
+(pdftex.def)             Requested size: 144.71156pt x 110.81226pt.
+
+Overfull \hbox (13.15633pt too wide) in paragraph at lines 1123--1124
+ [][] 
+ []
+
+<19.User_SY.png, id=169, 477.58424pt x 363.759pt>
+File: 19.User_SY.png Graphic file (type png)
+<use 19.User_SY.png>
+Package pdftex.def Info: 19.User_SY.png  used on input line 1130.
+(pdftex.def)             Requested size: 144.71156pt x 110.22198pt.
+
+Overfull \hbox (13.15633pt too wide) in paragraph at lines 1130--1131
+ [][] 
+ []
+
+<20.User_SZ.png, id=170, 475.17525pt x 353.52075pt>
+File: 20.User_SZ.png Graphic file (type png)
+<use 20.User_SZ.png>
+Package pdftex.def Info: 20.User_SZ.png  used on input line 1137.
+(pdftex.def)             Requested size: 144.71156pt x 107.65913pt.
+
+Overfull \hbox (13.15633pt too wide) in paragraph at lines 1137--1138
+ [][] 
+ []
+
+[37 <./15.Ansys_SX.png> <./16.Ansys_SY.png> <./17.Ansys_SZ.png> <./18.User_SX.p
+ng> <./19.User_SY.png> <./20.User_SZ.png>] (Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -1439,10 +1510,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17113 strings out of 479321
- 345562 string characters out of 2856583
- 723238 words of memory out of 3000000
- 34223 multiletter control sequences out of 15000+600000
+ 17166 strings out of 479321
+ 346602 string characters out of 2856583
+ 723215 words of memory out of 3000000
+ 34270 multiletter control sequences out of 15000+600000
  417736 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,13n,89p,1548b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1464,9 +1535,9 @@ blic/amsfonts/cm/cmr8.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aruns/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Report.pdf (36 pages, 1634585 bytes).
+Output written on Report.pdf (37 pages, 1920928 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
+ 235 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

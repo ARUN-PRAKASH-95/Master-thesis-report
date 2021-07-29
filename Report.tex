@@ -7,12 +7,12 @@
     \usepackage{titlepic}
     \usepackage{stackengine}
     \usepackage{lipsum}
-    \usepackage{graphicx}
+    \usepackage[demo]{graphicx}
     \usepackage{booktabs}
     \usepackage{cite}
-	\usepackage{caption}
 	\usepackage{float}
-	\usepackage{subcaption}
+	\usepackage{caption}
+    \usepackage{subcaption}
     \usepackage{multirow}
     \usepackage[top=1in, bottom=1.1in, left=1.1in, right=1.1in]{geometry}
     \usepackage{fancyhdr}
@@ -503,7 +503,7 @@ $$
  $$
  \\
  \\
-\subsubsection{Orthotropic materials}
+\subsubsection{Orthotropic materials}\label{Constitutive matrix}
 \indent\indent\indent Orthotropic materials are materials which exhibit different material properties along three mutually-orthogonal axis. They are a special form of anisotropic materials, because their properties change when measured from different directions. Some examples of orthotropic materials are wood, composite materials etc., Orthotropic materials require 9 independent variables in order to express their constitutive matrix. The 9 elastic constants are three Young's moduli $E_{x},E_{y},E_{z}$, the three Poisson's ratios $\nu_{xy},\nu_{yz},\nu_{zx}$, and three shear moduli $G_{xy},G_{yz},G_{zx}$. The elastic stiffness matrix of orthotropic material has the form,
 \\
 \\
@@ -1070,14 +1070,78 @@ d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}(F_{z} - 1))    /G_{
 \end{center}
 
 \newpage
+\vspace*{2cm}
 \section{Results and Discussion}
+\vspace*{1cm}
+\subsection{Modelling Linear elastic behaviour of orthotropic materials}
+\indent\indent\indent Before implementing the damage behaviour in orthotropic materials, their linear elastic behaviour must implemented which demonstrates what happens before the damage initiation. As mentioned before orthtoropic materials are special class of material whose properties change in mutually perpendicular directions. Therefore 9 independent material constants are required in order to model their elastic behaviour numerically. The constitutive matrix given in the section(\ref{Constitutive matrix}) and Hooke's law helps us model the elastic behaviour of the orthotropic materials.\\ 
+\indent\indent\indent The linear elastic behaviour of the orthotropic material is implemented in the USERMAT using constitutive equations and in this section the results are compared against the default orthortropic material option present in ANSYS using a structural example. A bar of length 10mm and area 1mm$^2$ (b = 1mm, t =1mm) fixed at one end is chosen for the analysis. The bar is constructed using 8 node SOLID 185 elements and full integration has been used. A displacement of 1mm is applied at the free end and the results obtained using the ANSYS default and the USERMAT are presented below. The figure(\ref{fig:Stress-Strain Linear elastic}) compares the stress-strain relation of the bar obtained using both ANSYS default and USERMAT 
+
+
+
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{{StressvsStrain.png}}
- \caption{Types of degradation behaviour in damaged composite materials}
- \label{fig:Types_of_damage_evolution}
+\includegraphics[width=0.6\textwidth]{{14.Linear_SvsE.png}}
+ \caption{Stress-Strain relation (ANSYS vs USERMAT)}
+ \label{fig:Stress-Strain Linear elastic}
  \end{center}
 \end{figure}
 
+\newpage
+\begin{figure}
+	\centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{15.Ansys_SX.png}
+         \caption{X Component of Stress}
+         \label{fig:X Component of Stress}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{16.Ansys_SY.png}
+         \caption{Y Component of Stress}
+         \label{fig:Y Component of Stress}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{17.Ansys_SZ.png}
+         \caption{Z Component of Stress}
+         \label{fig:Z Component of Stress}
+     \end{subfigure}
+        \caption{Contour plots of the stress components $\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ of the bar obtained using ANSYS default option }
+        \label{fig:ANSYS Default}     
+\end{figure}
+
+\vspace*{0.1cm}
+
+\begin{figure}
+	\centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{18.User_SX.png}
+         \caption{X Component of Stress}
+         \label{fig:X Component of Stress}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{19.User_SY.png}
+         \caption{Y Component of Stress}
+         \label{fig:Y Component of Stress}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{20.User_SZ.png}
+         \caption{Z Component of Stress}
+         \label{fig:Z Component of Stress}
+     \end{subfigure}
+        \caption{Contour plots of the stress components $\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ of the bar obtained using USERMAT}
+        \label{fig:USERMAT}     
+\end{figure}
+
+Figure (\ref{fig:ANSYS Default}) and (\ref{fig:USERMAT}) shows the contour plots of the normal stresses ($\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ ) computed using ANSYS default and USERMAT respectively. The comparison of the stress-strain relation and contour plots between the ANSYS default and USERMAT confirms that the results obtained using both options are same and therefore further damage-intiation and damage-evolution processes can now be implemented.
 
 \end{document}
