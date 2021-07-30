@@ -8,6 +8,7 @@
     \usepackage{stackengine}
     \usepackage{lipsum}
     \usepackage[demo]{graphicx}
+    \usepackage[section]{placeins}
     \usepackage{booktabs}
     \usepackage{cite}
 	\usepackage{float}
@@ -962,6 +963,7 @@ where $\mathbb{M}$ is the damage effect tensor from Section.(\ref{Matrix Represe
 A simple damage evolution law for each principal material direction in case of anisotropic damage is given as follows,
 \begin{equation}
 d_{i} = 1 - \frac{e^{-P(F_{I} - 1)} }{F_{I}}  
+\label{exponential damage equation}
 \end{equation}
 where $d_{i}$ (i = 1,2,3) and $F_{I}$ (I = f,m,z) are damage evolution and failure index in each principal material direction respectively.
 The material tangent stiffness tensor for anisotropic damage can also be derived in the same way as isotropic damage and it is given as follows
@@ -974,7 +976,8 @@ The material tangent stiffness tensor for anisotropic damage can also be derived
 \end{equation*}
 
 \begin{equation}
-\mathbb{C}_{T}  \; = \; \mathbb{C}(D) + \sum_{i = 1}^{3} \Big( \frac{\partial \mathbb{C}(D) }{\partial d_{i}} : \epsilon \otimes \frac{\partial d_{i}}{\partial \epsilon }\Big) 
+\mathbb{C}_{T}  \; = \; \mathbb{C}(D) + \sum_{i = 1}^{3} \Big( \frac{\partial \mathbb{C}(D) }{\partial d_{i}} : \epsilon \otimes \frac{\partial d_{i}}{\partial \epsilon }\Big)
+\label{Anisotropic tangent stiffness} 
 \end{equation}
 In the above equation, the second term(i.e., due to increased damage) must be computed only if the corresponding failure mode is active. Since the damage evolution equation $d_{i}$ depends on failure index, the term $\frac{\partial d_{i}}{\partial \epsilon }$ must be computed based on whether the damage happened during tension or compression.
 
@@ -1088,7 +1091,7 @@ d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}(F_{z} - 1))    /G_{
 \end{figure}
 
 \newpage
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
@@ -1116,7 +1119,7 @@ d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}(F_{z} - 1))    /G_{
 
 \vspace*{0.1cm}
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
@@ -1143,5 +1146,87 @@ d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}(F_{z} - 1))    /G_{
 \end{figure}
 
 Figure (\ref{fig:ANSYS Default}) and (\ref{fig:USERMAT}) shows the contour plots of the normal stresses ($\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ ) computed using ANSYS default and USERMAT respectively. The comparison of the stress-strain relation and contour plots between the ANSYS default and USERMAT confirms that the results obtained using both options are same and therefore further damage-intiation and damage-evolution processes can now be implemented.
+
+\subsection*{Studies at integration point level}
+\indent\indent\indent The material subroutines are first developed on octave and tested using constitutive driver routines which enables us to understand the phenomenon that happens at integration point level. In order to demonstrate the evolution of damage after damage initiation and the strain softening following simple loading cases are investigated at the integration point level.
+\begin{itemize}
+\item Uniaxial tension
+\item Biaxial tension
+\item Triaxial tension.
+\end{itemize} 
+After that, the material subroutines are implemented in USERMAT and tested in ANSYS environment using a 3D finite element of unit length. The finite element is subjected to the above loading cases and the results are compared against the octave implementation
+\FloatBarrier
+\subsection{Uniaxial tension}
+\indent\indent\indent In Ansys environment, uniaxial tension is achieved by applying a displacement on the finite element in 11 direction which increases the strain $\epsilon_{11}$ linearly and the lateral contraction is not constrained. The results obtained from Ansys and usermat are presented in the Figure(\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) respectively. The figure (\ref{fig:Evolution of damage in 11 direction}) shows the evolution of damage variables.  The system is linearly elastic till the damage initiation strain and the damage is zero. Once the strain $\epsilon_{11}$ exceeds the damage initiation strain, the damage $d_{1}$ starts to evolve exponentially(because of the exponential damage evolution equation) and the stress starts to drop due to reduction in stiffness in 11 direction.  The damage variables $d_{2}$ and $d_{3}$ are zero. The comparison between the figures (\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) suggests that the material routine implemented in octave and usermat are numerically similiar to each other. \\
+\\
+
+\begin{figure}[htbp]
+     \centering
+     \captionsetup[subfigure]{justification=centering}
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{21.StressvsStrain_Ansys.png}
+         \caption{Stress-Strain relation (ANSYS)}
+         \label{fig:Stress-Strain relation in Ansys}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{21.StressvsStrain_Octave.png}
+         \caption{Stress-Strain relation (Octave)}
+         \label{fig:Stress-Strain relation Octave}
+     \end{subfigure}
+
+
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{22.d1,d2,d3.png}
+         \caption{Evolution of damage}
+         \label{fig:Evolution of damage in 11 direction}
+     \end{subfigure}
+        \caption{Evolution of stress and damage components for a uniaxial tension test in 11 direction}
+        \label{fig:Evolution of stress and damage components for a uniaxial tension test in 11 direction}     
+\end{figure}
+The scalar softening parameter($P$) in the damage evolution equation(\ref{exponential damage equation}) determines the slope of the damage curve. The following figure demonstrates the influence of the softening parameter (P) in the damage evolution\\
+\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{{22.P_damage.png}}
+ \caption{Influence of softening parameter $P$ in the damage evolution)}
+ \label{fig:Influence of softening parameter P}
+ \end{center}
+\end{figure}
+
+\subsubsection*{Discussion about tangent stiffness}
+\indent\indent\indent In case of uniaxial tension the components of the stress tensor other than $\sigma_{11}$ are zero. Since stress-conditions are enforced, the octave driver routine uses Newton-raphson method to determine the input strain components other than $\epsilon_{11}$ iteratively. The Newton-raphson method requires tangent stiffness for computation which can be derived using the equation (\ref{Anisotropic tangent stiffness}) for anisotropic damage. This enables us to test the derived algorithmic tangent stiffness (ATS) before implementing it in USERMAT which is then used by Ansys for solving non-linear system of equations which arise due to strain softening. The derived algorithmic tangent stiffness is verified by comparing it with the numerical tangent stiffness computed using numerical perturbation. In numerical perturbation, the coefficients of strain tensor are perturbed by a very small value i.e.,  $\Delta\epsilon_{kl}^{n+1} = \delta$ (where $\delta<<1$) and the resulting stress perturbations are calculated. 
+\begin{equation}
+\Delta\sigma_{ij}^{n+1} \; = \; \sigma_{ij}^{n+1}(\epsilon_{kl}^{n+1}+\delta) - \sigma_{ij}^{n+1}(\epsilon_{kl}^{n+1})
+\end{equation}
+Then the components of the tangent stiffness tensor can be estimated as
+\begin{equation}
+ C_T \;  =  \;  \frac{\Delta\sigma_{ij}^{n+1}}{\Delta\epsilon_{kl}^{n+1}}
+\end{equation}
+Since the material routine must be evaluated for every perturbation of $\epsilon_{kl}$ the routine has to be called six time recursively per load-step iteration. The figure (\ref{fig:Algorithmic tangent})  and (\ref{fig:Numerical perturbation}) shows the strain components $\epsilon_{22}$ and $\epsilon_{33}$ computed using algorithmic and numerical tangent stiffness which are plotted against $\epsilon_{11}$  respectively.\\
+\\
+\begin{figure}[htbp]
+     \centering
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{23.e11vse22e33_ATS.png}
+         \caption{$\epsilon_{22},\epsilon_{33}$ vs $\epsilon_{11}$ (Algorithmic tangent)}
+         \label{fig:Algorithmic tangent}
+     \end{subfigure}  
+     \hfill
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.e11vse22e33_NT.png}
+         \caption{$\epsilon_{22},\epsilon_{33}$ vs $\epsilon_{11}$ (Numerical perturbation)}
+         \label{fig:Numerical perturbation}
+     \end{subfigure}
+        \caption{The Strain components $\epsilon_{22}$ and $\epsilon_{33}$ computed using algorithmic and numerical tangent stiffness under uniaxial tension}
+        \label{fig: Algorithmic and numerical tangent stiffness under uniaxial tension}     
+\end{figure}
+\\
+These comparison between above plots clearly indicates that the tangent stiffness computed using algorithmic tangent and numerical tangent are numerically similar to each other.
 
 \end{document}
