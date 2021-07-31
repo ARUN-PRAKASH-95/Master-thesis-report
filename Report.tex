@@ -736,11 +736,11 @@ where $\epsilon_{ti}$ and $\epsilon_{ci}$ are failure strains in tension and com
       \\
       \hline
       \\
-      Fibre direction 1 ($F_{f}$) & \Large{$\frac{\tilde{\sigma}_{11}}{X_{T}} $}\small{ $\leq 1$} & \Large{$\frac{\tilde{\sigma}_{11}}{-X_{C}} $}\small{ $\leq 1$} \\
+      Longitudinal direction 1 ($F_{f}$) & \Large{$\frac{\tilde{\sigma}_{11}}{X_{T}} $}\small{ $\leq 1$} & \Large{$\frac{\tilde{\sigma}_{11}}{-X_{C}} $}\small{ $\leq 1$} \\
       \\
-      Matrix direction 2 ($F_{m}$)  &  \Large{$\frac{\tilde{\sigma}_{22}}{Y_{T}} $}\small{ $\leq 1$}  & \Large{$\frac{\tilde{\sigma}_{22}}{-Y_{C}} $}\small{ $\leq 1$}\\
+      Transverse direction 2 ($F_{m}$)  &  \Large{$\frac{\tilde{\sigma}_{22}}{Y_{T}} $}\small{ $\leq 1$}  & \Large{$\frac{\tilde{\sigma}_{22}}{-Y_{C}} $}\small{ $\leq 1$}\\
       \\
-      Matrix direction 3 ($F_{z}$) &  \Large{$\frac{\tilde{\sigma}_{33}}{Z_{T}} $}\small{ $\leq 1$}  &   \Large{$\frac{\tilde{\sigma}_{33}}{-Z_{C}} $}\small{ $\leq 1$}\\
+      Transverse direction 3 ($F_{z}$) &  \Large{$\frac{\tilde{\sigma}_{33}}{Z_{T}} $}\small{ $\leq 1$}  &   \Large{$\frac{\tilde{\sigma}_{33}}{-Z_{C}} $}\small{ $\leq 1$}\\
        \\
        \hline
     \end{tabular}
@@ -753,11 +753,11 @@ where $\epsilon_{ti}$ and $\epsilon_{ci}$ are failure strains in tension and com
 where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,$ Y_{C} $ and $Z_{C}$ are failure strength in compression in each principal material direction respectively.\\
 \\
 
-\subsubsection{3D Hashin's quadratic strain criteria}
+\subsubsection{3D Hashin's quadratic strain criteria}\label{3D Hashin's quadratic strain criteria}
 \indent\indent\indent Hashin's quadratic strain criteria includes shear strain components in addition to the normal strain components. The criteria for each material direction is given below\\
 \\
 \\
-i) Fibre direction 1 ,
+i) Longitudinal direction 1 ,
 \\
 \begin{equation}
 \large{F_{f}^{2} =  
@@ -772,7 +772,7 @@ i) Fibre direction 1 ,
 \end{equation}
 \\
 \\
-ii) Matrix direction 2,
+ii) Transverse direction 2,
 \\
 \begin{equation}
 \large{F_{m}^{2} =  
@@ -790,7 +790,7 @@ ii) Matrix direction 2,
 \end{equation}
 \\
 \\
-iii) Matrix direction 3,
+iii) Transverse direction 3,
 \\
 \begin{equation}
 \large{F_{z}^{2} =  
@@ -812,7 +812,7 @@ in which  $\LARGE{\epsilon_{ii}^{f,t}=\frac{\sigma_{i}^{f,t}}{C_{ii}}}$,  $\epsi
 \indent\indent\indent Hashin's stress criteria for each principal material direction is given as follows
 \\
 \\
-i) Fibre direction 1,
+i) Longitudinal direction 1,
 \\
 \begin{equation}
 \large{F_{f}^{2} =  
@@ -825,7 +825,7 @@ i) Fibre direction 1,
 \end{equation}
 \\
 \\
-ii) Matrix direction 2,
+ii) Transverse direction 2,
 \\
 \begin{equation}
 \large{F_{m}^{2} =  
@@ -837,7 +837,7 @@ ii) Matrix direction 2,
 \end{equation}
 \\
 \\
-iii) Matrix direction 3,
+iii) Transverse direction 3,
 \\
 \begin{equation}
 \large{F_{z}^{2} =  
@@ -855,7 +855,7 @@ where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,
 \indent\indent\indent Modified Hashin's failure criterion for plane stress condition is given below
 \\
 \\
-i) Fibre direction 1,
+i) Longitudinal direction 1,
 \\
 \begin{equation}
 \large{F_{f} =  
@@ -869,7 +869,7 @@ i) Fibre direction 1,
 \end{equation}
 \\
 \\
-i) Matrix direction 1,
+i) Transverse direction 1,
 \\
 \begin{equation}
 \large{F_{f} =  
@@ -981,25 +981,29 @@ The material tangent stiffness tensor for anisotropic damage can also be derived
 \end{equation}
 In the above equation, the second term(i.e., due to increased damage) must be computed only if the corresponding failure mode is active. Since the damage evolution equation $d_{i}$ depends on failure index, the term $\frac{\partial d_{i}}{\partial \epsilon }$ must be computed based on whether the damage happened during tension or compression.
 
-\subsection{Localisation and Mesh Regularisation}
+\subsection{Localisation and Mesh Regularisation}\label{Mesh Regularisation}
 \indent\indent\indent Finite element simulations which uses continuum damage models are susceptible to mesh dependency: when the finite element discretization  is refined, the numerical problems does not converge to a physically meaningful solution of the problem. When the material exhibits softening behaviour, which leads to strain localization and this formulation results in a strong mesh dependency i.e., the solution is non-objective with respective to mesh refinement and the energy dissipated  decreases with the decrease in finite element size. Merely improving the numerical solution schemes cannot alleviate the problem associated to mesh dependency and localisation. Even if the convergence to the actual solution is improved, the solution may not even make sense from physical point of view. Therefore the so called fracture energy approach is adopted in which fracture energy is included in the damage evolution equation in order to deal with the mesh dependency problem. In this approach the fracture energy of each element is preserved by including the characteristic length $(L_{c})$ of the element also in the damage evolution equation. The damage evolution equations based on fracture energy approach for each principal directions is shown below
 \\
 \\
-In fibre direction,
+In Longitudinal direction 1,
 \begin{equation}
-d_{1} = 1 - \frac{e^{(-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}(F_{f} - 1))    /G_{c,1}}}{F_{f}}   
+d_{1} = 1 - \frac{e^{P_{1}(F_{f} - 1)}}{F_{f}}
+\label{d1}   
 \end{equation}
 \\
-In matrix direction,
+In transverse direction 2,
 \begin{equation}
-d_{2} = 1 - \frac{e^{(-\sigma_{22}^{f}\epsilon_{22}^{f}L_{c}(F_{m} - 1))    /G_{c,2}}}{F_{m}}   
+d_{2} = 1 - \frac{e^{P_{2}(F_{m} - 1))}}{F_{m}}
+\label{d2}   
 \end{equation}
 \\
-In ply stacking direction,
+In transverse direction 3,
 \begin{equation}
-d_{3} = 1 - \frac{e^{(-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}(F_{z} - 1))    /G_{c,3}}}{F_{z}}   
+d_{3} = 1 - \frac{e^{P_{3}(F_{z} - 1)}}{F_{z}}
+\label{d3}   
 \end{equation}
 \\
+where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} = \frac{-\sigma_{22}^{f}\epsilon_{22}^{f}L_{c}}{G_{c,2}}$ and $P_{3} = \frac{-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}}{G_{c,3}}$ 
 
 
 
@@ -1157,7 +1161,7 @@ Figure (\ref{fig:ANSYS Default}) and (\ref{fig:USERMAT}) shows the contour plots
 After that, the material subroutines are implemented in USERMAT and tested in ANSYS environment using a 3D finite element of unit length. The finite element is subjected to the above loading cases and the results are compared against the octave implementation
 \FloatBarrier
 \subsection{Uniaxial tension}
-\indent\indent\indent In Ansys environment, uniaxial tension is achieved by applying a displacement on the finite element in 11 direction which increases the strain $\epsilon_{11}$ linearly and the lateral contraction is not constrained. The results obtained from Ansys and usermat are presented in the Figure(\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) respectively. The figure (\ref{fig:Evolution of damage in 11 direction}) shows the evolution of damage variables.  The system is linearly elastic till the damage initiation strain and the damage is zero. Once the strain $\epsilon_{11}$ exceeds the damage initiation strain, the damage $d_{1}$ starts to evolve exponentially(because of the exponential damage evolution equation) and the stress starts to drop due to reduction in stiffness in 11 direction.  The damage variables $d_{2}$ and $d_{3}$ are zero. The comparison between the figures (\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) suggests that the material routine implemented in octave and usermat are numerically similiar to each other. \\
+\indent\indent\indent In case of uniaxial tension the normal stress is present only in one direction and the shear stresses are zero i.e., only one component of the stress tensor is non-zero.  In Ansys environment, uniaxial tension is achieved by applying a displacement on the finite element in a normal direction ($11$) which increases the strain $\epsilon_{11}$ linearly and the lateral(transverse) contraction is not constrained. 3D Hashin's quadratic strain criteria (Section(\ref{3D Hashin's quadratic strain criteria})) is used to predict the damage initiation and exponential damage evolution law (Eqn(\ref{exponential damage equation})) is used to calculate the damage evolution. The results obtained from Ansys and usermat are presented in the Figure(\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) respectively. The figure (\ref{fig:Evolution of damage in 11 direction}) shows the evolution of damage variables.  The system is linearly elastic till the damage initiation strain and the damage is zero. Once the strain $\epsilon_{11}$ exceeds the damage initiation strain, the damage $d_{1}$ starts to evolve exponentially and the stress starts to drop due to reduction in stiffness in 11 direction.  The damage variables $d_{2}$ and $d_{3}$ are zero. The comparison between the figures (\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) suggests that the material routine implemented in octave and usermat are numerically similiar to each other. \\
 \\
 
 \begin{figure}[htbp]
@@ -1180,7 +1184,7 @@ After that, the material subroutines are implemented in USERMAT and tested in AN
 
      \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=1.25\textwidth]{22.d1,d2,d3.png}
+         \includegraphics[width=1.25\textwidth]{21.d1,d2,d3.png}
          \caption{Evolution of damage}
          \label{fig:Evolution of damage in 11 direction}
      \end{subfigure}
@@ -1188,14 +1192,70 @@ After that, the material subroutines are implemented in USERMAT and tested in AN
         \label{fig:Evolution of stress and damage components for a uniaxial tension test in 11 direction}     
 \end{figure}
 The scalar softening parameter($P$) in the damage evolution equation(\ref{exponential damage equation}) determines the slope of the damage curve. The following figure demonstrates the influence of the softening parameter (P) in the damage evolution\\
-\\
+
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{{22.P_damage.png}}
+\includegraphics[width=0.6\textwidth]{{21.P_damage.png}}
  \caption{Influence of softening parameter $P$ in the damage evolution)}
  \label{fig:Influence of softening parameter P}
  \end{center}
 \end{figure}
+
+\subsubsection*{Drawbacks of strain based damage initiation criteria}
+\indent\indent\indent Since the lateral contraction is not constrained during uniaxial tension, the transverse directions experience compression due to poisson's effect i.e., $\epsilon_{22}$ and $\epsilon_{33}$ will be negative. If the compressive strength of transverse directions 2 and 3 are sufficiently low, the strains  $\epsilon_{22}$ and $\epsilon_{33}$ will exceed the damage initiation strain. This leads to damage evolution without the presence of stress in transverse directions 2 and 3. 
+This phenomenon cause convergence issues and the model stops when the damage $d_{2}$ or $d_{3}$ evolve without the presence of stress. The image (\ref{fig:Convergence error}) shows the convergence issue and the failure of the model to run when the damage $d_{2}$ starts when using strain-based damage initiation criteria\\
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{{22.Convergence_error.png}}
+ \caption{Convergence error due to evolution of damage $d_{2}$ without the presence of stress}
+ \label{fig:Convergence error}
+ \end{center}
+\end{figure}
+This problem can be rectified by using stress-based damage initiation criteria. Since damage evolution depends on failure index $F$, the transverse failure indices $F_{m}$ and $F_{z}$ will be zero during uniaxial tension if the stress based damage initiation criteria is used. This results in zero damage in transverse direction. The following section presents the results obtained using stress-based damage initiation and the use of mesh regularisation in the damage evolution law.
+
+\subsubsection*{Stress based damage initiation and mesh regularisation}
+\indent\indent\indent  As mentioned in the section (\ref{Mesh Regularisation}), the strain localisation problems results in strong mesh dependency so fracture energy and characteristic length($L_{c}$) of the element has to been included in the damage evolution law in order to alleviate the problem. So the material routine is modified by changing the damage initiation criteria to maximum stress criteria(\ref{tab:Maximum stress criterion}) and including the damage evolution equations from (\ref{d1}) to (\ref{d3}). The uniaxial tension is conducted again with the above mentioned changes and with very low transverse compression strength and the results are presented below\\ 
+
+\begin{figure}[htbp]
+     \centering
+     \captionsetup[subfigure]{justification=centering}
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{22.StressvsStrain_Ansys.png}
+         \caption{Stress-Strain relation (ANSYS)}
+         \label{fig:Stress-Strain relation in Ansys2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{22.StressvsStrain_Octave.png}
+         \caption{Stress-Strain relation (Octave)}
+         \label{fig:Stress-Strain relation Octave2}
+     \end{subfigure}
+
+
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{22.d1,d2,d3.png}
+         \caption{Evolution of damage}
+         \label{fig:Evolution of damage in 11 direction2}
+     \end{subfigure}
+        \caption{Evolution of stress and damage components with stress-based damage initiation criteria under uniaxial tension}
+        \label{fig:Evolution of stress and damage components 2}     
+\end{figure} 
+
+From figure (\ref{fig:Evolution of damage in 11 direction2}) it is evident that the damage  $d_{2}$ and $d_{3}$ are zero as a result of stress-based damage initiation because the stress components $\sigma_{22}$ and $\sigma_{33}$ are zero under uniaxial tension. While using mesh regularisation, the slope of the damage curve is determined by the characteristic length ($L_{c}$) which depends on the volume of the element. The following figure (\ref{fig:Influence of softening parameter P}) shows how the damage evolution is affected by the volume of the element,
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{{22.V_damage.png}}
+ \caption{Influence of element volume ($V$) in the damage evolution}
+ \label{fig:Influence of element volume}
+ \end{center}
+\end{figure}
+
+
 
 \subsubsection*{Discussion about tangent stiffness}
 \indent\indent\indent In case of uniaxial tension the components of the stress tensor other than $\sigma_{11}$ are zero. Since stress-conditions are enforced, the octave driver routine uses Newton-raphson method to determine the input strain components other than $\epsilon_{11}$ iteratively. The Newton-raphson method requires tangent stiffness for computation which can be derived using the equation (\ref{Anisotropic tangent stiffness}) for anisotropic damage. This enables us to test the derived algorithmic tangent stiffness (ATS) before implementing it in USERMAT which is then used by Ansys for solving non-linear system of equations which arise due to strain softening. The derived algorithmic tangent stiffness is verified by comparing it with the numerical tangent stiffness computed using numerical perturbation. In numerical perturbation, the coefficients of strain tensor are perturbed by a very small value i.e.,  $\Delta\epsilon_{kl}^{n+1} = \delta$ (where $\delta<<1$) and the resulting stress perturbations are calculated. 
@@ -1212,21 +1272,122 @@ Since the material routine must be evaluated for every perturbation of $\epsilon
      \centering
      \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=1.25\textwidth]{23.e11vse22e33_ATS.png}
+         \includegraphics[width=1.25\textwidth]{22.e11vse22e33_ATS.png}
          \caption{$\epsilon_{22},\epsilon_{33}$ vs $\epsilon_{11}$ (Algorithmic tangent)}
          \label{fig:Algorithmic tangent}
      \end{subfigure}  
      \hfill
      \begin{subfigure}{0.4\textwidth}
          \centering
-         \includegraphics[width=1.25\textwidth]{24.e11vse22e33_NT.png}
+         \includegraphics[width=1.25\textwidth]{22.e11vse22e33_NT.png}
          \caption{$\epsilon_{22},\epsilon_{33}$ vs $\epsilon_{11}$ (Numerical perturbation)}
          \label{fig:Numerical perturbation}
      \end{subfigure}
         \caption{The Strain components $\epsilon_{22}$ and $\epsilon_{33}$ computed using algorithmic and numerical tangent stiffness under uniaxial tension}
         \label{fig: Algorithmic and numerical tangent stiffness under uniaxial tension}     
 \end{figure}
-\\
 These comparison between above plots clearly indicates that the tangent stiffness computed using algorithmic tangent and numerical tangent are numerically similar to each other.
 
+\subsection{Biaxial tension}
+\indent\indent\indent  In case of biaxial tension, normal stresses are present in two direction and the shear stresses are zero  i.e., two components of the stress are non-zero. In Ansys, biaxial tension is achieved by applying same displacements in two normal directions of the finite element ($11$ and $22$ direction) and the contraction in 3rd direction ($33$) is unconstrained. The following figures shows the corresponding stress and damage components obtained from the test
+\begin{figure}[htbp]
+     \centering
+     \captionsetup[subfigure]{justification=centering}
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{23.S11vsE11.png}
+         \caption{$\sigma_{11}$ vs $\epsilon_{11}$}
+         \label{fig:S11vsE11}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{23.S22vsE22.png}
+         \caption{$\sigma_{22}$ vs $\epsilon_{22}$}
+         \label{fig:S22vsE22}
+     \end{subfigure}
+
+        \caption{Evolution of stress components under biaxial tension}
+        \label{fig:Evolution of stress under biaxial tension}   
+\end{figure} 
+
+\begin{figure}[htbp]
+     \centering
+     \captionsetup[subfigure]{justification=centering}
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{23.d1.png}
+         \caption{Evolution of damage d1}
+         \label{fig:Evolution of damage d1}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{23.d2.png}
+         \caption{Evolution of damage d2}
+         \label{fig:Evolution of damage d2}
+     \end{subfigure}
+     
+
+        \caption{Evolution of damage components under biaxial tension}
+        \label{fig:Evolution of damage under biaxial tension}     
+\end{figure} 
+\subsection*{Triaxial tension}
+\indent\indent\indent In case of triaxial tension all the normal stresses are present on the element and the shear stresses are zero.  In Ansys, triaxial tension is achieved by same displacement all the normal directions ($11$, $22$ and $33$ direction).  
+The following figures shows the corresponding stress and damage components obtained from the test
+\begin{figure}[htbp]
+     \centering
+     \captionsetup[subfigure]{justification=centering}
+     \begin{subfigure}{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.S11vsE11.png}
+         \caption{$\sigma_{11}$ vs $\epsilon_{11}$}
+         \label{fig:S11vsE11 2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.S22vsE22.png}
+         \caption{$\sigma_{22}$ vs $\epsilon_{22}$}
+         \label{fig:S22vsE22 2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.S33vsE33.png}
+         \caption{$\sigma_{33}$ vs $\epsilon_{33}$}
+         \label{fig:S33vsE33}
+     \end{subfigure}
+
+        \caption{Evolution of stress components under triaxial tension}
+        \label{fig:Evolution of stress under triaxial tension}   
+\end{figure} 
+
+\begin{figure}[htbp]
+     \centering
+     \captionsetup[subfigure]{justification=centering}
+     \begin{subfigure}{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.d1.png}
+         \caption{Evolution of damage d1}
+         \label{fig:Evolution of damage d1 2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.d2.png}
+         \caption{Evolution of damage d2}
+         \label{fig:Evolution of damage d2 2}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.3\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.d2.png}
+         \caption{Evolution of damage d3}
+         \label{fig:Evolution of damage d3}
+     \end{subfigure}     
+
+        \caption{Evolution of damage components under triaxial tension}
+        \label{fig:Evolution of damage under triaxial tension}     
+\end{figure}
 \end{document}

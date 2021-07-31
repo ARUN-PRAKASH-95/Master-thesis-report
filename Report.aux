@@ -99,6 +99,7 @@
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Maximum stress criterion\relax }}{27}{}\protected@file@percent }
 \newlabel{tab:Maximum stress criterion}{{2}{27}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}3D Hashin's quadratic strain criteria}{27}{}\protected@file@percent }
+\newlabel{3D Hashin's quadratic strain criteria}{{4.3.3}{27}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}3D Hashin's stress criteria}{28}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5}Modified Hashin's failure criterion }{29}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Types of damage evolution}{30}{}\protected@file@percent }
@@ -112,6 +113,10 @@
 \newlabel{exponential damage equation}{{66}{32}}
 \newlabel{Anisotropic tangent stiffness}{{67}{32}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Localisation and Mesh Regularisation}{32}{}\protected@file@percent }
+\newlabel{Mesh Regularisation}{{4.5}{32}}
+\newlabel{d1}{{68}{33}}
+\newlabel{d2}{{69}{33}}
+\newlabel{d3}{{70}{33}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results and Discussion}{36}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Modelling Linear elastic behaviour of orthotropic materials}{36}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Stress-Strain relation (ANSYS vs USERMAT)\relax }}{36}{}\protected@file@percent }
@@ -143,10 +148,51 @@
 \newlabel{fig:Evolution of stress and damage components for a uniaxial tension test in 11 direction}{{18}{38}}
 \@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Influence of softening parameter $P$ in the damage evolution)\relax }}{39}{}\protected@file@percent }
 \newlabel{fig:Influence of softening parameter P}{{19}{39}}
-\newlabel{fig:Algorithmic tangent}{{20a}{40}}
-\newlabel{sub@fig:Algorithmic tangent}{{a}{40}}
-\newlabel{fig:Numerical perturbation}{{20b}{40}}
-\newlabel{sub@fig:Numerical perturbation}{{b}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces The Strain components $\epsilon _{22}$ and $\epsilon _{33}$ computed using algorithmic and numerical tangent stiffness under uniaxial tension\relax }}{40}{}\protected@file@percent }
-\newlabel{fig: Algorithmic and numerical tangent stiffness under uniaxial tension}{{20}{40}}
-\gdef \@abspage@last{40}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Convergence error due to evolution of damage $d_{2}$ without the presence of stress\relax }}{39}{}\protected@file@percent }
+\newlabel{fig:Convergence error}{{20}{39}}
+\newlabel{fig:Stress-Strain relation in Ansys2}{{21a}{40}}
+\newlabel{sub@fig:Stress-Strain relation in Ansys2}{{a}{40}}
+\newlabel{fig:Stress-Strain relation Octave2}{{21b}{40}}
+\newlabel{sub@fig:Stress-Strain relation Octave2}{{b}{40}}
+\newlabel{fig:Evolution of damage in 11 direction2}{{21c}{40}}
+\newlabel{sub@fig:Evolution of damage in 11 direction2}{{c}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Evolution of stress and damage components with stress-based damage initiation criteria under uniaxial tension\relax }}{40}{}\protected@file@percent }
+\newlabel{fig:Evolution of stress and damage components 2}{{21}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Influence of element volume ($V$) in the damage evolution\relax }}{41}{}\protected@file@percent }
+\newlabel{fig:Influence of element volume}{{22}{41}}
+\newlabel{fig:Algorithmic tangent}{{23a}{42}}
+\newlabel{sub@fig:Algorithmic tangent}{{a}{42}}
+\newlabel{fig:Numerical perturbation}{{23b}{42}}
+\newlabel{sub@fig:Numerical perturbation}{{b}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces The Strain components $\epsilon _{22}$ and $\epsilon _{33}$ computed using algorithmic and numerical tangent stiffness under uniaxial tension\relax }}{42}{}\protected@file@percent }
+\newlabel{fig: Algorithmic and numerical tangent stiffness under uniaxial tension}{{23}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Biaxial tension}{42}{}\protected@file@percent }
+\newlabel{fig:S11vsE11}{{24a}{42}}
+\newlabel{sub@fig:S11vsE11}{{a}{42}}
+\newlabel{fig:S22vsE22}{{24b}{42}}
+\newlabel{sub@fig:S22vsE22}{{b}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Evolution of stress components under biaxial tension\relax }}{42}{}\protected@file@percent }
+\newlabel{fig:Evolution of stress under biaxial tension}{{24}{42}}
+\newlabel{fig:Evolution of damage d1}{{25a}{43}}
+\newlabel{sub@fig:Evolution of damage d1}{{a}{43}}
+\newlabel{fig:Evolution of damage d2}{{25b}{43}}
+\newlabel{sub@fig:Evolution of damage d2}{{b}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Evolution of damage components under biaxial tension\relax }}{43}{}\protected@file@percent }
+\newlabel{fig:Evolution of damage under biaxial tension}{{25}{43}}
+\newlabel{fig:S11vsE11 2}{{26a}{43}}
+\newlabel{sub@fig:S11vsE11 2}{{a}{43}}
+\newlabel{fig:S22vsE22 2}{{26b}{43}}
+\newlabel{sub@fig:S22vsE22 2}{{b}{43}}
+\newlabel{fig:S33vsE33}{{26c}{43}}
+\newlabel{sub@fig:S33vsE33}{{c}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Evolution of stress components under triaxial tension\relax }}{43}{}\protected@file@percent }
+\newlabel{fig:Evolution of stress under triaxial tension}{{26}{43}}
+\newlabel{fig:Evolution of damage d1 2}{{27a}{44}}
+\newlabel{sub@fig:Evolution of damage d1 2}{{a}{44}}
+\newlabel{fig:Evolution of damage d2 2}{{27b}{44}}
+\newlabel{sub@fig:Evolution of damage d2 2}{{b}{44}}
+\newlabel{fig:Evolution of damage d3}{{27c}{44}}
+\newlabel{sub@fig:Evolution of damage d3}{{c}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Evolution of damage components under triaxial tension\relax }}{44}{}\protected@file@percent }
+\newlabel{fig:Evolution of damage under triaxial tension}{{27}{44}}
+\gdef \@abspage@last{44}
