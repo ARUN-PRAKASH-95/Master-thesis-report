@@ -381,3 +381,131 @@ The matrix representation of the Eqn.(\ref{Damaged_elasticity_matrix_2}) can be 
 \subsection{Manufacturing techniques}
 \indent\indent\indent The manufacturing techniques depend on the way in which fibres are used. The fibres can be laid in unidirectional fashion or combined to fibre bundles, woven mats, mats with randomly distributed long curled fibres and binding between the fibres etc., For short fibres the method of spraying in which the cut fibres are sprayed in a mould together with the matrix resin is often used. The fibre orientation in this process is random which leads to nearly an isotropic material. If unidirectional fibre mats are placed in mould and resin is added the resulting material will be orthotropic. For graphite fibres combined with epoxy resin special type of reinforcement called prepegs in which fibres are already combined with a matrix material and hardened till they are dried. \\
 \indent\indent\indent  The hardening of the composite can take place under high temperature, high pressure or simply at room temperature for all procedures in which resin is added to the fibres in the mould, the so called wet process. In dry process the fibres are combined under high temperature or high pressure to let the matrix material completely harden as one.The hardening process influences the strength of the material. For example high temperature hardening leads to residual stress in material due to the temperature drop when the product is cooled to room temperature. Besides hardening the binging of the fibres and resin influences the material behaviour and thus failure strength. The binding can be improved by surface treatment of fibres which increases roughness.
+
+
+
+\subsubsection{Damage tensors of Fourth order and eighth order}
+\indent\indent\indent Let us consider the fourth-order elastic modulus tensor of an undamaged and the damaged material be denoted by $\mathbb{C}_{0}$ and $\mathbb{C}(D)$. Then the elastic constitutive equation of these materials is given by \\
+\begin{equation}
+\label{eqn:4thorder_sigma}
+  \sigma  =  \mathbb{C}_{0} : \epsilon  \;\;\;  \sigma = \mathbb{C}(D) : \epsilon
+\end{equation}
+where (:) denotes the double contraction. Since the the elastic strain in a damaged material under stress $\sigma$ is equal to the equivalent fictitious undamaged material subject to effective stress $\sigma$, we have
+\begin{equation}
+\label{eqn:4thorder_tilde_sigma}
+ \tilde{\sigma}  = \mathbb{C}_{0} : \epsilon
+\end{equation}
+Form Eqn.(\ref{eqn:4thorder_sigma}) and (\ref{eqn:4thorder_tilde_sigma}) we can represent effective stress as 
+\begin{equation}
+\tilde{\sigma}  = [\mathbb{C}_{0} : \mathbb{C}(D)^{-1}] : \sigma
+\end{equation}
+From equation (\ref{eqn:4thorder_sigma}), the damage tensor $D$ may be viewed as an eighth-order tensor which transforms fourth order elasticity tensor $\mathbb{C}_{0}$ of an undamaged material into another fourth-order tensor $\mathbb{C}(D)$ of the damaged material. Since mathematical operation of eighth-order tensor is highly complicated an alternative fourth-order damage tensor $\mathbb{D}$ has been proposed and the transformation between elastic moduli is given by,
+\begin{equation}
+\mathbb{C}(\mathbb{D})  =  (\mathbb{I}  - \mathbb{D}) : \mathbb{C}_{0}
+\end{equation}
+where $\mathbb{I}$ denotes the fourth-order identity tensor. The fourth order damage tesnor $\mathbb{D}$ and the effecctive stress tensor $\tilde{\sigma}$ are given by the following relations
+\begin{equation}
+\mathbb{D}  = \mathbb{I} - \mathbb{C}(\mathbb{D}) : \mathbb{C}_{0}^{-1}
+\end{equation}\\
+\begin{equation}
+\label{eqn:4thorder_effective_stress}
+\tilde{\sigma} =  (\mathbb{I} - \mathbb{D})^{-1} : \sigma
+\end{equation}
+Since the damage tensor $\mathbb{D}$ given by Eqn(\ref{eqn:4thorder_effective_stress}) is asymmetric, Chaboche(1993) later employed an alternative transformation,
+\begin{equation}
+\mathbb{C}(\hat{\mathbb{D}}) = \frac{1}{2}\; [(\mathbb{I} - \hat{\mathbb{D}}) : \mathbb{C}_{0} + \mathbb{C}_{0} : (\mathbb{I} - \hat{\mathbb{D}}  ]
+\end{equation}
+and proposed a new fourth-order symmetric tensor $\hat{\mathbb{D}}$.
+
+
+
+
+\indent\indent\indent Isotropic materials are the materials which exhibit same material properties in all directions at a given point. This means when a load is applied at any point in the material it will exhibit same stress, strain, strength, hardness etc., The elastic constitutive equation of the isotropic material has the form, 
+\begin{equation}
+  \sigma = \mathbb{C}_{0} : \epsilon   \;\;\;  \sigma_{ij}  =  C^{0}_{ijkl}\epsilon_{kl},
+\end{equation}
+\begin{equation}
+\mathbb{C}_{0} =  \lambda I \otimes I  +  2\mu ´\mathbb{I}^{s}
+\end{equation}\\
+\\
+or
+\begin{equation}
+C^{0}_{ijkl} = \lambda\delta_{ij}\delta_{kl}  +  \mu(\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk})
+\end{equation}
+
+The fourth-order elastic modulus tensor $\mathbb{C}_{0}$ can be represented in matrix form as 
+\\
+\\
+$$
+[C^{0}_{pq}] =  \frac{E}{(1 + \nu)(1 - 2\nu)}
+ \begin{bmatrix}
+  1 - \nu \; & \nu \;& \nu\; & 0 \;& 0 \;& 0 \\
+  \\
+  \nu \; & 1-\nu \;& \nu \;& 0 \;& 0 \;& 0 \\
+  \\
+  \nu \;& \nu \;& 1-\nu \;& 0 \;& 0 \;& 0 \\
+  \\
+  0 \;& \nu \;& \nu \;& 1 - 2\nu \;& 0 \;& 0 \\
+  \\
+  0 \;& \nu \;& \nu \;& 0 \;& 1 - 2\nu\;& 0 \\
+  \\
+  0\;& \nu \;& \nu \;& 0 \;& 0 \;&1 - 2\nu  
+ \end{bmatrix}
+ $$
+ \\
+ \\
+  A simple APDL script for creating a square with isotropic material properties under uniaxial tension is shown in the Fig.(\ref{fig:APDL_script}) below\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{{11.APDL_script}}
+ \caption{APDL Script}
+ \label{fig:APDL_script}
+ \end{center}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{{10.Intelcompiler}}
+ \caption{Intel compiler window}
+ \label{fig:Intelcompiler}
+ \end{center}
+\end{figure}
+\vspace*{0.6cm}
+
+
+
+
+
+\begin{center}
+\begin{tikzpicture}[node distance = 1.8cm]
+
+\node(straininc) [startstop] {Apply increment $\Delta\epsilon$};
+\node(strainadd) [process, below of = straininc] {Find effective stress \\ $\underline{\tilde{\sigma}}_{n+1} = \mathbb{C}_{0} : \underline{\epsilon}_{n+1} $};
+\node(Failure)   [process, below of = strainadd] {Failure Criteria ($F_{I}(\underline{\sigma}))$};
+\node(Damageon)  [decision, below of = Failure, yshift=-1.5cm] {Damage onset?};
+\node(Damagecalc) [process, below of = Damageon, yshift=-1.8cm] {Calculate damage variables};
+\node(Materialeqn)[process, below of = Damagecalc, yshift=-0.3cm] {Material constitutive equations};
+\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] {$\underline{\sigma} = M(D)^{-1}:\underline{\tilde{\sigma}}_{n+1}$ \\  $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
+\node(abaqus)[startstop, below of = Tangent, yshift=-0.5cm] {ANSYS solver};
+\node(Converge)[decision, below of = abaqus, yshift=-1cm] {Converged?};
+
+\draw [arrow] (straininc) -- (strainadd);
+\draw [arrow] (strainadd) -- (Failure);
+\draw [arrow] (Failure) -- (Damageon);
+\draw [arrow] (Damageon) -- node[anchor = west]{yes} (Damagecalc);
+\draw [arrow] (Damagecalc) -- (Materialeqn);
+\draw [arrow] (Materialeqn) -- (Tangent);
+\draw [arrow] (Tangent) -- (abaqus);
+\draw [arrow] (abaqus) -- (Converge);
+\draw [arrow] (Damageon.east) node[xshift=0.6cm,anchor = south]{no} -| ++(1,-5.8) -- ++(-0.7,0)  (Materialeqn);
+
+\draw [arrow] (Converge.west)node[xshift=-1.7cm,yshift=-0.3cm,anchor = north]{yes} -| node[xshift=10cm,sloped,above]{Next increment until failure or end of analysis}++(-4.5,19.9) -- ++ (4,0) (straininc); 
+
+\draw [arrow] (Converge.east)node[xshift=1.7cm,yshift=-0.3cm,anchor = north]{no} -| node[xshift=10.5cm,sloped,below]{Iterate until convergence} ++(3.8,19.2)-- ++ (-5.9,0)  (straininc); 
+
+\draw [arrow] (0,-16.25)-|node[xshift=6.5cm,sloped,above]{Do for each integration point}++(-4.5,15.4)--(-0,-0.9);
+
+ 
+\end{tikzpicture}
+\end{center}

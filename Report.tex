@@ -7,6 +7,7 @@
     \usepackage{titlepic}
     \usepackage{stackengine}
     \usepackage{lipsum}
+    \linespread{1.2} 
     \usepackage[demo]{graphicx}
     \usepackage[section]{placeins}
     \usepackage{booktabs}
@@ -24,7 +25,7 @@
     \setlength{\@fptop}{0pt}
     \makeatother
     \tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 4cm, minimum height=1cm, text centered,text width = 5cm, draw = black, fill=white!10]    
-     \tikzstyle{process} = [rectangle,  minimum width = 4.2cm, minimum height=1.5cm, text centered, text width = 5cm,draw = black, fill = white!10]  
+     \tikzstyle{process} = [rectangle,  minimum width = 5cm, minimum height=1.5cm, text centered, text width = 5cm,draw = black, fill = white!10]  
 	 \tikzstyle{decision} = [diamond, minimum width = 4cm, minimum height=1cm, text centered,text width = 3cm, draw = black, fill = white!10]  
      \tikzstyle{arrow} = [thick,->,>=stealth]  
 
@@ -200,38 +201,7 @@ where $I$ is the second order identity tensor. Since the damage tensor $D$ is sy
 D = \sum_{i = 1}^{3} D_{i}n_{i}  \otimes D_{i}n_{i}
 \end{equation}
 where $D_{i}$ and $n_{i}$ are the principal value and principal direction of $D$. 
-\subsubsection{Damage tensors of Fourth order and eighth order}
-\indent\indent\indent Let us consider the fourth-order elastic modulus tensor of an undamaged and the damaged material be denoted by $\mathbb{C}_{0}$ and $\mathbb{C}(D)$. Then the elastic constitutive equation of these materials is given by \\
-\begin{equation}
-\label{eqn:4thorder_sigma}
-  \sigma  =  \mathbb{C}_{0} : \epsilon  \;\;\;  \sigma = \mathbb{C}(D) : \epsilon
-\end{equation}
-where (:) denotes the double contraction. Since the the elastic strain in a damaged material under stress $\sigma$ is equal to the equivalent fictitious undamaged material subject to effective stress $\sigma$, we have
-\begin{equation}
-\label{eqn:4thorder_tilde_sigma}
- \tilde{\sigma}  = \mathbb{C}_{0} : \epsilon
-\end{equation}
-Form Eqn.(\ref{eqn:4thorder_sigma}) and (\ref{eqn:4thorder_tilde_sigma}) we can represent effective stress as 
-\begin{equation}
-\tilde{\sigma}  = [\mathbb{C}_{0} : \mathbb{C}(D)^{-1}] : \sigma
-\end{equation}
-From equation (\ref{eqn:4thorder_sigma}), the damage tensor $D$ may be viewed as an eighth-order tensor which transforms fourth order elasticity tensor $\mathbb{C}_{0}$ of an undamaged material into another fourth-order tensor $\mathbb{C}(D)$ of the damaged material. Since mathematical operation of eighth-order tensor is highly complicated an alternative fourth-order damage tensor $\mathbb{D}$ has been proposed and the transformation between elastic moduli is given by,
-\begin{equation}
-\mathbb{C}(\mathbb{D})  =  (\mathbb{I}  - \mathbb{D}) : \mathbb{C}_{0}
-\end{equation}
-where $\mathbb{I}$ denotes the fourth-order identity tensor. The fourth order damage tesnor $\mathbb{D}$ and the effecctive stress tensor $\tilde{\sigma}$ are given by the following relations
-\begin{equation}
-\mathbb{D}  = \mathbb{I} - \mathbb{C}(\mathbb{D}) : \mathbb{C}_{0}^{-1}
-\end{equation}\\
-\begin{equation}
-\label{eqn:4thorder_effective_stress}
-\tilde{\sigma} =  (\mathbb{I} - \mathbb{D})^{-1} : \sigma
-\end{equation}
-Since the damage tensor $\mathbb{D}$ given by Eqn(\ref{eqn:4thorder_effective_stress}) is asymmetric, Chaboche(1993) later employed an alternative transformation,
-\begin{equation}
-\mathbb{C}(\hat{\mathbb{D}}) = \frac{1}{2}\; [(\mathbb{I} - \hat{\mathbb{D}}) : \mathbb{C}_{0} + \mathbb{C}_{0} : (\mathbb{I} - \hat{\mathbb{D}}  ]
-\end{equation}
-and proposed a new fourth-order symmetric tensor $\hat{\mathbb{D}}$.
+
 \subsection{Effective Stress Tensors}
 \indent\indent\indent The effective stresses are  used to describe the mechanical behaviour of the damaged material. Some of the effective stresses postulated in damage mechanics are given below
 \subsubsection{Effective Stress Tensor for Isotropic Damage}
@@ -468,46 +438,13 @@ V = \frac{1}{2}\sigma : \epsilon \; - \; \phi(\alpha) = \frac{1}{2}\tilde{\sigma
 \tilde{\epsilon} \; = \; \mathbb{S}_{0} : \tilde{\sigma}
 \end{equation}
 
-\subsection{Elastic Constitutive equation and Elastic modulus tensor}
-\subsubsection{Isotropic materials}
-\indent\indent\indent Isotropic materials are the materials which exhibit same material properties in all directions at a given point. This means when a load is applied at any point in the material it will exhibit same stress, strain, strength, hardness etc., The elastic constitutive equation of the isotropic material has the form, 
+\subsection{Elastic Constitutive equation and Elastic modulus tensor of orthotropic material}\label{Constitutive matrix}
+\indent\indent\indent Orthotropic materials are materials which exhibit different material properties along three mutually-orthogonal axis. They are a special form of anisotropic materials, because their properties change when measured from different directions. Some examples of orthotropic materials are wood, composite materials etc., Orthotropic materials require 9 independent variables in order to express their constitutive matrix. The 9 elastic constants are three Young's moduli $E_{x},E_{y},E_{z}$, the three Poisson's ratios $\nu_{xy},\nu_{yz},\nu_{zx}$, and three shear moduli $G_{xy},G_{yz},G_{zx}$. The elastic stiffness matrix of orthotropic material has the form,
+
 \begin{equation}
   \sigma = \mathbb{C}_{0} : \epsilon   \;\;\;  \sigma_{ij}  =  C^{0}_{ijkl}\epsilon_{kl},
 \end{equation}
-\begin{equation}
-\mathbb{C}_{0} =  \lambda I \otimes I  +  2\mu ´\mathbb{I}^{s}
-\end{equation}\\
-\\
-or
-\begin{equation}
-C^{0}_{ijkl} = \lambda\delta_{ij}\delta_{kl}  +  \mu(\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk})
-\end{equation}
 
-The fourth-order elastic modulus tensor $\mathbb{C}_{0}$ can be represented in matrix form as 
-\\
-\\
-$$
-[C^{0}_{pq}] =  \frac{E}{(1 + \nu)(1 - 2\nu)}
- \begin{bmatrix}
-  1 - \nu \; & \nu \;& \nu\; & 0 \;& 0 \;& 0 \\
-  \\
-  \nu \; & 1-\nu \;& \nu \;& 0 \;& 0 \;& 0 \\
-  \\
-  \nu \;& \nu \;& 1-\nu \;& 0 \;& 0 \;& 0 \\
-  \\
-  0 \;& \nu \;& \nu \;& 1 - 2\nu \;& 0 \;& 0 \\
-  \\
-  0 \;& \nu \;& \nu \;& 0 \;& 1 - 2\nu\;& 0 \\
-  \\
-  0\;& \nu \;& \nu \;& 0 \;& 0 \;&1 - 2\nu  
- \end{bmatrix}
- $$
- \\
- \\
-\subsubsection{Orthotropic materials}\label{Constitutive matrix}
-\indent\indent\indent Orthotropic materials are materials which exhibit different material properties along three mutually-orthogonal axis. They are a special form of anisotropic materials, because their properties change when measured from different directions. Some examples of orthotropic materials are wood, composite materials etc., Orthotropic materials require 9 independent variables in order to express their constitutive matrix. The 9 elastic constants are three Young's moduli $E_{x},E_{y},E_{z}$, the three Poisson's ratios $\nu_{xy},\nu_{yz},\nu_{zx}$, and three shear moduli $G_{xy},G_{yz},G_{zx}$. The elastic stiffness matrix of orthotropic material has the form,
-\\
-\\
 $$
 [C^{0}_{pq}] =  
  \begin{bmatrix}
@@ -534,18 +471,18 @@ $$
 \vspace*{2cm}
 \section{Working environment}
 \vspace*{1cm}
-\indent\indent\indent  The user material subroutines (USERMAT) necessary for simulating progressive damage models must be programmed first using a programming language, compiled and then can be tested in a commercial FEM software. The programming language of choice for most commercial FEM software is FORTRAN because they are simple and fast. In order to program the USERMAT an integrated development environment (IDE) and a compiler which is compatible with the version of the FEM software is required. In this chapter the tools required for creating USERMAT and how to use them in order to test the subroutines is described in detail.  
+\indent\indent\indent  The material models necessary for simulating progressive damage models must be programmed first using a programming language, compiled and then can be tested in a commercial FEM software. The programming language of choice for most commercial FEM software is FORTRAN because they are simple and fast. In order to program the material model, an integrated development environment (IDE) and a compiler which is compatible with the version of the FEM software is required. In this chapter the tools required for creating material model and how to use them in order to test the models is described in detail.  
 \vspace*{1cm}
 \subsection{Software tools required}
 \begin{itemize}
 \item \textbf{OCTAVE}\\ \indent
 \hspace*{13mm} Octave is an open source version of programming language software MATLAB. Initially, the user material subroutines are developed on Octave and tested using simple tests like uniaxial tension with the help of constitutive driver routines
-\item \textbf{Visual studio community 2015}\\
+\item \textbf{Visual studio }\\
 \hspace*{13mm} Visual studio is the IDE used for programming and debugging user material subroutines using FORTRAN programming language.
-\item \textbf{Intel parallel studio 2017}\\
-\hspace*{13mm} The compiler available in Intel parallel studio is used for compiling the USERMAT before testing them in an FEM software
-\item \textbf{ANSYS 19.1}\\
-\hspace*{13mm}ANSYS is the commercial FEM software chosen for creating specimens and analyzing how the subroutines behave in different test conditions
+\item \textbf{Intel parallel studio}\\
+\hspace*{13mm} The compiler available in Intel parallel studio is used for compiling the material subroutines before testing them in an FEM software
+\item \textbf{ANSYS }\\
+\hspace*{13mm}ANSYS is the commercial FEM software chosen for creating specimens and analyzing how the material models behave in different test conditions
 \end{itemize}
 
 The following sections provide the reader a detailed description starting from how to develop the user defined material subroutine to how to implement and analyse the results in the ANSYS environment.  The flowchart below shows the steps involved in the whole process\\
@@ -593,27 +530,13 @@ For every Newton raphson iteration, the USERMAT is called at every material inte
 \item Open command prompt and navigate to the working directory
 \item Type ANSUSERSHARED.bat and press enter. This opens the Intel compiler and asks for user-programmable feature source file name
 \item Type $usermat$ without extension and press Enter.
-\item If there is no error in the usermat file the compiler will show the message "usermatLib.dll has been successfully build." as shown in the Fig.(\ref{fig:Intelcompiler}) below 
+\item If there is no error in the usermat file the compiler will show the message "usermatLib.dll has been successfully build."  
 \item In order for the ANSYS to access these .dll files, open ANSYS Mechanical APDL product launcher and in the file management section browse to the current working directory
 \item Click run and in the Mechanical APDL output window you shoud see the message "Note - This ANSYS version was linked by Licensee". This indicates that you are using the shared library with the USERMAT\\
 \end{itemize} 
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=0.9\textwidth]{{10.Intelcompiler}}
- \caption{Intel compiler window}
- \label{fig:Intelcompiler}
- \end{center}
-\end{figure}
-\vspace*{0.6cm}
+
 \subsection{Creating FE model}
-\indent\indent\indent  The preprocessor section of the ANSYS mechanical APDL is used to create and mesh the FE model. The ANSYS user programmable feature can be used with 18x family elements, which include LINK180, PLANE 182, PLANE 183, SOLID 185, SOLID 186. The type of element required for creating FE model based on the problem can be chosen from the element type menu in preprocessor section. Once the element type is chosen the material model and the material properties can be entered in the $Material\; props$ section.  The $Modelling$ section can be utilised to create the geometry required for testing the subroutines and then can be meshed using the $Meshing$ option.\\ \indent\indent\indent In order to use the FE model again and again to test different material models with different material properties the FE model can be saved in the form of an APDL script. An APDL script is a simple text file which contains the command required to create and solve and FE model. A simple way to create an APDL script for an FE model is to copy the log of commands which were automatically created in the log file during the creation of your model and pasting it a new text file. This log file can be accessed by going to $List>Files>Logfile$. The created APDL script can then be accessed by going to $File>Read \;input\; from$ and navigate and select your file. A simple APDL script for creating a square with isotropic material properties under uniaxial tension is shown in the Fig.(\ref{fig:APDL_script}) below\\
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=0.5\textwidth]{{11.APDL_script}}
- \caption{APDL Script}
- \label{fig:APDL_script}
- \end{center}
-\end{figure}
+\indent\indent\indent  The preprocessor section of the ANSYS mechanical APDL is used to create and mesh the FE model. The ANSYS user programmable feature can be used with 18x family elements, which include LINK180, PLANE 182, PLANE 183, SOLID 185, SOLID 186. The type of element required for creating FE model based on the problem can be chosen from the element type menu in preprocessor section. Once the element type is chosen the material model and the material properties can be entered in the $Material\; props$ section.  The $Modelling$ section can be utilised to create the geometry required for testing the subroutines and then can be meshed using the $Meshing$ option.\\ \indent\indent\indent In order to use the FE model again and again to test different material models with different material properties the FE model can be saved in the form of an APDL script. An APDL script is a simple text file which contains the command required to create and solve and FE model. A simple way to create an APDL script for an FE model is to copy the log of commands which were automatically created in the log file during the creation of your model and pasting it a new text file. This log file can be accessed by going to $List>Files>Logfile$. The created APDL script can then be accessed by going to $File>Read \;input\; from$ and navigate and select your file.
 
 \subsection{Testing UMAT}
 \indent\indent\indent  To use the user material option, the TB,USER command must be included in the APDL script so that the user material can be defined. The table command for USER material option is\\
@@ -1005,18 +928,68 @@ d_{3} = 1 - \frac{e^{P_{3}(F_{z} - 1)}}{F_{z}}
 \\
 where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} = \frac{-\sigma_{22}^{f}\epsilon_{22}^{f}L_{c}}{G_{c,2}}$ and $P_{3} = \frac{-\sigma_{33}^{f}\epsilon_{33}^{f}L_{c}}{G_{c,3}}$ 
 
+\vspace*{1cm}
+\subsection{Numerical implementation of the damage model in ANSYS}
+\indent\indent\indent  As discussed before, the material models necessary for simulating progressive damage failure is implemented using the ANSYS user programmable feature called USERMAT. The damage model implemented using USERMAT computes and updates the current stress and consistent tangent stiffness. The following sections deal with the numerical implementation of the damage model based on two different methods or criteria used to predict the damage initiation\\
+\begin{itemize}
+\item Strain based damage model 
+\item Stress based damage model 
+\end{itemize}
+\vspace*{1cm}
+
+\newpage
+\subsubsection{Strain based damage model}
+\indent\indent\indent  In case of strain based damage model, the damage initiation is predicted using current strain ($\epsilon_{n+1}$).   The USERMAT receives strains, stresses and state variables at the beginning of the time increment and the current strain increment. The following steps describe the process of implementing the damage model
+
+\begin{itemize}
+\item Calculate current strain \textbf{$$ \underline{\epsilon}_{n+1} = \underline{\epsilon}_{n} + \underline{\Delta \epsilon} $$}
+\item Calculate the current degraded material stiffness matrix  \textbf{$\mathbb{C}(\underline{D}_{n})$}
+\item Calculate the failure indices \textbf{$F_{I}(\underline{\epsilon})$}
+\item[] Check if $F_{I} \geq F_{I}$max
+\item if \textbf{$F_{I}(\underline{\epsilon})<1$} \textbf{$$\underline{\sigma}_{n+1} \; = \; \mathbb{C}(\underline{D}_{n}) :  \underline{\epsilon}_{n+1} $$} \textbf{$$\mathbb{C}_{T} \; = \; \mathbb{C}(\underline{D}_{n})$$}
+\item else
+   	
+\item[]  Calculate the damage variables using damage evolution law \textbf{$$d_{1}(F_{f}),\;d_{2}(F_{m}),\;d_{3}(F_{z})$$}
+\item[]  Check if $d_{i} \geq 0 $ 
+\item[]  Calculate the updated degraded stiffness based on damage variables \textbf{$$\mathbb{C}(\underline{D}_{n+1})$$}
+\item[]  Calculate current stress  \textbf{$$\underline{\sigma}_{n+1} \; = \; \mathbb{C}(\underline{D}_{n+1}) :  \underline{\epsilon}_{n+1} $$}
+\item[] Calculate tangent stiffness \textbf{$$\mathbb{C}_{T}  \; = \;\mathbb{C}(D) + \sum_{i = 1}^{3} \Big( \frac{\partial \mathbb{C}(D) }{\partial d_{i}} : \epsilon \otimes \frac{\partial d_{i}}{\partial \epsilon }\Big)$$}
+	
+\end{itemize} 
+
+\newpage
+\subsubsection{Stress based damage model}
+\indent\indent\indent  In case of stress based damage model, the damage initiation is predicted using effective ($\underline{\tilde{\sigma}}_{n+1}$).  The USERMAT receives strains, stresses and state variables at the beginning of the time increment and the current strain increment. The following steps describe the process of implementing the damage model
+
+\begin{itemize}
+\item Calculate the elastic stiffness matrix  \textbf{$\mathbb{C}$}
+\item Calculate effective stress \textbf{$$\underline{\tilde{\sigma}}_{n+1} = \mathbb{C}_{0} : \underline{\epsilon}_{n+1} $$}
+\item Calculate the failure indices \textbf{$F_{I}(\underline{\sigma})$}
+\item[] Check if $F_{I} \geq F_{I}$max
+\item if \textbf{$F_{I}(\underline{\sigma})<1$} \textbf{$$\underline{\sigma}_{n+1} \; = \; \underline{\tilde{\sigma}}_{n+1} $$} \textbf{$$\mathbb{C}_{T} \; = \; \mathbb{C}$$}
+\item else
+   	
+\item[]  Calculate the damage variables using damage evolution law \textbf{$$d_{1}(F_{f}),\;d_{2}(F_{m}),\;d_{3}(F_{z})$$}  	
+\item[]  Check if $d_{i} \geq 0 $ 
+\item[]  Calculate the updated degraded stiffness based on damage variables \textbf{$$\mathbb{C}(\underline{D}_{n+1})$$}
+\item[]  Calculate current stress  \textbf{$$\underline{\sigma}_{n+1} \; = \;  M(D)^{-1}:\underline{\tilde{\sigma}}_{n+1} $$}
+\item[] Calculate tangent stiffness \textbf{$$\mathbb{C}_{T}  \; = \;\mathbb{C}(D) + \sum_{i = 1}^{3} \Big( \frac{\partial \mathbb{C}(D) }{\partial d_{i}} : \epsilon \otimes \frac{\partial d_{i}}{\partial \epsilon }\Big)$$}
+	
+\end{itemize} 
 
 
+
+\newpage
 \begin{center}
 \begin{tikzpicture}[node distance = 1.8cm]
 
 \node(straininc) [startstop] {Apply increment $\Delta\epsilon$};
-\node(strainadd) [process, below of = straininc] {$\underline{\epsilon}_{n+1} = \underline{\epsilon}_{n} + \underline{\Delta\epsilon} $};
-\node(Failure)   [process, below of = strainadd] {Failure Criteria ($F_{I}(\underline{\epsilon}))$};
+\node(strainadd) [process, below of = straininc] {$\underline{\epsilon}_{n+1} = \underline{\epsilon}_{n} + \underline{\Delta\epsilon} $ \\ $\underline{\tilde{\sigma}}_{n+1} = \mathbb{C}_{0} : \underline{\epsilon}_{n+1} $};
+\node(Failure)   [process, below of = strainadd] {Failure Criteria ($F_{I}(\underline{\epsilon}))$ or $F_{I}(\underline{\sigma}))$ };
 \node(Damageon)  [decision, below of = Failure, yshift=-1.5cm] {Damage onset?};
 \node(Damagecalc) [process, below of = Damageon, yshift=-1.8cm] {Calculate damage variables};
 \node(Materialeqn)[process, below of = Damagecalc, yshift=-0.3cm] {Material constitutive equations};
-\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] { $\underline{\sigma} = \mathbb{C}(D):\underline{\epsilon}_{n + 1}$ \\ $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
+\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] { $\underline{\sigma}_{n+1} = \mathbb{C}(D):\underline{\epsilon}_{n + 1}$ \\ (or) \\$\underline{\sigma}_{n+1} = M(D)^{-1}:\underline{\tilde{\sigma}}_{n+1}$ \\ $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
 \node(abaqus)[startstop, below of = Tangent, yshift=-0.5cm] {ANSYS solver};
 \node(Converge)[decision, below of = abaqus, yshift=-1cm] {Converged?};
 
@@ -1028,7 +1001,7 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
 \draw [arrow] (Materialeqn) -- (Tangent);
 \draw [arrow] (Tangent) -- (abaqus);
 \draw [arrow] (abaqus) -- (Converge);
-\draw [arrow] (Damageon.east) node[xshift=0.6cm,anchor = south]{no} -| ++(1,-5.8) -- ++(-0.7,0)  (Materialeqn);
+\draw [arrow] (Damageon.east) node[xshift=0.6cm,anchor = south]{no} -| ++(1,-5.8) -- ++(-0.5,0)  (Materialeqn);
 
 \draw [arrow] (Converge.west)node[xshift=-1.7cm,yshift=-0.3cm,anchor = north]{yes} -| node[xshift=10cm,sloped,above]{Next increment until failure or end of analysis}++(-4.5,19.9) -- ++ (4,0) (straininc); 
 
@@ -1043,49 +1016,14 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
 
 
 
-\begin{center}
-\begin{tikzpicture}[node distance = 1.8cm]
-
-\node(straininc) [startstop] {Apply increment $\Delta\epsilon$};
-\node(strainadd) [process, below of = straininc] {Find effective stress \\ $\underline{\tilde{\sigma}}_{n+1} = \mathbb{C}_{0} : \underline{\epsilon}_{n+1} $};
-\node(Failure)   [process, below of = strainadd] {Failure Criteria ($F_{I}(\underline{\sigma}))$};
-\node(Damageon)  [decision, below of = Failure, yshift=-1.5cm] {Damage onset?};
-\node(Damagecalc) [process, below of = Damageon, yshift=-1.8cm] {Calculate damage variables};
-\node(Materialeqn)[process, below of = Damagecalc, yshift=-0.3cm] {Material constitutive equations};
-\node(Tangent)[process, below of = Materialeqn, yshift=-0.5cm] {$\underline{\sigma} = M(D)^{-1}:\underline{\tilde{\sigma}}_{n+1}$ \\  $C_{T}=\frac{\partial \Delta \sigma}{\partial \Delta \epsilon}$};
-\node(abaqus)[startstop, below of = Tangent, yshift=-0.5cm] {ANSYS solver};
-\node(Converge)[decision, below of = abaqus, yshift=-1cm] {Converged?};
-
-\draw [arrow] (straininc) -- (strainadd);
-\draw [arrow] (strainadd) -- (Failure);
-\draw [arrow] (Failure) -- (Damageon);
-\draw [arrow] (Damageon) -- node[anchor = west]{yes} (Damagecalc);
-\draw [arrow] (Damagecalc) -- (Materialeqn);
-\draw [arrow] (Materialeqn) -- (Tangent);
-\draw [arrow] (Tangent) -- (abaqus);
-\draw [arrow] (abaqus) -- (Converge);
-\draw [arrow] (Damageon.east) node[xshift=0.6cm,anchor = south]{no} -| ++(1,-5.8) -- ++(-0.7,0)  (Materialeqn);
-
-\draw [arrow] (Converge.west)node[xshift=-1.7cm,yshift=-0.3cm,anchor = north]{yes} -| node[xshift=10cm,sloped,above]{Next increment until failure or end of analysis}++(-4.5,19.9) -- ++ (4,0) (straininc); 
-
-\draw [arrow] (Converge.east)node[xshift=1.7cm,yshift=-0.3cm,anchor = north]{no} -| node[xshift=10.5cm,sloped,below]{Iterate until convergence} ++(3.8,19.2)-- ++ (-5.9,0)  (straininc); 
-
-\draw [arrow] (0,-16.25)-|node[xshift=6.5cm,sloped,above]{Do for each integration point}++(-4.5,15.4)--(-0,-0.9);
-
- 
-\end{tikzpicture}
-\end{center}
 
 \newpage
 \vspace*{2cm}
 \section{Results and Discussion}
 \vspace*{1cm}
 \subsection{Modelling Linear elastic behaviour of orthotropic materials}
-\indent\indent\indent Before implementing the damage behaviour in orthotropic materials, their linear elastic behaviour must implemented which demonstrates what happens before the damage initiation. As mentioned before orthtoropic materials are special class of material whose properties change in mutually perpendicular directions. Therefore 9 independent material constants are required in order to model their elastic behaviour numerically. The constitutive matrix given in the section(\ref{Constitutive matrix}) and Hooke's law helps us model the elastic behaviour of the orthotropic materials.\\ 
-\indent\indent\indent The linear elastic behaviour of the orthotropic material is implemented in the USERMAT using constitutive equations and in this section the results are compared against the default orthortropic material option present in ANSYS using a structural example. A bar of length 10mm and area 1mm$^2$ (b = 1mm, t =1mm) fixed at one end is chosen for the analysis. The bar is constructed using 8 node SOLID 185 elements and full integration has been used. A displacement of 1mm is applied at the free end and the results obtained using the ANSYS default and the USERMAT are presented below. The figure(\ref{fig:Stress-Strain Linear elastic}) compares the stress-strain relation of the bar obtained using both ANSYS default and USERMAT 
-
-
-
+\indent\indent\indent Before implementing the damage behaviour in orthotropic materials, their linear elastic behaviour must implemented which demonstrates what happens before the damage initiation. As mentioned before orthtoropic materials are special class of material whose properties change in mutually perpendicular directions. Therefore 9 independent material constants are required in order to model their elastic behaviour numerically. Table (\ref{tab:Material parameters(Integration point studies}) summarises the utilised material parameters. The constitutive matrix given in the section(\ref{Constitutive matrix}) and Hooke's law helps us model the elastic behaviour of the orthotropic materials.\\ 
+\indent\indent\indent The linear elastic behaviour of the orthotropic material is implemented in the USERMAT using constitutive equations and in this section the results obtained are compared against the default orthortropic material option present in ANSYS using a structural example. A bar of length 10mm and area 1mm$^2$ (b = 1mm, t =1mm) fixed at one end is chosen for the analysis. The bar is constructed using 8 node SOLID 185 elements and full integration has been used. A displacement of 1mm is applied at the free end and the results obtained using the ANSYS default and the USERMAT are presented below. The figure(\ref{fig:Stress-Strain Linear elastic}) compares the stress-strain relation of the bar obtained using both ANSYS default and USERMAT 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{{14.Linear_SvsE.png}}
@@ -1093,6 +1031,47 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
  \label{fig:Stress-Strain Linear elastic}
  \end{center}
 \end{figure}
+\\
+\begin{table}[htbp]
+  \begin{center}
+     \begin{tabular}{l l l} 
+     \hline
+     \\
+      \textbf{Symbol} \;\;& \textbf{Material Parameter} \;& \textbf{Value}\\
+      \\
+      \hline
+      \\
+      \vspace*{0.1cm}
+      $E_{1}$ & Longitudinal (fibre dominated) elastic modulus &  55000e6 $N/m^{2}$\\
+      \vspace*{0.1cm}
+      $E_{2}$ = $E_{3}$  & Transverse(matrix dominated) elastic modulus   & 9500e6 $N/m^{2}$ \\
+      \vspace*{0.1cm}
+      $\nu_{12}$ = $\nu_{13}$  & Poisson's ratio (in-plane)  & 0.33 \\
+      \vspace*{0.1cm}
+      $\nu_{23}$   & Poisson's ratio (Planes 2-3)  & 0.27 \\
+      \vspace*{0.1cm}
+      $G_{12}$ = $G_{13}$  & In-plane shear modulus  & 5500e6 $N/m^{2}$ \\
+      \vspace*{0.1cm}
+      $G_{23}$   & Shear modulus (Planes 2-3)   & 3000e6 $N/m^{2}$ \\
+      \vspace*{0.1cm}
+      $X_{t}$ & Longitudinal (fibre dominated) Tensile strength &  2500e6 $N/m^{2}$\\
+      \vspace*{0.1cm}
+      $X_{c}$ & Longitudinal (fibre dominated) Compressive strength &  -2000e6 $N/m^{2}$\\
+      \vspace*{0.1cm}
+      $Y_{t}$ & Transverse (matrix dominated) Tensile strength &  50e6 $N/m^{2}$\\
+      \vspace*{0.1cm}
+      $Y_{c}$ & Transverse (matrix dominated) Compressive strength &  -200e6 $N/m^{2}$\\
+      \vspace*{0.1cm}
+      $S_{12}$ & In-plane strength &  50e6 $N/m^{2}$\\
+
+       \hline
+    \end{tabular}
+    \\
+    \caption{Material parameters(Integration point studies)}
+    \label{tab:Material parameters(Integration point studies}
+  \end{center}
+\end{table}
+
 
 \newpage
 \begin{figure}[htbp]
@@ -1129,21 +1108,21 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
          \centering
          \includegraphics[width=1.1\textwidth]{18.User_SX.png}
          \caption{X Component of Stress}
-         \label{fig:X Component of Stress}
+         \label{fig:X Component of Stress2}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
          \includegraphics[width=1.1\textwidth]{19.User_SY.png}
          \caption{Y Component of Stress}
-         \label{fig:Y Component of Stress}
+         \label{fig:Y Component of Stress2}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
          \includegraphics[width=1.1\textwidth]{20.User_SZ.png}
          \caption{Z Component of Stress}
-         \label{fig:Z Component of Stress}
+         \label{fig:Z Component of Stress2}
      \end{subfigure}
         \caption{Contour plots of the stress components $\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ of the bar obtained using USERMAT}
         \label{fig:USERMAT}     
@@ -1151,7 +1130,7 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
 
 Figure (\ref{fig:ANSYS Default}) and (\ref{fig:USERMAT}) shows the contour plots of the normal stresses ($\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ ) computed using ANSYS default and USERMAT respectively. The comparison of the stress-strain relation and contour plots between the ANSYS default and USERMAT confirms that the results obtained using both options are same and therefore further damage-intiation and damage-evolution processes can now be implemented.
 
-\subsection*{Studies at integration point level}
+\subsection*{Damage behaviour at integration point level}
 \indent\indent\indent The material subroutines are first developed on octave and tested using constitutive driver routines which enables us to understand the phenomenon that happens at integration point level. In order to demonstrate the evolution of damage after damage initiation and the strain softening following simple loading cases are investigated at the integration point level.
 \begin{itemize}
 \item Uniaxial tension
@@ -1161,7 +1140,7 @@ Figure (\ref{fig:ANSYS Default}) and (\ref{fig:USERMAT}) shows the contour plots
 After that, the material subroutines are implemented in USERMAT and tested in ANSYS environment using a 3D finite element of unit length. The finite element is subjected to the above loading cases and the results are compared against the octave implementation
 \FloatBarrier
 \subsection{Uniaxial tension}
-\indent\indent\indent In case of uniaxial tension the normal stress is present only in one direction and the shear stresses are zero i.e., only one component of the stress tensor is non-zero.  In Ansys environment, uniaxial tension is achieved by applying a displacement on the finite element in a normal direction ($11$) which increases the strain $\epsilon_{11}$ linearly and the lateral(transverse) contraction is not constrained. 3D Hashin's quadratic strain criteria (Section(\ref{3D Hashin's quadratic strain criteria})) is used to predict the damage initiation and exponential damage evolution law (Eqn(\ref{exponential damage equation})) is used to calculate the damage evolution. The results obtained from Ansys and usermat are presented in the Figure(\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) respectively. The figure (\ref{fig:Evolution of damage in 11 direction}) shows the evolution of damage variables.  The system is linearly elastic till the damage initiation strain and the damage is zero. Once the strain $\epsilon_{11}$ exceeds the damage initiation strain, the damage $d_{1}$ starts to evolve exponentially and the stress starts to drop due to reduction in stiffness in 11 direction.  The damage variables $d_{2}$ and $d_{3}$ are zero. The comparison between the figures (\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) suggests that the material routine implemented in octave and usermat are numerically similiar to each other. \\
+\indent\indent\indent In case of uniaxial tension the normal stress is present only in one direction and the shear stresses are zero i.e., only one component(diagonal) of the stress tensor is non-zero.  In Ansys environment, uniaxial tension is achieved by applying a displacement on the finite element in a normal direction ($11$) which increases the strain $\epsilon_{11}$ linearly and the lateral(transverse) contraction is not constrained. 3D Hashin's quadratic strain criteria (Section(\ref{3D Hashin's quadratic strain criteria})) is used to predict the damage initiation and exponential damage evolution law (Eqn(\ref{exponential damage equation})) is used to calculate the damage evolution. The results obtained from Ansys and usermat are presented in the Figure(\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) respectively. The figure (\ref{fig:Evolution of damage in 11 direction}) shows the evolution of damage variables.  The system is linearly elastic till the damage initiation strain and the damage is zero. Once the strain $\epsilon_{11}$ exceeds the damage initiation strain, the damage $d_{1}$ starts to evolve exponentially and the stress starts to drop due to reduction in stiffness in 11 direction.  The damage variables $d_{2}$ and $d_{3}$ are zero. The comparison between the figures (\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) suggests that the material routine implemented in octave and usermat are numerically similiar to each other. \\
 \\
 
 \begin{figure}[htbp]
@@ -1289,7 +1268,7 @@ Since the material routine must be evaluated for every perturbation of $\epsilon
 These comparison between above plots clearly indicates that the tangent stiffness computed using algorithmic tangent and numerical tangent are numerically similar to each other.
 
 \subsection{Biaxial tension}
-\indent\indent\indent  In case of biaxial tension, normal stresses are present in two direction and the shear stresses are zero  i.e., two components of the stress are non-zero. In Ansys, biaxial tension is achieved by applying same displacements in two normal directions of the finite element ($11$ and $22$ direction) and the contraction in 3rd direction ($33$) is unconstrained. The following figures shows the corresponding stress and damage components obtained from the test
+\indent\indent\indent  In case of biaxial tension, normal stresses are present only in two normal directions and all the shear stresses are zero  i.e., only two components(diagonal) of the stress tensor are non-zero. In Ansys, biaxial tension is achieved by applying same displacements in two normal directions of the finite element ($11$ and $22$ direction) and the contraction in 3rd direction ($33$) is unconstrained. The following figures shows the corresponding stress and damage components obtained from the test.
 \begin{figure}[htbp]
      \centering
      \captionsetup[subfigure]{justification=centering}
@@ -1317,14 +1296,14 @@ These comparison between above plots clearly indicates that the tangent stiffnes
      \begin{subfigure}{0.4\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{23.d1.png}
-         \caption{Evolution of damage d1}
+         \caption{Evolution of damage $d_{1}$}
          \label{fig:Evolution of damage d1}
      \end{subfigure}
      \hfill
      \begin{subfigure}{0.4\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{23.d2.png}
-         \caption{Evolution of damage d2}
+         \caption{Evolution of damage $d_{2}$}
          \label{fig:Evolution of damage d2}
      \end{subfigure}
      
@@ -1332,8 +1311,9 @@ These comparison between above plots clearly indicates that the tangent stiffnes
         \caption{Evolution of damage components under biaxial tension}
         \label{fig:Evolution of damage under biaxial tension}     
 \end{figure} 
+Since the tensile strength in transverse direction is very low compared to the longitudinal direction, evolution of damage ($d_{2}$) begins very soon and simultaneously the stress component ($\sigma_{22}$) drops as seen in figures (\ref{fig:S22vsE22}) and (\ref{fig:Evolution of damage d2}). 
 \subsection*{Triaxial tension}
-\indent\indent\indent In case of triaxial tension all the normal stresses are present on the element and the shear stresses are zero.  In Ansys, triaxial tension is achieved by same displacement all the normal directions ($11$, $22$ and $33$ direction).  
+\indent\indent\indent In case of triaxial tension, the normal stresses are present in all three normal directions and all the shear stresses are zero i.e., only diagonal components of the stress tensor are non-zero.  In Ansys, triaxial tension is achieved by applying same displacement in all three normal directions ($11$, $22$ and $33$ direction).  
 The following figures shows the corresponding stress and damage components obtained from the test
 \begin{figure}[htbp]
      \centering
@@ -1361,29 +1341,29 @@ The following figures shows the corresponding stress and damage components obtai
 
         \caption{Evolution of stress components under triaxial tension}
         \label{fig:Evolution of stress under triaxial tension}   
-\end{figure} 
-
+\end{figure} \\
+Since the material properties are same in $22$ and $33$ direction and the tensile strength is very low compared to the longitudinal direction, the damage $d_{2}$ and $d_{3}$ evolves simultaneously (Fig (\ref{fig:Evolution of damage d2 2}) and (\ref{fig:Evolution of damage d3})) and very soon as expected. Therefore the stress components $\sigma_{22}$ and $\sigma_{33}$ drops very soon as shown in the figure (\ref{fig:S22vsE22 2}) and (\ref{fig:S33vsE33})   
 \begin{figure}[htbp]
      \centering
      \captionsetup[subfigure]{justification=centering}
      \begin{subfigure}{0.3\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{24.d1.png}
-         \caption{Evolution of damage d1}
+         \caption{Evolution of damage $d_{1}$}
          \label{fig:Evolution of damage d1 2}
      \end{subfigure}
      \hfill
      \begin{subfigure}{0.3\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{24.d2.png}
-         \caption{Evolution of damage d2}
+         \caption{Evolution of damage $d_{2}$}
          \label{fig:Evolution of damage d2 2}
      \end{subfigure}
      \hfill
      \begin{subfigure}{0.3\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{24.d2.png}
-         \caption{Evolution of damage d3}
+         \caption{Evolution of damage $d_{3}$}
          \label{fig:Evolution of damage d3}
      \end{subfigure}     
 
