@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{extarticle}
+\documentclass[12pt,twoside]{report}
     \usepackage{amsmath}
     \usepackage{nccmath}
     \usepackage{amsfonts}
@@ -8,7 +8,7 @@
     \usepackage{stackengine}
     \usepackage{lipsum}
     \linespread{1.2} 
-    \usepackage[demo]{graphicx}
+    \usepackage[]{graphicx}
     \usepackage[section]{placeins}
     \usepackage{booktabs}
     \usepackage{cite}
@@ -16,7 +16,7 @@
 	\usepackage{caption}
     \usepackage{subcaption}
     \usepackage{multirow}
-    \usepackage[top=1in, bottom=1.1in, left=1.1in, right=1.1in]{geometry}
+    \usepackage[a4paper,top=1in, bottom=1.1in, left=1.1in, right=1.1in]{geometry}
     \usepackage{fancyhdr}
     \usepackage{relsize}
     \usepackage{tikz}
@@ -280,29 +280,24 @@ Matrix representation of the damage effect tensor of Eq.(\ref{eqn:Matrix_rep_dam
 $$
 [\mathbb{M}_{pq}] \equiv   
  \begin{bmatrix}
-  \Phi_{1} \; & 0 \; & 0 \; & 0 \; & 0\; & 0 \\
+   \frac{1}{\omega_{11}}  \; & 0 \; & 0 \; & 0 \; & 0\; & 0 \\
   \\
-  0\; & \Phi_{2}\; & 0\; & 0\; & 0\; & 0 \\
+  0\; & \frac{1}{\omega_{22}}\; & 0\; & 0\; & 0\; & 0 \\
   \\
-  0\; & 0 \; & \Phi_{3}\; & 0\; & 0\; & 0 \\
+  0\; & 0 \; & \frac{1}{\omega_{33}}\; & 0\; & 0\; & 0 \\
   \\
-  0\; & 0\; & 0\; & \frac{\Phi_{2} + \Phi_{3} }{2}\; & 0\; & 0 \\
+  0\; & 0\; & 0\; & \frac{1}{\omega_{12}}\; & 0\; & 0 \\
   \\
-  0\; & 0\; & 0\; & 0\; & \frac{\Phi_{1} + \Phi_{3} }{2}\; & 0 \\
+  0\; & 0\; & 0\; & 0\; & \frac{1}{\omega_{23}}\; & 0 \\
   \\
-  0\; & 0\; & 0\; & 0\; & 0\; & \frac{\Phi_{1} + \Phi_{2} }{2}  
+  0\; & 0\; & 0\; & 0\; & 0\; & \frac{1}{\omega_{13}}  
   \\
  \end{bmatrix}
  \label{Damage_effect_tensor}
  $$
 \\
-\begin{equation}
-\Phi_{i}  =  (1 - D_{i})^{-1}, \;\; (i = 1,2,3)
-\end{equation}
-or
-\begin{equation}
-M_{11}^{(1)}  =  \frac{1}{1 - D_{1}},....,M_{66}^{(1)}  = \frac{1}{2}( \frac{1}{1 - D_{1}} + \frac{1}{1 - D_{2}}) 
-\end{equation}
+where
+$$\omega_{11} \; = \; (1 - d_{1}) \;\;  \omega_{22} \; = \; (1 - d_{2}) \;\; \omega_{33} \; = \; (1 - d_{3})$$ \vspace*{0.1cm} $$\omega_{12} \; = \; \sqrt{(1 - d_{1})(1 - d_{2})}  \;\;\omega_{23} \; = \; \sqrt{(1 - d_{2})(1 - d_{3})} \;\; \omega_{13} \; = \; \sqrt{(1 - d_{1})(1 - d_{3})}$$
 
 \subsection{Hypothesis of Strain Equivalence}\label{Hypothesis of Strain Equivalence}
 
@@ -442,7 +437,7 @@ V = \frac{1}{2}\sigma : \epsilon \; - \; \phi(\alpha) = \frac{1}{2}\tilde{\sigma
 \indent\indent\indent Orthotropic materials are materials which exhibit different material properties along three mutually-orthogonal axis. They are a special form of anisotropic materials, because their properties change when measured from different directions. Some examples of orthotropic materials are wood, composite materials etc., Orthotropic materials require 9 independent variables in order to express their constitutive matrix. The 9 elastic constants are three Young's moduli $E_{x},E_{y},E_{z}$, the three Poisson's ratios $\nu_{xy},\nu_{yz},\nu_{zx}$, and three shear moduli $G_{xy},G_{yz},G_{zx}$. The elastic stiffness matrix of orthotropic material has the form,
 
 \begin{equation}
-  \sigma = \mathbb{C}_{0} : \epsilon   \;\;\;  \sigma_{ij}  =  C^{0}_{ijkl}\epsilon_{kl},
+  \sigma = \mathbb{C}_{0} : \epsilon   or \;\;\;  \sigma_{ij}  =  C^{0}_{ijkl}\epsilon_{kl},
 \end{equation}
 
 $$
@@ -464,8 +459,13 @@ $$
  \end{bmatrix}
  $$\\
  
- where $\Delta = (1 - \nu_{xy}\nu_{yx} - \nu_{yz}\nu_{zy} - \nu_{zx}\nu_{xz} - 2\nu_{xy}\nu_{yz}\nu_{zx})/E_{x}E_{y}E_{z}$ and 
-  $ \frac{\nu_{xy}}{E_{y}} = \frac{\nu_{yx}}{E_{x}}, \frac{\nu_{yz}}{E_{z}} = \frac{\nu_{zy}}{E_{y}}, \frac{\nu_{xz}}{E_{z}} = \frac{\nu_{zx}}{E_{x}},  $
+ where 
+ \begin{align*}
+ \Delta = (1 - \nu_{xy}\nu_{yx} - \nu_{yz}\nu_{zy} - \nu_{zx}\nu_{xz} - 2\nu_{xy}\nu_{yz}\nu_{zx})/E_{x}E_{y}E_{z}
+ \end{align*}
+   and  $\frac{\nu_{xy}}{E_{y}} = \frac{\nu_{yx}}{E_{x}}, \frac{\nu_{yz}}{E_{z}} = \frac{\nu_{zy}}{E_{y}}, \frac{\nu_{xz}}{E_{z}} = \frac{\nu_{zx}}{E_{x}}$ 
+
+
 
 \newpage
 \vspace*{2cm}
@@ -576,7 +576,7 @@ Before defining boundary conditions (BCs) the entities required for solving the 
 \vspace*{0.6cm}
 \subsection{PostProcessing}
 \indent\indent\indent Once the FE model has finished solving, the results then can be analyzed using the 'General Postprocessor' option. The nodal and elemental solution for components like stress, strain, displacement etc., can be plotted using the 'contour plot' option which can be found on Plot results. By default this option plots the results at last sub step, so to plot the solution at the sub step of your choice one must navigate to $Read\;results>By\;pick$ and select the substep to be plotted. Then the results of that substep can be plotted using 'contour plot' option mentioned before. Since the  posprocessor of ANSYS doesnot have GUI option for plotting state variables the following command must be given: $ plnsol,svar,n $ where $n$ is the number of the state variable to be plotted.\\
-\indent\indent\indent  The time history of a certain variable such stress,reaction force, strain etc., at a node or an element can be plotted using $TimeHist\;Postpro$ option. On clicking the $TimeHist\;Postpro$ option a $Variable\;List$ window opens up. In order to add the variables to plot, click the green add symbol on the top-left corner which opens a window with the list of variables that can be added to the $Variable\;List$ window. Once the variables has been added the variables can be plotted against each other or against time. Fig.(\ref{fig:Timehist}) shows the $Variable\;List$ window with X-component of force and displacement of node 3 selected and plotted against each other.\\
+\indent\indent\indent  The time history of a certain variable such stress,reaction force, strain etc., at a node or an element can be plotted using $TimeHist\;Postpro$ option. On clicking the $TimeHist\;Postpro$ option a $Variable\;List$ window opens up. In order to add the variables to plot, click the green add symbol on the top-left corner which opens a window with the list of variables that can be added to the $Variable\;List$ window. Once the variables has been added the variables can be plotted against each other or against time. Fig.(\ref{fig:Timehist}) shows the $Variable\;List$ window with X-component of force and displacement of node 3 selected and plotted against each other.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{{13.Timehist}}
@@ -584,15 +584,14 @@ Before defining boundary conditions (BCs) the entities required for solving the 
  \label{fig:Timehist}
  \end{center}
 \end{figure}
-\vspace*{0.6cm}
 The time history results of each variable at node or an element can also be saved as text file using $List\;Data$ option in the 
 $Variable\;List$ window. 
 
 
-\newpage
+
+\clearpage
 \vspace*{2cm}
 \section{Progressive Failure analysis of Orthotropic composite materials }
-\vspace*{1cm}
 \subsection{Fibre-reinforced Composites}
 \indent\indent\indent  Fibre reinforced plastic composites is a term for large family of materials ranging from short fibre reinforced polyesters to unidirectional graphite fibre epoxies. Fibre reinforced composites consists of three components 1) the fibres as the discontinuous or dispersed phase 2) the matrix as the continuous phase and 3) the fine inter-phase region also known as the interface. The different combination of fibre and matrix material lead to different material properties and also the manifestation of the fibres and the manufacturing techniques. The first fibres used in fibre reinforced plastics are made of glass. Although the virgin strength of the glass is high, the actual strength is limited by the microscopic defects on the surface of the fibre. The graphite fibres are anisotropic due to their laminar structure. Graphite fibres maintain their strength even at high temperatures. Two types of plastics are commonly used as matrix materials, namely unsaturated polyesters and epoxies. The use of unsaturated polyesters is restricted to temperatures upto 100C. The main advantage of this material is the high amount of shrinkage at hardening , which causes high internal stress and decrease the strength of the material.  The characteristics of epoxy are better than polyester resins. The material can withstand temperatures upto 250C and shrinks only  2\%  at hardening. But epoxy resins are high in price compared to the polyesters.
 
@@ -619,10 +618,8 @@ $Variable\;List$ window.
 \subsection{Damage initiation criteria}
 \indent\indent\indent  Damage initiation criteria refers to the onset of damage at a material point. Since the properties of the orthotropic materials change in mutually perpendicular direction three failure mode index, $F_{f}, F_{m}, F_{z}$, are used for failure modes in three principal material directions. Since the failure due to tension and compression in each direction cannot happen at same integration point and at the same time, the failure mode index must be calculated based on whether the material direction is under tension or compression. Both strain and stress based damage initiation criteria can be employed based on the application. Some of the damage initiation criteria are given as follows
 \subsubsection{Maximum strain criteria}
-\indent\indent\indent The maximum strain criterion is a simple criterion which checks whether the strain in the given material direction exceeds the failure strain or not. The maximum strain criterion for each material direction is given below
-\\
-\\
-\begin{table}[h!]
+\indent\indent\indent The maximum strain criterion is a simple criterion which checks whether the strain in the given material direction exceeds the failure strain or not. The maximum strain criterion for each material direction is given below\\
+\begin{table}[htbp]
   \begin{center}
      \begin{tabular}{l  c  c} 
      \hline
@@ -647,10 +644,8 @@ $Variable\;List$ window.
 where $\epsilon_{ti}$ and $\epsilon_{ci}$ are failure strains in tension and compression respectively, in each material direction. 
 \\
 \subsubsection{Maximum stress criteria}
-\indent\indent\indent Since the load-carrying area decreases due to increase in damage, the effective of stress gets magnified in the damaged material. Therefore, in case of maximum stress criteria normal stress components of the effective stress($\tilde{\sigma}$) are checked against the failure strength in each principal material direction. The effective stress can computed using the Eqn.(\ref{eqn:effective_stress_tensor}). The maximum stress criteria for each material direction is given in the table below
-\\
-\\
-\begin{table}[h!]
+\indent\indent\indent Since the load-carrying area decreases due to increase in damage, the effective of stress gets magnified in the damaged material. Therefore, in case of maximum stress criteria normal stress components of the effective stress($\tilde{\sigma}$) are checked against the failure strength in each principal material direction. The effective stress can computed using the Eqn.(\ref{eqn:effective_stress_tensor}). The maximum stress criteria for each material direction is given in the table below\\
+\begin{table}[htbp]
   \begin{center}
      \begin{tabular}{l  c  c} 
      \hline
@@ -672,14 +667,12 @@ where $\epsilon_{ti}$ and $\epsilon_{ci}$ are failure strains in tension and com
     \label{tab:Maximum stress criterion}
   \end{center}
 \end{table}\\
-\\
 where $X_{T}$,$ Y_{T} $ and $Z_{T}$ are failure strength in tension and $X_{C}$,$ Y_{C} $ and $Z_{C}$ are failure strength in compression in each principal material direction respectively.\\
 \\
 
 \subsubsection{3D Hashin's quadratic strain criteria}\label{3D Hashin's quadratic strain criteria}
 \indent\indent\indent Hashin's quadratic strain criteria includes shear strain components in addition to the normal strain components. The criteria for each material direction is given below\\
-\\
-\\
+
 i) Longitudinal direction 1 ,
 \\
 \begin{equation}
@@ -792,7 +785,7 @@ i) Longitudinal direction 1,
 \end{equation}
 \\
 \\
-i) Transverse direction 1,
+i) Transverse direction 2,
 \\
 \begin{equation}
 \large{F_{f} =  
@@ -1023,7 +1016,6 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
 \vspace*{1cm}
 \subsection{Modelling Linear elastic behaviour of orthotropic materials}
 \indent\indent\indent Before implementing the damage behaviour in orthotropic materials, their linear elastic behaviour must implemented which demonstrates what happens before the damage initiation. As mentioned before orthtoropic materials are special class of material whose properties change in mutually perpendicular directions. Therefore 9 independent material constants are required in order to model their elastic behaviour numerically. Table (\ref{tab:Material parameters(Integration point studies}) summarises the utilised material parameters. The constitutive matrix given in the section(\ref{Constitutive matrix}) and Hooke's law helps us model the elastic behaviour of the orthotropic materials.\\ 
-\indent\indent\indent The linear elastic behaviour of the orthotropic material is implemented in the USERMAT using constitutive equations and in this section the results obtained are compared against the default orthortropic material option present in ANSYS using a structural example. A bar of length 10mm and area 1mm$^2$ (b = 1mm, t =1mm) fixed at one end is chosen for the analysis. The bar is constructed using 8 node SOLID 185 elements and full integration has been used. A displacement of 1mm is applied at the free end and the results obtained using the ANSYS default and the USERMAT are presented below. The figure(\ref{fig:Stress-Strain Linear elastic}) compares the stress-strain relation of the bar obtained using both ANSYS default and USERMAT 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{{14.Linear_SvsE.png}}
@@ -1031,7 +1023,7 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
  \label{fig:Stress-Strain Linear elastic}
  \end{center}
 \end{figure}
-\\
+\indent\indent\indent The linear elastic behaviour of the orthotropic material is implemented in the USERMAT using constitutive equations and in this section the results obtained are compared against the default orthortropic material option present in ANSYS using a structural example. A bar of length 10mm and area 1mm$^2$ (b = 1mm, t =1mm) fixed at one end is chosen for the analysis. The bar is constructed using 8 node SOLID 185 elements and full integration has been used. A displacement of 1mm is applied at the free end and the results obtained using the ANSYS default and the USERMAT are presented below. The figure(\ref{fig:Stress-Strain Linear elastic}) compares the stress-strain relation of the bar obtained using both ANSYS default and USERMAT 
 \begin{table}[htbp]
   \begin{center}
      \begin{tabular}{l l l} 
@@ -1075,56 +1067,50 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
 
 \newpage
 \begin{figure}[htbp]
-	\centering
-     \begin{subfigure}[b]{0.3\textwidth}
+     \begin{subfigure}[b]{0.4\textwidth}
          \centering
          \includegraphics[width=1.1\textwidth]{15.Ansys_SX.png}
          \caption{X Component of Stress}
          \label{fig:X Component of Stress}
      \end{subfigure}
      \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
+     \begin{subfigure}[b]{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{18.User_SX.png}
+         \caption{X Component of Stress}
+         \label{fig:X Component of Stress2}
+     \end{subfigure}
+\end{figure}
+\begin{figure}[htbp]\ContinuedFloat     
+     \begin{subfigure}[b]{0.4\textwidth}
          \centering
          \includegraphics[width=1.1\textwidth]{16.Ansys_SY.png}
          \caption{Y Component of Stress}
          \label{fig:Y Component of Stress}
      \end{subfigure}
      \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=1.1\textwidth]{17.Ansys_SZ.png}
-         \caption{Z Component of Stress}
-         \label{fig:Z Component of Stress}
-     \end{subfigure}
-        \caption{Contour plots of the stress components $\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ of the bar obtained using ANSYS default option }
-        \label{fig:ANSYS Default}     
-\end{figure}
-
-\vspace*{0.1cm}
-
-\begin{figure}[htbp]
-	\centering
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=1.1\textwidth]{18.User_SX.png}
-         \caption{X Component of Stress}
-         \label{fig:X Component of Stress2}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
+      \begin{subfigure}[b]{0.4\textwidth}
          \centering
          \includegraphics[width=1.1\textwidth]{19.User_SY.png}
          \caption{Y Component of Stress}
          \label{fig:Y Component of Stress2}
      \end{subfigure}
+\end{figure}
+\begin{figure}[htbp]\ContinuedFloat     
+     \begin{subfigure}[b]{0.4\textwidth}
+         \centering
+         \includegraphics[width=1.1\textwidth]{17.Ansys_SZ.png}
+         \caption{Z Component of Stress}
+         \label{fig:Z Component of Stress}
+     \end{subfigure}
      \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
+     \begin{subfigure}[b]{0.4\textwidth}
          \centering
          \includegraphics[width=1.1\textwidth]{20.User_SZ.png}
          \caption{Z Component of Stress}
          \label{fig:Z Component of Stress2}
      \end{subfigure}
-        \caption{Contour plots of the stress components $\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ of the bar obtained using USERMAT}
+        \caption{Contour plots of the stress components $\sigma_{xx}$,$\sigma_{yy}$ and $\sigma_{zz}$ of the bar obtained using ANSYS and USERMAT}
         \label{fig:USERMAT}     
 \end{figure}
 
@@ -1159,8 +1145,9 @@ After that, the material subroutines are implemented in USERMAT and tested in AN
          \caption{Stress-Strain relation (Octave)}
          \label{fig:Stress-Strain relation Octave}
      \end{subfigure}
-
-
+\end{figure}
+\begin{figure}[htbp]\ContinuedFloat 
+	\centering
      \begin{subfigure}{0.4\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{21.d1,d2,d3.png}
@@ -1170,8 +1157,7 @@ After that, the material subroutines are implemented in USERMAT and tested in AN
         \caption{Evolution of stress and damage components for a uniaxial tension test in 11 direction}
         \label{fig:Evolution of stress and damage components for a uniaxial tension test in 11 direction}     
 \end{figure}
-The scalar softening parameter($P$) in the damage evolution equation(\ref{exponential damage equation}) determines the slope of the damage curve. The following figure demonstrates the influence of the softening parameter (P) in the damage evolution\\
-
+The scalar softening parameter($P$) in the damage evolution equation(\ref{exponential damage equation}) determines the slope of the damage curve. The following figure demonstrates the influence of the softening parameter (P) in the damage evolution
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{{21.P_damage.png}}
@@ -1182,20 +1168,18 @@ The scalar softening parameter($P$) in the damage evolution equation(\ref{expone
 
 \subsubsection*{Drawbacks of strain based damage initiation criteria}
 \indent\indent\indent Since the lateral contraction is not constrained during uniaxial tension, the transverse directions experience compression due to poisson's effect i.e., $\epsilon_{22}$ and $\epsilon_{33}$ will be negative. If the compressive strength of transverse directions 2 and 3 are sufficiently low, the strains  $\epsilon_{22}$ and $\epsilon_{33}$ will exceed the damage initiation strain. This leads to damage evolution without the presence of stress in transverse directions 2 and 3. 
-This phenomenon cause convergence issues and the model stops when the damage $d_{2}$ or $d_{3}$ evolve without the presence of stress. The image (\ref{fig:Convergence error}) shows the convergence issue and the failure of the model to run when the damage $d_{2}$ starts when using strain-based damage initiation criteria\\
-
+This phenomenon cause convergence issues and the model stops when the damage $d_{2}$ or $d_{3}$ evolve without the presence of stress. The image (\ref{fig:Convergence error}) shows the convergence issue and the failure of the model to run when the damage $d_{2}$ starts when using strain-based damage initiation criteria
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.4\textwidth]{{22.Convergence_error.png}}
+\includegraphics[width=0.3\textwidth]{{22.Convergence_error.png}}
  \caption{Convergence error due to evolution of damage $d_{2}$ without the presence of stress}
  \label{fig:Convergence error}
  \end{center}
-\end{figure}
+\end{figure}\\
 This problem can be rectified by using stress-based damage initiation criteria. Since damage evolution depends on failure index $F$, the transverse failure indices $F_{m}$ and $F_{z}$ will be zero during uniaxial tension if the stress based damage initiation criteria is used. This results in zero damage in transverse direction. The following section presents the results obtained using stress-based damage initiation and the use of mesh regularisation in the damage evolution law.
 
 \subsubsection*{Stress based damage initiation and mesh regularisation}
-\indent\indent\indent  As mentioned in the section (\ref{Mesh Regularisation}), the strain localisation problems results in strong mesh dependency so fracture energy and characteristic length($L_{c}$) of the element has to been included in the damage evolution law in order to alleviate the problem. So the material routine is modified by changing the damage initiation criteria to maximum stress criteria(\ref{tab:Maximum stress criterion}) and including the damage evolution equations from (\ref{d1}) to (\ref{d3}). The uniaxial tension is conducted again with the above mentioned changes and with very low transverse compression strength and the results are presented below\\ 
-
+\indent\indent\indent  As mentioned in the section (\ref{Mesh Regularisation}), the strain localisation problems results in strong mesh dependency so fracture energy and characteristic length($L_{c}$) of the element has to been included in the damage evolution law in order to alleviate the problem. So the material routine is modified by changing the damage initiation criteria to maximum stress criteria(\ref{tab:Maximum stress criterion}) and including the damage evolution equations from (\ref{d1}) to (\ref{d3}). The uniaxial tension is conducted again with the above mentioned changes and with very low transverse compression strength and the results are presented below
 \begin{figure}[htbp]
      \centering
      \captionsetup[subfigure]{justification=centering}
@@ -1212,8 +1196,9 @@ This problem can be rectified by using stress-based damage initiation criteria. 
          \caption{Stress-Strain relation (Octave)}
          \label{fig:Stress-Strain relation Octave2}
      \end{subfigure}
-
-
+\end{figure}
+\begin{figure}[htbp]\ContinuedFloat 
+	\centering
      \begin{subfigure}{0.4\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{22.d1,d2,d3.png}
@@ -1222,10 +1207,8 @@ This problem can be rectified by using stress-based damage initiation criteria. 
      \end{subfigure}
         \caption{Evolution of stress and damage components with stress-based damage initiation criteria under uniaxial tension}
         \label{fig:Evolution of stress and damage components 2}     
-\end{figure} 
-
+\end{figure}
 From figure (\ref{fig:Evolution of damage in 11 direction2}) it is evident that the damage  $d_{2}$ and $d_{3}$ are zero as a result of stress-based damage initiation because the stress components $\sigma_{22}$ and $\sigma_{33}$ are zero under uniaxial tension. While using mesh regularisation, the slope of the damage curve is determined by the characteristic length ($L_{c}$) which depends on the volume of the element. The following figure (\ref{fig:Influence of softening parameter P}) shows how the damage evolution is affected by the volume of the element,
-
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{{22.V_damage.png}}
@@ -1272,35 +1255,29 @@ These comparison between above plots clearly indicates that the tangent stiffnes
 \begin{figure}[htbp]
      \centering
      \captionsetup[subfigure]{justification=centering}
-     \begin{subfigure}{0.4\textwidth}
+     \begin{subfigure}{0.45\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{23.S11vsE11.png}
          \caption{$\sigma_{11}$ vs $\epsilon_{11}$}
          \label{fig:S11vsE11}
      \end{subfigure}
-     \hfill
-     \begin{subfigure}{0.4\textwidth}
-         \centering
-         \includegraphics[width=1.25\textwidth]{23.S22vsE22.png}
-         \caption{$\sigma_{22}$ vs $\epsilon_{22}$}
-         \label{fig:S22vsE22}
-     \end{subfigure}
-
-        \caption{Evolution of stress components under biaxial tension}
-        \label{fig:Evolution of stress under biaxial tension}   
-\end{figure} 
-
-\begin{figure}[htbp]
-     \centering
+	\hfill
      \captionsetup[subfigure]{justification=centering}
-     \begin{subfigure}{0.4\textwidth}
+     \begin{subfigure}{0.45\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{23.d1.png}
          \caption{Evolution of damage $d_{1}$}
          \label{fig:Evolution of damage d1}
      \end{subfigure}
+     \vfill
+     \begin{subfigure}{0.45\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{23.S22vsE22.png}
+         \caption{$\sigma_{22}$ vs $\epsilon_{22}$}
+         \label{fig:S22vsE22}
+     \end{subfigure}
      \hfill
-     \begin{subfigure}{0.4\textwidth}
+     \begin{subfigure}{0.45\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{23.d2.png}
          \caption{Evolution of damage $d_{2}$}
@@ -1308,66 +1285,65 @@ These comparison between above plots clearly indicates that the tangent stiffnes
      \end{subfigure}
      
 
-        \caption{Evolution of damage components under biaxial tension}
+        \caption{Evolution of stress and corresponding damage components under biaxial tension}
         \label{fig:Evolution of damage under biaxial tension}     
 \end{figure} 
-Since the tensile strength in transverse direction is very low compared to the longitudinal direction, evolution of damage ($d_{2}$) begins very soon and simultaneously the stress component ($\sigma_{22}$) drops as seen in figures (\ref{fig:S22vsE22}) and (\ref{fig:Evolution of damage d2}). 
+Since the tensile strength in transverse direction is very low compared to the longitudinal direction, evolution of damage ($d_{2}$) begins very soon and simultaneously the stress component ($\sigma_{22}$) drops as seen in figures (\ref{fig:S22vsE22}) and (\ref{fig:Evolution of damage d2}). \\
 \subsection*{Triaxial tension}
 \indent\indent\indent In case of triaxial tension, the normal stresses are present in all three normal directions and all the shear stresses are zero i.e., only diagonal components of the stress tensor are non-zero.  In Ansys, triaxial tension is achieved by applying same displacement in all three normal directions ($11$, $22$ and $33$ direction).  
 The following figures shows the corresponding stress and damage components obtained from the test
+
 \begin{figure}[htbp]
-     \centering
+  
      \captionsetup[subfigure]{justification=centering}
-     \begin{subfigure}{0.3\textwidth}
-         \centering
+     \begin{subfigure}{0.45\textwidth}
+        \centering
          \includegraphics[width=1.25\textwidth]{24.S11vsE11.png}
          \caption{$\sigma_{11}$ vs $\epsilon_{11}$}
          \label{fig:S11vsE11 2}
      \end{subfigure}
      \hfill
-     \begin{subfigure}{0.3\textwidth}
-         \centering
-         \includegraphics[width=1.25\textwidth]{24.S22vsE22.png}
-         \caption{$\sigma_{22}$ vs $\epsilon_{22}$}
-         \label{fig:S22vsE22 2}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}{0.3\textwidth}
-         \centering
-         \includegraphics[width=1.25\textwidth]{24.S33vsE33.png}
-         \caption{$\sigma_{33}$ vs $\epsilon_{33}$}
-         \label{fig:S33vsE33}
-     \end{subfigure}
-
-        \caption{Evolution of stress components under triaxial tension}
-        \label{fig:Evolution of stress under triaxial tension}   
-\end{figure} \\
-Since the material properties are same in $22$ and $33$ direction and the tensile strength is very low compared to the longitudinal direction, the damage $d_{2}$ and $d_{3}$ evolves simultaneously (Fig (\ref{fig:Evolution of damage d2 2}) and (\ref{fig:Evolution of damage d3})) and very soon as expected. Therefore the stress components $\sigma_{22}$ and $\sigma_{33}$ drops very soon as shown in the figure (\ref{fig:S22vsE22 2}) and (\ref{fig:S33vsE33})   
-\begin{figure}[htbp]
-     \centering
      \captionsetup[subfigure]{justification=centering}
-     \begin{subfigure}{0.3\textwidth}
+     \begin{subfigure}{0.45\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{24.d1.png}
          \caption{Evolution of damage $d_{1}$}
          \label{fig:Evolution of damage d1 2}
      \end{subfigure}
+     \vfill
+     \begin{subfigure}{0.45\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.S22vsE22.png}
+         \caption{$\sigma_{22}$ vs $\epsilon_{22}$}
+         \label{fig:S22vsE22 2}
+     \end{subfigure}   
      \hfill
-     \begin{subfigure}{0.3\textwidth}
+     \begin{subfigure}{0.45\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{24.d2.png}
          \caption{Evolution of damage $d_{2}$}
          \label{fig:Evolution of damage d2 2}
      \end{subfigure}
+\end{figure}
+
+\begin{figure}[htbp]\ContinuedFloat
+     \begin{subfigure}{0.45\textwidth}
+         \centering
+         \includegraphics[width=1.25\textwidth]{24.S33vsE33.png}
+         \caption{$\sigma_{33}$ vs $\epsilon_{33}$}
+         \label{fig:S33vsE33}
+     \end{subfigure}
      \hfill
-     \begin{subfigure}{0.3\textwidth}
+     \begin{subfigure}{0.45\textwidth}
          \centering
          \includegraphics[width=1.25\textwidth]{24.d2.png}
          \caption{Evolution of damage $d_{3}$}
          \label{fig:Evolution of damage d3}
      \end{subfigure}     
-
-        \caption{Evolution of damage components under triaxial tension}
+        \caption{Evolution of stress and corresponding damage components under triaxial tension}
         \label{fig:Evolution of damage under triaxial tension}     
 \end{figure}
+Since the material properties are same in $22$ and $33$ direction and the tensile strength is very low compared to the longitudinal direction, the damage $d_{2}$ and $d_{3}$ evolves simultaneously (Fig (\ref{fig:Evolution of damage d2 2}) and (\ref{fig:Evolution of damage d3})) and very soon as expected. Therefore the stress components $\sigma_{22}$ and $\sigma_{33}$ drops very soon as shown in the figure (\ref{fig:S22vsE22 2}) and (\ref{fig:S33vsE33})   
+
+
 \end{document}

@@ -1,34 +1,26 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  3 AUG 2021 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  4 AUG 2021 20:30
 entering extended mode
 **./Report.tex
 (Report.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.cls
-Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-(C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty
-Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-\big@size=\dimen138
-)
 \c@part=\count179
-\c@section=\count180
-\c@subsection=\count181
-\c@subsubsection=\count182
-\c@paragraph=\count183
-\c@subparagraph=\count184
-\c@figure=\count185
-\c@table=\count186
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen139
+\bibindent=\dimen138
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
@@ -41,46 +33,46 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
-\ex@=\dimen140
+\ex@=\dimen139
 ))
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen141
+\pmbraise@=\dimen140
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count187
+\inf@bad=\count188
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count188
-\leftroot@=\count189
+\uproot@=\count189
+\leftroot@=\count190
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count190
-\DOTSCASE@=\count191
+\classnum@=\count191
+\DOTSCASE@=\count192
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box47
 \strutbox@=\box48
-\big@size=\dimen142
+\big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
+\macc@depth=\count193
+\c@MaxMatrixCols=\count194
 \dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
+\c@parentequation=\count195
+\dspbrk@lvl=\count196
 \tag@help=\toks16
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
+\row@=\count197
+\column@=\count198
+\maxfields@=\count199
 \andhelp@=\toks17
-\eqnshift@=\dimen143
-\alignsep@=\dimen144
-\tagshift@=\dimen145
-\tagwidth@=\dimen146
-\totwidth@=\dimen147
-\lineht@=\dimen148
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
 \@envbody=\toks18
 \multlinegap=\skip50
 \multlinetaggap=\skip51
@@ -90,7 +82,7 @@ LaTeX Info: Redefining \] on input line 2924.
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/ncctools\nccmath.sty
 Package: nccmath 2006/01/20 v1.3 Additional Math Commands (NCC)
-\NCC@fracrulewidth=\dimen149
+\NCC@fracrulewidth=\dimen148
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -133,32 +125,32 @@ ways
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count199
+\etb@tempcnta=\count266
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/listofitems\listofitems
 .sty
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/listofitems\listofite
 ms.tex
-\loi_cnt_foreach_nest=\count266
-\loi_nestcnt=\count267
+\loi_cnt_foreach_nest=\count267
+\loi_nestcnt=\count268
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
 sep char (CT)
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count268
-\calc@Bcount=\count269
-\calc@Adimen=\dimen150
-\calc@Bdimen=\dimen151
+\calc@Acount=\count269
+\calc@Bcount=\count270
+\calc@Adimen=\dimen149
+\calc@Bdimen=\dimen150
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count270
+\calc@Ccount=\count271
 \calc@Cskip=\skip54
 )
-\c@@stackindex=\count271
+\c@@stackindex=\count272
 \@boxshift=\skip55
 \stack@tmplength=\skip56
 \temp@stkl=\skip57
@@ -167,7 +159,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \@anchorbox=\box50
 \stackedbox=\box51
 \@centerbox=\box52
-\c@ROWcellindex@=\count272
+\c@ROWcellindex@=\count273
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
@@ -176,7 +168,7 @@ Package: expl3 2021-02-18 L3 programming layer (loader)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count273
+\l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box53
 ))
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
@@ -197,31 +189,31 @@ Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-\Gin@req@height=\dimen152
-\Gin@req@width=\dimen153
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen154
-\lightrulewidth=\dimen155
-\cmidrulewidth=\dimen156
-\belowrulesep=\dimen157
-\belowbottomsep=\dimen158
-\aboverulesep=\dimen159
-\abovetopsep=\dimen160
-\cmidrulesep=\dimen161
-\cmidrulekern=\dimen162
-\defaultaddspace=\dimen163
-\@cmidla=\count274
-\@cmidlb=\count275
-\@aboverulesep=\dimen164
-\@belowrulesep=\dimen165
-\@thisruleclass=\count276
-\@lastruleclass=\count277
-\@thisrulewidth=\dimen166
+\heavyrulewidth=\dimen153
+\lightrulewidth=\dimen154
+\cmidrulewidth=\dimen155
+\belowrulesep=\dimen156
+\belowbottomsep=\dimen157
+\aboverulesep=\dimen158
+\abovetopsep=\dimen159
+\cmidrulesep=\dimen160
+\cmidrulekern=\dimen161
+\defaultaddspace=\dimen162
+\@cmidla=\count275
+\@cmidlb=\count276
+\@aboverulesep=\dimen163
+\@belowrulesep=\dimen164
+\@thisruleclass=\count277
+\@lastruleclass=\count278
+\@thisrulewidth=\dimen165
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
 LaTeX Info: Redefining \cite on input line 302.
@@ -230,7 +222,7 @@ Package: cite 2015/02/27  v 5.5
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count278
+\c@float@type=\count279
 \float@exts=\toks23
 \float@box=\box54
 \@float@everytoks=\toks24
@@ -241,29 +233,29 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen167
-\captionmargin@=\dimen168
-\captionwidth=\dimen169
-\caption@tempdima=\dimen170
-\caption@indent=\dimen171
-\caption@parindent=\dimen172
-\caption@hangindent=\dimen173
+\captionmargin=\dimen166
+\captionmargin@=\dimen167
+\captionwidth=\dimen168
+\caption@tempdima=\dimen169
+\caption@indent=\dimen170
+\caption@parindent=\dimen171
+\caption@hangindent=\dimen172
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count279
-\c@continuedfloat=\count280
+\c@caption@flags=\count280
+\c@continuedfloat=\count281
 Package caption Info: float package is loaded.
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count281
-\c@subtable=\count282
+\c@subfigure=\count282
+\c@subtable=\count283
 ) (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip59
-\multirow@cntb=\count283
+\multirow@cntb=\count284
 \multirow@dima=\skip60
-\bigstrutjot=\dimen174
+\bigstrutjot=\dimen173
 ) (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -273,17 +265,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count284
-\Gm@cntv=\count285
-\c@Gm@tempcnt=\count286
-\Gm@bindingoffset=\dimen175
-\Gm@wd@mp=\dimen176
-\Gm@odd@mp=\dimen177
-\Gm@even@mp=\dimen178
-\Gm@layoutwidth=\dimen179
-\Gm@layoutheight=\dimen180
-\Gm@layouthoffset=\dimen181
-\Gm@layoutvoffset=\dimen182
+\Gm@cnth=\count285
+\Gm@cntv=\count286
+\c@Gm@tempcnt=\count287
+\Gm@bindingoffset=\dimen174
+\Gm@wd@mp=\dimen175
+\Gm@odd@mp=\dimen176
+\Gm@even@mp=\dimen177
+\Gm@layoutwidth=\dimen178
+\Gm@layoutheight=\dimen179
+\Gm@layouthoffset=\dimen180
+\Gm@layoutvoffset=\dimen181
 \Gm@dimlist=\toks25
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
@@ -311,8 +303,8 @@ y
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
 \pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen183
-\pgfutil@tempdimb=\dimen184
+\pgfutil@tempdima=\dimen182
+\pgfutil@tempdimb=\dimen183
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common-lists.tex))
@@ -344,26 +336,26 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 filtered.code.tex
 \pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen185
-\pgf@y=\dimen186
-\pgf@xa=\dimen187
-\pgf@ya=\dimen188
-\pgf@xb=\dimen189
-\pgf@yb=\dimen190
-\pgf@xc=\dimen191
-\pgf@yc=\dimen192
-\pgf@xd=\dimen193
-\pgf@yd=\dimen194
+\pgf@x=\dimen184
+\pgf@y=\dimen185
+\pgf@xa=\dimen186
+\pgf@ya=\dimen187
+\pgf@xb=\dimen188
+\pgf@yb=\dimen189
+\pgf@xc=\dimen190
+\pgf@yc=\dimen191
+\pgf@xd=\dimen192
+\pgf@yd=\dimen193
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count287
-\c@pgf@countb=\count288
-\c@pgf@countc=\count289
-\c@pgf@countd=\count290
+\c@pgf@counta=\count288
+\c@pgf@countb=\count289
+\c@pgf@countc=\count290
+\c@pgf@countd=\count291
 \t@pgf@toka=\toks30
 \t@pgf@tokb=\toks31
 \t@pgf@tokc=\toks32
-\pgf@sys@id@count=\count291
+\pgf@sys@id@count=\count292
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -382,8 +374,8 @@ File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count292
-\pgfsyssoftpath@bigbuffer@items=\count293
+\pgfsyssoftpath@smallbuffer@items=\count293
+\pgfsyssoftpath@bigbuffer@items=\count294
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -418,8 +410,8 @@ code.tex
 code.tex)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen195
-\pgfmath@count=\count294
+\pgfmath@dimen=\dimen194
+\pgfmath@count=\count295
 \pgfmath@box=\box57
 \pgfmath@toks=\toks33
 \pgfmath@stack@operand=\toks34
@@ -445,39 +437,39 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count295
+\c@pgfmathroundto@lastzeros=\count296
 ))
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@picminx=\dimen196
-\pgf@picmaxx=\dimen197
-\pgf@picminy=\dimen198
-\pgf@picmaxy=\dimen199
-\pgf@pathminx=\dimen256
-\pgf@pathmaxx=\dimen257
-\pgf@pathminy=\dimen258
-\pgf@pathmaxy=\dimen259
-\pgf@xx=\dimen260
-\pgf@xy=\dimen261
-\pgf@yx=\dimen262
-\pgf@yy=\dimen263
-\pgf@zx=\dimen264
-\pgf@zy=\dimen265
+\pgf@picminx=\dimen195
+\pgf@picmaxx=\dimen196
+\pgf@picminy=\dimen197
+\pgf@picmaxy=\dimen198
+\pgf@pathminx=\dimen199
+\pgf@pathmaxx=\dimen256
+\pgf@pathminy=\dimen257
+\pgf@pathmaxy=\dimen258
+\pgf@xx=\dimen259
+\pgf@xy=\dimen260
+\pgf@yx=\dimen261
+\pgf@yy=\dimen262
+\pgf@zx=\dimen263
+\pgf@zy=\dimen264
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@path@lastx=\dimen266
-\pgf@path@lasty=\dimen267
+\pgf@path@lastx=\dimen265
+\pgf@path@lasty=\dimen266
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@shorten@end@additional=\dimen268
-\pgf@shorten@start@additional=\dimen269
+\pgf@shorten@end@additional=\dimen267
+\pgf@shorten@start@additional=\dimen268
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
@@ -485,19 +477,19 @@ File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpic=\box58
 \pgf@hbox=\box59
 \pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count296
+\pgf@picture@serial@count=\count297
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgflinewidth=\dimen270
+\pgflinewidth=\dimen269
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@pt@x=\dimen271
-\pgf@pt@y=\dimen272
-\pgf@pt@temp=\dimen273
+\pgf@pt@x=\dimen270
+\pgf@pt@y=\dimen271
+\pgf@pt@temp=\dimen272
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -514,14 +506,14 @@ File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowsep=\dimen274
+\pgfarrowsep=\dimen273
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@max=\dimen275
-\pgf@sys@shading@range@num=\count297
-\pgf@shadingcount=\count298
+\pgf@max=\dimen274
+\pgf@sys@shading@range@num=\count298
+\pgf@shadingcount=\count299
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -560,8 +552,8 @@ File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@nodesepstart=\dimen276
-\pgf@nodesepend=\dimen277
+\pgf@nodesepstart=\dimen275
+\pgf@nodesepend=\dimen276
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -582,8 +574,8 @@ Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
 .tex)
-\pgffor@iter=\dimen278
-\pgffor@skip=\dimen279
+\pgffor@iter=\dimen277
+\pgffor@skip=\dimen278
 \pgffor@stack=\toks36
 \pgffor@toks=\toks37
 ))
@@ -594,34 +586,34 @@ Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count299
-\pgfplotmarksize=\dimen280
+\pgf@plot@mark@count=\count300
+\pgfplotmarksize=\dimen279
 )
-\tikz@lastx=\dimen281
-\tikz@lasty=\dimen282
-\tikz@lastxsaved=\dimen283
-\tikz@lastysaved=\dimen284
-\tikz@lastmovetox=\dimen285
-\tikz@lastmovetoy=\dimen286
-\tikzleveldistance=\dimen287
-\tikzsiblingdistance=\dimen288
+\tikz@lastx=\dimen280
+\tikz@lasty=\dimen281
+\tikz@lastxsaved=\dimen282
+\tikz@lastysaved=\dimen283
+\tikz@lastmovetox=\dimen284
+\tikz@lastmovetoy=\dimen285
+\tikzleveldistance=\dimen286
+\tikzsiblingdistance=\dimen287
 \tikz@figbox=\box63
 \tikz@figbox@bg=\box64
 \tikz@tempbox=\box65
 \tikz@tempbox@bg=\box66
-\tikztreelevel=\count300
-\tikznumberofchildren=\count301
-\tikznumberofcurrentchild=\count302
-\tikz@fig@count=\count303
+\tikztreelevel=\count301
+\tikznumberofchildren=\count302
+\tikznumberofcurrentchild=\count303
+\tikz@fig@count=\count304
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count304
-\pgfmatrixcurrentcolumn=\count305
-\pgf@matrix@numberofcolumns=\count306
+\pgfmatrixcurrentrow=\count305
+\pgfmatrixcurrentcolumn=\count306
+\pgf@matrix@numberofcolumns=\count307
 )
-\tikz@expandcount=\count307
+\tikz@expandcount=\count308
 
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -642,7 +634,7 @@ File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen289
+\arrowsize=\dimen288
 ))
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
@@ -671,16 +663,16 @@ LaTeX Font Info:    ... okay on input line 54.
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen290
+\scratchcounter=\count309
+\scratchdimen=\dimen289
 \scratchbox=\box67
-\nofMPsegments=\count309
-\nofMParguments=\count310
+\nofMPsegments=\count310
+\nofMParguments=\count311
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen291
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen290
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
 \everyMPtoPDFconversion=\toks39
 )
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -703,7 +695,7 @@ Package caption Info: End \AtBeginDocument code.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes: twoside 
 * h-part:(L,W,R)=(79.49744pt, 438.513pt, 79.49744pt)
 * v-part:(T,H,B)=(72.26999pt, 693.27942pt, 79.49744pt)
 * \paperwidth=597.50787pt
@@ -717,7 +709,7 @@ Package caption Info: End \AtBeginDocument code.
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
+* \marginparwidth=95.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -725,8 +717,8 @@ Package caption Info: End \AtBeginDocument code.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -742,7 +734,8 @@ Package pdftex.def Info: logo.png  used on input line 55.
 [1
 
 {C:/Users/aruns/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo.png>]
-<composite plane.jpg, id=13, 2710.125pt x 1212.53pt>
+[2]
+<composite plane.jpg, id=16, 2710.125pt x 1212.53pt>
 File: composite plane.jpg Graphic file (type jpg)
 <use composite plane.jpg>
 Package pdftex.def Info: composite plane.jpg  used on input line 62.
@@ -753,7 +746,7 @@ Overfull \hbox (4.19629pt too wide) in paragraph at lines 59--68
 rength, stiff-ness, high stiffness-
  []
 
-[2 <./composite plane.jpg>] [3]
+[3 <./composite plane.jpg>] [4]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 
@@ -766,24 +759,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 (C:\Users\aruns\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<1. Damage.png, id=20, 366.77025pt x 365.56575pt>
+<1. Damage.png, id=23, 366.77025pt x 365.56575pt>
 File: 1. Damage.png Graphic file (type png)
 <use 1. Damage.png>
 Package pdftex.def Info: 1. Damage.png  used on input line 77.
 (pdftex.def)             Requested size: 175.40251pt x 174.82808pt.
 
-[4 <./1. Damage.png>] [5]
-<Damage2.png, id=30, 449.88075pt x 287.27325pt>
+[5 <./1. Damage.png>] [6]
+<Damage2.png, id=33, 449.88075pt x 287.27325pt>
 File: Damage2.png Graphic file (type png)
 <use Damage2.png>
 Package pdftex.def Info: Damage2.png  used on input line 125.
 (pdftex.def)             Requested size: 350.81174pt x 224.01086pt.
-<3. Damage_cylinder.png, id=31, 471.56175pt x 292.09125pt>
+<3. Damage_cylinder.png, id=34, 471.56175pt x 292.09125pt>
 File: 3. Damage_cylinder.png Graphic file (type png)
 <use 3. Damage_cylinder.png>
 Package pdftex.def Info: 3. Damage_cylinder.png  used on input line 144.
 (pdftex.def)             Requested size: 350.81174pt x 217.30739pt.
- [6]
+ [7]
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
@@ -798,13 +791,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
-[7 <./Damage2.png>] [8 <./3. Damage_cylinder.png>]
-<4. Damage.png, id=47, 387.24675pt x 250.536pt>
+[8 <./Damage2.png>] [9 <./3. Damage_cylinder.png>]
+<4. Damage.png, id=50, 387.24675pt x 250.536pt>
 File: 4. Damage.png Graphic file (type png)
 <use 4. Damage.png>
 Package pdftex.def Info: 4. Damage.png  used on input line 188.
 (pdftex.def)             Requested size: 219.2565pt x 141.85509pt.
- [9 <./4. Damage.png>]
+ [10 <./4. Damage.png>]
 Overfull \hbox (8.50041pt too wide) in paragraph at lines 208--209
 [][]\OT1/cmr/m/n/12 If the dam-age state is isotropic then the ef-fec-tive stre
 ss ten-sor of three-dimensional
@@ -821,15 +814,9 @@ Overfull \hbox (4.52267pt too wide) in paragraph at lines 214--215
 uc-tion in case of anisotropic
  []
 
-[10]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
- []
-
-
-Overfull \hbox (14.06482pt too wide) in paragraph at lines 226--226
-[]\OT1/cmr/bx/n/12 Symmetrized Ef-fec-tive Stress Ten-sor for Anisotropic Dam-a
-ge 2 (Corde-
  []
 
 
@@ -847,7 +834,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--253
 
  []
 
-[11]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
@@ -857,104 +844,99 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--280
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--299
-
- []
-
-[12]
-<6. Strain_eq.png, id=65, 481.8pt x 233.07076pt>
+[13]
+<6. Strain_eq.png, id=69, 481.8pt x 233.07076pt>
 File: 6. Strain_eq.png Graphic file (type png)
 <use 6. Strain_eq.png>
-Package pdftex.def Info: 6. Strain_eq.png  used on input line 321.
+Package pdftex.def Info: 6. Strain_eq.png  used on input line 316.
 (pdftex.def)             Requested size: 350.81174pt x 169.7099pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
-[13 <./6. Strain_eq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 369--371
+[14 <./6. Strain_eq.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--377
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--381
+Underfull \hbox (badness 10000) in paragraph at lines 368--372
 
  []
 
-<7.Strain_energy_eq.png, id=71, 570.33075pt x 260.77425pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--376
+
+ []
+
+<7.Strain_energy_eq.png, id=74, 570.33075pt x 260.77425pt>
 File: 7.Strain_energy_eq.png Graphic file (type png)
 <use 7.Strain_energy_eq.png>
-Package pdftex.def Info: 7.Strain_energy_eq.png  used on input line 388.
+Package pdftex.def Info: 7.Strain_energy_eq.png  used on input line 383.
 (pdftex.def)             Requested size: 350.81174pt x 160.40504pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--396
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 398--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 404--406
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--410
+Underfull \hbox (badness 10000) in paragraph at lines 399--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--414
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--421
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--427
+Underfull \hbox (badness 10000) in paragraph at lines 412--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--433
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
 
  []
 
-[15 <./7.Strain_energy_eq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 435--437
+[16 <./7.Strain_energy_eq.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 424--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--466
+Underfull \hbox (badness 10000) in paragraph at lines 430--432
 
  []
 
-[16]
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+
+ []
+
+[17] [18]
 Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
-[17]
-<9.Usermat_input.png, id=86, 747.9945pt x 581.17125pt>
+[19]
+<9.Usermat_input.png, id=93, 747.9945pt x 581.17125pt>
 File: 9.Usermat_input.png Graphic file (type png)
 <use 9.Usermat_input.png>
 Package pdftex.def Info: 9.Usermat_input.png  used on input line 514.
@@ -964,12 +946,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 510--519
 
  []
 
-[18]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 523--524
 
  []
 
-[19 <./9.Usermat_input.png>]
+[21 <./9.Usermat_input.png>]
 Overfull \hbox (57.11244pt too wide) in paragraph at lines 527--528
 []\OT1/cmr/m/n/12 Go to "Con-trol Panel$\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 Sear
 ch System$\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 Edit the sys-tem en-vi-ron-ment va
@@ -989,8 +971,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 535--536
 
  []
 
-[20]
-<12.Tb.png, id=98, 209.583pt x 175.857pt>
+[22]
+<12.Tb.png, id=104, 209.583pt x 175.857pt>
 File: 12.Tb.png Graphic file (type png)
 <use 12.Tb.png>
 Package pdftex.def Info: 12.Tb.png  used on input line 569.
@@ -1040,627 +1022,601 @@ Underfull \hbox (badness 10000) in paragraph at lines 542--577
 
  []
 
-[21]
-<13.Timehist.png, id=102, 895.54575pt x 422.7795pt>
+[23]
+<13.Timehist.png, id=108, 895.54575pt x 422.7795pt>
 File: 13.Timehist.png Graphic file (type png)
 <use 13.Timehist.png>
 Package pdftex.def Info: 13.Timehist.png  used on input line 582.
 (pdftex.def)             Requested size: 350.81174pt x 165.6123pt.
- [22 <./12.Tb.png>] [23 <./13.Timehist.png>]
-Overfull \hbox (1.3249pt too wide) in paragraph at lines 599--599
-[]\OT1/cmr/bx/n/14.4 Mechanisms of dam-age and fail-ure in fi-bre re-in-forced 
-com-
+ [24 <./12.Tb.png>] [25 <./13.Timehist.png>]
+Overfull \hbox (6.0988pt too wide) in paragraph at lines 594--594
+[]\OT1/cmr/bx/n/17.28 Progressive Fail-ure anal-y-sis of Or-thotropic com-
  []
 
-<5. FRP failure.png, id=111, 635.37375pt x 303.534pt>
+[26
+
+]
+<5. FRP failure.png, id=121, 635.37375pt x 303.534pt>
 File: 5. FRP failure.png Graphic file (type png)
 <use 5. FRP failure.png>
-Package pdftex.def Info: 5. FRP failure.png  used on input line 609.
+Package pdftex.def Info: 5. FRP failure.png  used on input line 608.
 (pdftex.def)             Requested size: 306.95775pt x 146.64412pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--614
+Underfull \hbox (badness 10000) in paragraph at lines 605--613
 
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 622--649
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 622--649
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[25 <./5. FRP failure.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 650--678
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 650--678
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 650--678
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 650--678
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 680--685
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 680--685
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 680--685
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 686.
-
-[26]
-LaTeX Font Info:    Calculating math sizes for size <> on input line 695.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 695.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 695.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 695--700
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 695--700
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 701.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 713--718
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 713--718
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 719.
-
-[27]
-
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 733.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 730--734
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 735--740
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 735--740
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 741.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 748--753
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 748--753
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 754.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 760--765
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 760--765
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 766.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 772--777
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 772--777
+[27 <./5. FRP failure.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 621--646
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 778--783
+Underfull \hbox (badness 10000) in paragraph at lines 647--672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--783
+Underfull \hbox (badness 10000) in paragraph at lines 647--672
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 784.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 792--797
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--797
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 798.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 806--810
-
- []
+LaTeX Font Warning: Command \large invalid in math mode on input line 679.
 
 [29]
-<8.Types_of_damage_evolution.png, id=136, 468.5505pt x 287.8755pt>
-File: 8.Types_of_damage_evolution.png Graphic file (type png)
-<use 8.Types_of_damage_evolution.png>
-Package pdftex.def Info: 8.Types_of_damage_evolution.png  used on input line 81
-6.
-(pdftex.def)             Requested size: 306.95775pt x 188.59715pt.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 688.
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--826
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 688.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 688.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--693
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--826
+Underfull \hbox (badness 10000) in paragraph at lines 688--693
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 827.
+LaTeX Font Warning: Command \large invalid in math mode on input line 694.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--832
-
- []
-
-[30 <./8.Types_of_damage_evolution.png>]
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 833.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 834--836
+Underfull \hbox (badness 10000) in paragraph at lines 706--711
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 837.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 838--841
+Underfull \hbox (badness 10000) in paragraph at lines 706--711
 
  []
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 842.
+LaTeX Font Warning: Command \large invalid in math mode on input line 712.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 846.
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 726.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 850.
+Underfull \hbox (badness 10000) in paragraph at lines 723--727
+
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 855--856
+Underfull \hbox (badness 10000) in paragraph at lines 728--733
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 728--733
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 734.
+
+
+Underfull \vbox (badness 5077) has occurred while \output is active []
+
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 741--746
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--746
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 747.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 753--758
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 753--758
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 759.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 765--770
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 765--770
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--776
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--776
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 777.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 785--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 785--790
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 866--869
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 879--880
-
- []
+LaTeX Font Warning: Command \large invalid in math mode on input line 791.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 894.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 898.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 908--912
+Underfull \hbox (badness 10000) in paragraph at lines 799--803
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+<8.Types_of_damage_evolution.png, id=146, 468.5505pt x 287.8755pt>
+File: 8.Types_of_damage_evolution.png Graphic file (type png)
+<use 8.Types_of_damage_evolution.png>
+Package pdftex.def Info: 8.Types_of_damage_evolution.png  used on input line 80
+9.
+(pdftex.def)             Requested size: 306.95775pt x 188.59715pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--819
 
  []
 
-[33] [34] [35] [36] [37]
-<14.Linear_SvsE.png, id=164, 953.5625pt x 715.67375pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--819
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 820.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 822--825
+
+ []
+
+[33 <./8.Types_of_damage_evolution.png>]
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 826.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 827--829
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 830.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--834
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 835.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 839.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 843.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 859--862
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
+
+ []
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 887.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 891.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 901--905
+
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 926--927
+
+ []
+
+[36] [37] [38] [39] [40]
+<14.Linear_SvsE.png, id=173, 953.5625pt x 715.67375pt>
 File: 14.Linear_SvsE.png Graphic file (type png)
 <use 14.Linear_SvsE.png>
-Package pdftex.def Info: 14.Linear_SvsE.png  used on input line 1029.
+Package pdftex.def Info: 14.Linear_SvsE.png  used on input line 1021.
 (pdftex.def)             Requested size: 263.11047pt x 197.47156pt.
 
-Overfull \hbox (1.26901pt too wide) in paragraph at lines 1037--1069
+Overfull \hbox (1.26901pt too wide) in paragraph at lines 1029--1061
  [] 
  []
 
-[38] [39 <./14.Linear_SvsE.png (PNG copy)>]
-<15.Ansys_SX.png, id=171, 576.9555pt x 425.1885pt>
+[41 <./14.Linear_SvsE.png (PNG copy)>] [42]
+<15.Ansys_SX.png, id=180, 576.9555pt x 425.1885pt>
 File: 15.Ansys_SX.png Graphic file (type png)
 <use 15.Ansys_SX.png>
-Package pdftex.def Info: 15.Ansys_SX.png  used on input line 1081.
-(pdftex.def)             Requested size: 144.71156pt x 106.64072pt.
+Package pdftex.def Info: 15.Ansys_SX.png  used on input line 1072.
+(pdftex.def)             Requested size: 192.94383pt x 142.18762pt.
 
-Overfull \hbox (13.15633pt too wide) in paragraph at lines 1081--1082
+Overfull \hbox (17.54132pt too wide) in paragraph at lines 1072--1073
  [][] 
  []
 
-<16.Ansys_SY.png, id=172, 559.49025pt x 422.7795pt>
-File: 16.Ansys_SY.png Graphic file (type png)
-<use 16.Ansys_SY.png>
-Package pdftex.def Info: 16.Ansys_SY.png  used on input line 1088.
-(pdftex.def)             Requested size: 144.71156pt x 109.34592pt.
-
-Overfull \hbox (13.15633pt too wide) in paragraph at lines 1088--1089
- [][] 
- []
-
-<17.Ansys_SZ.png, id=173, 571.53525pt x 424.58624pt>
-File: 17.Ansys_SZ.png Graphic file (type png)
-<use 17.Ansys_SZ.png>
-Package pdftex.def Info: 17.Ansys_SZ.png  used on input line 1095.
-(pdftex.def)             Requested size: 144.71156pt x 107.50034pt.
-
-Overfull \hbox (13.15633pt too wide) in paragraph at lines 1095--1096
- [][] 
- []
-
-<18.User_SX.png, id=174, 581.7735pt x 425.79076pt>
+<18.User_SX.png, id=181, 581.7735pt x 425.79076pt>
 File: 18.User_SX.png Graphic file (type png)
 <use 18.User_SX.png>
-Package pdftex.def Info: 18.User_SX.png  used on input line 1109.
-(pdftex.def)             Requested size: 144.71156pt x 105.90817pt.
+Package pdftex.def Info: 18.User_SX.png  used on input line 1079.
+(pdftex.def)             Requested size: 192.94383pt x 141.21306pt.
 
-Overfull \hbox (13.15633pt too wide) in paragraph at lines 1109--1110
+Overfull \hbox (17.54132pt too wide) in paragraph at lines 1079--1080
  [][] 
  []
 
-<19.User_SY.png, id=175, 576.9555pt x 425.1885pt>
+<16.Ansys_SY.png, id=182, 559.49025pt x 422.7795pt>
+File: 16.Ansys_SY.png Graphic file (type png)
+<use 16.Ansys_SY.png>
+Package pdftex.def Info: 16.Ansys_SY.png  used on input line 1087.
+(pdftex.def)             Requested size: 192.94383pt x 145.79457pt.
+
+Overfull \hbox (17.54132pt too wide) in paragraph at lines 1087--1088
+ [][] 
+ []
+
+<19.User_SY.png, id=183, 576.9555pt x 425.1885pt>
 File: 19.User_SY.png Graphic file (type png)
 <use 19.User_SY.png>
-Package pdftex.def Info: 19.User_SY.png  used on input line 1116.
-(pdftex.def)             Requested size: 144.71156pt x 106.64072pt.
+Package pdftex.def Info: 19.User_SY.png  used on input line 1094.
+(pdftex.def)             Requested size: 192.94383pt x 142.18762pt.
 
-Overfull \hbox (13.15633pt too wide) in paragraph at lines 1116--1117
+Overfull \hbox (17.54132pt too wide) in paragraph at lines 1094--1095
  [][] 
  []
 
-<20.User_SZ.png, id=176, 572.1375pt x 423.984pt>
+<17.Ansys_SZ.png, id=184, 571.53525pt x 424.58624pt>
+File: 17.Ansys_SZ.png Graphic file (type png)
+<use 17.Ansys_SZ.png>
+Package pdftex.def Info: 17.Ansys_SZ.png  used on input line 1102.
+(pdftex.def)             Requested size: 192.94383pt x 143.33379pt.
+
+Overfull \hbox (17.54132pt too wide) in paragraph at lines 1102--1103
+ [][] 
+ []
+
+<20.User_SZ.png, id=185, 572.1375pt x 423.984pt>
 File: 20.User_SZ.png Graphic file (type png)
 <use 20.User_SZ.png>
-Package pdftex.def Info: 20.User_SZ.png  used on input line 1123.
-(pdftex.def)             Requested size: 144.71156pt x 107.23787pt.
+Package pdftex.def Info: 20.User_SZ.png  used on input line 1109.
+(pdftex.def)             Requested size: 192.94383pt x 142.98166pt.
 
-Overfull \hbox (13.15633pt too wide) in paragraph at lines 1123--1124
+Overfull \hbox (17.54132pt too wide) in paragraph at lines 1109--1110
  [][] 
  []
 
-[40 <./15.Ansys_SX.png> <./16.Ansys_SY.png> <./17.Ansys_SZ.png> <./18.User_SX.p
-ng> <./19.User_SY.png> <./20.User_SZ.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1143--1145
+
+LaTeX Warning: Reference `fig:ANSYS Default' on page 43 undefined on input line
+ 1117.
+
+[43 <./15.Ansys_SX.png> <./18.User_SX.png> <./16.Ansys_SY.png> <./19.User_SY.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1143--1145
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1131
 
  []
 
-<21.StressvsStrain_Ansys.png, id=186, 953.5625pt x 711.65875pt>
+<21.StressvsStrain_Ansys.png, id=194, 953.5625pt x 711.65875pt>
 File: 21.StressvsStrain_Ansys.png Graphic file (type png)
 <use 21.StressvsStrain_Ansys.png>
-Package pdftex.def Info: 21.StressvsStrain_Ansys.png  used on input line 1151.
+Package pdftex.def Info: 21.StressvsStrain_Ansys.png  used on input line 1137.
 (pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1151--1152
+Overfull \hbox (43.85062pt too wide) in paragraph at lines 1137--1138
  [][] 
  []
 
-<21.StressvsStrain_Octave.png, id=187, 953.5625pt x 711.65875pt>
+<21.StressvsStrain_Octave.png, id=195, 953.5625pt x 711.65875pt>
 File: 21.StressvsStrain_Octave.png Graphic file (type png)
 <use 21.StressvsStrain_Octave.png>
-Package pdftex.def Info: 21.StressvsStrain_Octave.png  used on input line 1158.
+Package pdftex.def Info: 21.StressvsStrain_Octave.png  used on input line 1144.
 
 (pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1158--1159
+Overfull \hbox (43.85062pt too wide) in paragraph at lines 1144--1145
  [][] 
  []
 
-<21.d1,d2,d3.png, id=188, 953.5625pt x 711.65875pt>
+<21.d1,d2,d3.png, id=196, 953.5625pt x 711.65875pt>
 File: 21.d1,d2,d3.png Graphic file (type png)
 <use 21.d1,d2,d3.png>
-Package pdftex.def Info: 21.d1,d2,d3.png  used on input line 1166.
+Package pdftex.def Info: 21.d1,d2,d3.png  used on input line 1153.
 (pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1166--1167
+Overfull \hbox (43.85062pt too wide) in paragraph at lines 1153--1154
  [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1174
-
- []
-
-<21.P_damage.png, id=189, 953.5625pt x 711.65875pt>
+<21.P_damage.png, id=197, 953.5625pt x 711.65875pt>
 File: 21.P_damage.png Graphic file (type png)
 <use 21.P_damage.png>
-Package pdftex.def Info: 21.P_damage.png  used on input line 1177.
+Package pdftex.def Info: 21.P_damage.png  used on input line 1163.
 (pdftex.def)             Requested size: 263.11047pt x 196.36372pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1186
-
- []
-
-<22.Convergence_error.png, id=190, 442.0515pt x 290.2845pt>
+<22.Convergence_error.png, id=198, 442.0515pt x 290.2845pt>
 File: 22.Convergence_error.png Graphic file (type png)
 <use 22.Convergence_error.png>
-Package pdftex.def Info: 22.Convergence_error.png  used on input line 1189.
-(pdftex.def)             Requested size: 175.40251pt x 115.18156pt.
-[41] [42 <./21.StressvsStrain_Ansys.png (PNG copy)> <./21.StressvsStrain_Octave
-.png (PNG copy)> <./21.d1,d2,d3.png (PNG copy)> <./21.P_damage.png (PNG copy)>]
-
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
-
- []
-
-<22.StressvsStrain_Ansys.png, id=197, 953.5625pt x 711.65875pt>
+Package pdftex.def Info: 22.Convergence_error.png  used on input line 1174.
+(pdftex.def)             Requested size: 131.55524pt x 86.38617pt.
+[44 <./17.Ansys_SZ.png> <./20.User_SZ.png>] [45 <./21.StressvsStrain_Ansys.png 
+(PNG copy)> <./21.StressvsStrain_Octave.png (PNG copy)> <./21.d1,d2,d3.png (PNG
+ copy)> <./21.P_damage.png (PNG copy)>]
+<22.StressvsStrain_Ansys.png, id=207, 953.5625pt x 711.65875pt>
 File: 22.StressvsStrain_Ansys.png Graphic file (type png)
 <use 22.StressvsStrain_Ansys.png>
-Package pdftex.def Info: 22.StressvsStrain_Ansys.png  used on input line 1204.
+Package pdftex.def Info: 22.StressvsStrain_Ansys.png  used on input line 1188.
+(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
+
+Overfull \hbox (43.85062pt too wide) in paragraph at lines 1188--1189
+ [][] 
+ []
+
+<22.StressvsStrain_Octave.png, id=208, 953.5625pt x 711.65875pt>
+File: 22.StressvsStrain_Octave.png Graphic file (type png)
+<use 22.StressvsStrain_Octave.png>
+Package pdftex.def Info: 22.StressvsStrain_Octave.png  used on input line 1195.
+
+(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
+
+Overfull \hbox (43.85062pt too wide) in paragraph at lines 1195--1196
+ [][] 
+ []
+
+<22.d1,d2,d3.png, id=209, 953.5625pt x 711.65875pt>
+File: 22.d1,d2,d3.png Graphic file (type png)
+<use 22.d1,d2,d3.png>
+Package pdftex.def Info: 22.d1,d2,d3.png  used on input line 1204.
 (pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
 
 Overfull \hbox (43.85062pt too wide) in paragraph at lines 1204--1205
  [][] 
  []
 
-<22.StressvsStrain_Octave.png, id=198, 953.5625pt x 711.65875pt>
-File: 22.StressvsStrain_Octave.png Graphic file (type png)
-<use 22.StressvsStrain_Octave.png>
-Package pdftex.def Info: 22.StressvsStrain_Octave.png  used on input line 1211.
-
-(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
-
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1211--1212
- [][] 
- []
-
-<22.d1,d2,d3.png, id=199, 953.5625pt x 711.65875pt>
-File: 22.d1,d2,d3.png Graphic file (type png)
-<use 22.d1,d2,d3.png>
-Package pdftex.def Info: 22.d1,d2,d3.png  used on input line 1219.
-(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
-
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1219--1220
- [][] 
- []
-
-<22.V_damage.png, id=200, 953.5625pt x 711.65875pt>
+<22.V_damage.png, id=210, 953.5625pt x 711.65875pt>
 File: 22.V_damage.png Graphic file (type png)
 <use 22.V_damage.png>
-Package pdftex.def Info: 22.V_damage.png  used on input line 1231.
+Package pdftex.def Info: 22.V_damage.png  used on input line 1214.
 (pdftex.def)             Requested size: 263.11047pt x 196.36372pt.
-[43 <./22.Convergence_error.png>] [44 <./22.StressvsStrain_Ansys.png (PNG copy)
-> <./22.StressvsStrain_Octave.png (PNG copy)> <./22.d1,d2,d3.png (PNG copy)> <.
-/22.V_damage.png (PNG copy)>]
-<22.e11vse22e33_ATS.png, id=209, 953.5625pt x 711.65875pt>
+[46 <./22.Convergence_error.png>] [47 <./22.StressvsStrain_Ansys.png (PNG copy)
+> <./22.StressvsStrain_Octave.png (PNG copy)> <./22.d1,d2,d3.png (PNG copy)>]
+<22.e11vse22e33_ATS.png, id=218, 953.5625pt x 711.65875pt>
 File: 22.e11vse22e33_ATS.png Graphic file (type png)
 <use 22.e11vse22e33_ATS.png>
-Package pdftex.def Info: 22.e11vse22e33_ATS.png  used on input line 1254.
+Package pdftex.def Info: 22.e11vse22e33_ATS.png  used on input line 1237.
 (pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1254--1255
+Overfull \hbox (43.85062pt too wide) in paragraph at lines 1237--1238
  [][] 
  []
 
-<22.e11vse22e33_NT.png, id=210, 953.5625pt x 711.65875pt>
+<22.e11vse22e33_NT.png, id=219, 953.5625pt x 711.65875pt>
 File: 22.e11vse22e33_NT.png Graphic file (type png)
 <use 22.e11vse22e33_NT.png>
-Package pdftex.def Info: 22.e11vse22e33_NT.png  used on input line 1261.
+Package pdftex.def Info: 22.e11vse22e33_NT.png  used on input line 1244.
 (pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1261--1262
+Overfull \hbox (43.85062pt too wide) in paragraph at lines 1244--1245
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1269
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1252
 
  []
 
-<23.S11vsE11.png, id=211, 953.5625pt x 711.65875pt>
+[48 <./22.V_damage.png (PNG copy)>]
+<23.S11vsE11.png, id=223, 953.5625pt x 711.65875pt>
 File: 23.S11vsE11.png Graphic file (type png)
 <use 23.S11vsE11.png>
-Package pdftex.def Info: 23.S11vsE11.png  used on input line 1277.
-(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
+Package pdftex.def Info: 23.S11vsE11.png  used on input line 1260.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1277--1278
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1260--1261
  [][] 
  []
 
-<23.S22vsE22.png, id=212, 953.5625pt x 711.65875pt>
-File: 23.S22vsE22.png Graphic file (type png)
-<use 23.S22vsE22.png>
-Package pdftex.def Info: 23.S22vsE22.png  used on input line 1284.
-(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
-
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1284--1285
- [][] 
- []
-
-[45 <./22.e11vse22e33_ATS.png (PNG copy)> <./22.e11vse22e33_NT.png (PNG copy)>]
-<23.d1.png, id=216, 953.5625pt x 711.65875pt>
+<23.d1.png, id=224, 953.5625pt x 711.65875pt>
 File: 23.d1.png Graphic file (type png)
 <use 23.d1.png>
-Package pdftex.def Info: 23.d1.png  used on input line 1298.
-(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
+Package pdftex.def Info: 23.d1.png  used on input line 1268.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1298--1299
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1268--1269
  [][] 
  []
 
-<23.d2.png, id=217, 953.5625pt x 711.65875pt>
+<23.S22vsE22.png, id=225, 953.5625pt x 711.65875pt>
+File: 23.S22vsE22.png Graphic file (type png)
+<use 23.S22vsE22.png>
+Package pdftex.def Info: 23.S22vsE22.png  used on input line 1275.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
+
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1275--1276
+ [][] 
+ []
+
+<23.d2.png, id=226, 953.5625pt x 711.65875pt>
 File: 23.d2.png Graphic file (type png)
 <use 23.d2.png>
-Package pdftex.def Info: 23.d2.png  used on input line 1305.
-(pdftex.def)             Requested size: 219.25313pt x 163.62376pt.
+Package pdftex.def Info: 23.d2.png  used on input line 1282.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
 
-Overfull \hbox (43.85062pt too wide) in paragraph at lines 1305--1306
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1282--1283
  [][] 
  []
 
-<24.S11vsE11.png, id=218, 953.5625pt x 711.65875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1292
+
+ []
+
+<24.S11vsE11.png, id=227, 953.5625pt x 711.65875pt>
 File: 24.S11vsE11.png Graphic file (type png)
 <use 24.S11vsE11.png>
-Package pdftex.def Info: 24.S11vsE11.png  used on input line 1323.
-(pdftex.def)             Requested size: 164.44405pt x 122.72868pt.
+Package pdftex.def Info: 24.S11vsE11.png  used on input line 1301.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
 
-Overfull \hbox (32.88881pt too wide) in paragraph at lines 1323--1324
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1301--1302
  [][] 
  []
 
-<24.S22vsE22.png, id=219, 953.5625pt x 711.65875pt>
-File: 24.S22vsE22.png Graphic file (type png)
-<use 24.S22vsE22.png>
-Package pdftex.def Info: 24.S22vsE22.png  used on input line 1330.
-(pdftex.def)             Requested size: 164.44405pt x 122.72868pt.
-
-Overfull \hbox (32.88881pt too wide) in paragraph at lines 1330--1331
- [][] 
- []
-
-<24.S33vsE33.png, id=220, 953.5625pt x 711.65875pt>
-File: 24.S33vsE33.png Graphic file (type png)
-<use 24.S33vsE33.png>
-Package pdftex.def Info: 24.S33vsE33.png  used on input line 1337.
-(pdftex.def)             Requested size: 164.44405pt x 122.72868pt.
-
-Overfull \hbox (32.88881pt too wide) in paragraph at lines 1337--1338
- [][] 
- []
-
-<24.d1.png, id=221, 953.5625pt x 711.65875pt>
+<24.d1.png, id=228, 953.5625pt x 711.65875pt>
 File: 24.d1.png Graphic file (type png)
 <use 24.d1.png>
-Package pdftex.def Info: 24.d1.png  used on input line 1351.
-(pdftex.def)             Requested size: 164.44405pt x 122.72868pt.
+Package pdftex.def Info: 24.d1.png  used on input line 1309.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
 
-Overfull \hbox (32.88881pt too wide) in paragraph at lines 1351--1352
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1309--1310
  [][] 
  []
 
-<24.d2.png, id=222, 953.5625pt x 711.65875pt>
+<24.S22vsE22.png, id=229, 953.5625pt x 711.65875pt>
+File: 24.S22vsE22.png Graphic file (type png)
+<use 24.S22vsE22.png>
+Package pdftex.def Info: 24.S22vsE22.png  used on input line 1316.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
+
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1316--1317
+ [][] 
+ []
+
+<24.d2.png, id=230, 953.5625pt x 711.65875pt>
 File: 24.d2.png Graphic file (type png)
 <use 24.d2.png>
-Package pdftex.def Info: 24.d2.png  used on input line 1358.
-(pdftex.def)             Requested size: 164.44405pt x 122.72868pt.
+Package pdftex.def Info: 24.d2.png  used on input line 1323.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
 
-Overfull \hbox (32.88881pt too wide) in paragraph at lines 1358--1359
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1323--1324
+ [][] 
+ []
+
+<24.S33vsE33.png, id=231, 953.5625pt x 711.65875pt>
+File: 24.S33vsE33.png Graphic file (type png)
+<use 24.S33vsE33.png>
+Package pdftex.def Info: 24.S33vsE33.png  used on input line 1332.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
+
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1332--1333
  [][] 
  []
 
 File: 24.d2.png Graphic file (type png)
 <use 24.d2.png>
-Package pdftex.def Info: 24.d2.png  used on input line 1365.
-(pdftex.def)             Requested size: 164.44405pt x 122.72868pt.
+Package pdftex.def Info: 24.d2.png  used on input line 1339.
+(pdftex.def)             Requested size: 246.66187pt x 184.08217pt.
 
-Overfull \hbox (32.88881pt too wide) in paragraph at lines 1365--1366
+Overfull \hbox (49.33237pt too wide) in paragraph at lines 1339--1340
  [][] 
  []
 
-[46 <./23.S11vsE11.png (PNG copy)> <./23.S22vsE22.png (PNG copy)> <./23.d1.png 
-(PNG copy)> <./23.d2.png (PNG copy)>] [47 <./24.S11vsE11.png (PNG copy)> <./24.
-S22vsE22.png (PNG copy)> <./24.S33vsE33.png (PNG copy)> <./24.d1.png (PNG copy)
-> <./24.d2.png (PNG copy)>] (Report.aux)
+[49 <./22.e11vse22e33_ATS.png (PNG copy)> <./22.e11vse22e33_NT.png (PNG copy)>]
+[50 <./23.S11vsE11.png (PNG copy)> <./23.d1.png (PNG copy)> <./23.S22vsE22.png 
+(PNG copy)> <./23.d2.png (PNG copy)>] [51 <./24.S11vsE11.png (PNG copy)> <./24.
+d1.png (PNG copy)> <./24.S22vsE22.png (PNG copy)> <./24.d2.png (PNG copy)> <./2
+4.S33vsE33.png (PNG copy)>] [52] (Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -1669,14 +1625,14 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17345 strings out of 479321
- 351087 string characters out of 2856583
- 718939 words of memory out of 3000000
- 34429 multiletter control sequences out of 15000+600000
+ 17325 strings out of 479321
+ 348930 string characters out of 2856583
+ 719281 words of memory out of 3000000
+ 34413 multiletter control sequences out of 15000+600000
  417736 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,13n,89p,1606b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1698,9 +1654,9 @@ blic/amsfonts/cm/cmr8.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aruns/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aruns/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Report.pdf (47 pages, 2692189 bytes).
+Output written on Report.pdf (52 pages, 2694702 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
+ 299 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
