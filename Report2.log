@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  30 MAY 2021 12:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.31)  5 AUG 2021 10:26
 entering extended mode
 **./Report2.tex
 (Report2.tex
@@ -640,7 +640,7 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmargin=\skip71
 \droptitle=\skip72
 )
-(Report2.aux)
+No file Report2.aux.
 \openout1 = `Report2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -744,9 +744,9 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16525 strings out of 479321
- 335238 string characters out of 2856583
- 696859 words of memory out of 3000000
+ 16523 strings out of 479321
+ 335172 string characters out of 2856583
+ 696868 words of memory out of 3000000
  33689 multiletter control sequences out of 15000+600000
  405546 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

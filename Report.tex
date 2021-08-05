@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside]{report}
+\documentclass[a4paper,12pt]{extarticle}
     \usepackage{amsmath}
     \usepackage{nccmath}
     \usepackage{amsfonts}
@@ -1024,7 +1024,7 @@ where $P_{1} = \frac{-\sigma_{11}^{f}\epsilon_{11}^{f}L_{c}}{G_{c,1}}$, $P_{2} =
  \end{center}
 \end{figure}
 \indent\indent\indent The linear elastic behaviour of the orthotropic material is implemented in the USERMAT using constitutive equations and in this section the results obtained are compared against the default orthortropic material option present in ANSYS using a structural example. A bar of length 10mm and area 1mm$^2$ (b = 1mm, t =1mm) fixed at one end is chosen for the analysis. The bar is constructed using 8 node SOLID 185 elements and full integration has been used. A displacement of 1mm is applied at the free end and the results obtained using the ANSYS default and the USERMAT are presented below. The figure(\ref{fig:Stress-Strain Linear elastic}) compares the stress-strain relation of the bar obtained using both ANSYS default and USERMAT 
-\begin{table}[htbp]
+\begin{table}
   \begin{center}
      \begin{tabular}{l l l} 
      \hline
@@ -1128,7 +1128,6 @@ After that, the material subroutines are implemented in USERMAT and tested in AN
 \subsection{Uniaxial tension}
 \indent\indent\indent In case of uniaxial tension the normal stress is present only in one direction and the shear stresses are zero i.e., only one component(diagonal) of the stress tensor is non-zero.  In Ansys environment, uniaxial tension is achieved by applying a displacement on the finite element in a normal direction ($11$) which increases the strain $\epsilon_{11}$ linearly and the lateral(transverse) contraction is not constrained. 3D Hashin's quadratic strain criteria (Section(\ref{3D Hashin's quadratic strain criteria})) is used to predict the damage initiation and exponential damage evolution law (Eqn(\ref{exponential damage equation})) is used to calculate the damage evolution. The results obtained from Ansys and usermat are presented in the Figure(\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) respectively. The figure (\ref{fig:Evolution of damage in 11 direction}) shows the evolution of damage variables.  The system is linearly elastic till the damage initiation strain and the damage is zero. Once the strain $\epsilon_{11}$ exceeds the damage initiation strain, the damage $d_{1}$ starts to evolve exponentially and the stress starts to drop due to reduction in stiffness in 11 direction.  The damage variables $d_{2}$ and $d_{3}$ are zero. The comparison between the figures (\ref{fig:Stress-Strain relation in Ansys}) and (\ref{fig:Stress-Strain relation Octave}) suggests that the material routine implemented in octave and usermat are numerically similiar to each other. \\
 \\
-
 \begin{figure}[htbp]
      \centering
      \captionsetup[subfigure]{justification=centering}
@@ -1325,7 +1324,6 @@ The following figures shows the corresponding stress and damage components obtai
          \label{fig:Evolution of damage d2 2}
      \end{subfigure}
 \end{figure}
-
 \begin{figure}[htbp]\ContinuedFloat
      \begin{subfigure}{0.45\textwidth}
          \centering
@@ -1345,5 +1343,13 @@ The following figures shows the corresponding stress and damage components obtai
 \end{figure}
 Since the material properties are same in $22$ and $33$ direction and the tensile strength is very low compared to the longitudinal direction, the damage $d_{2}$ and $d_{3}$ evolves simultaneously (Fig (\ref{fig:Evolution of damage d2 2}) and (\ref{fig:Evolution of damage d3})) and very soon as expected. Therefore the stress components $\sigma_{22}$ and $\sigma_{33}$ drops very soon as shown in the figure (\ref{fig:S22vsE22 2}) and (\ref{fig:S33vsE33})   
 
+\subsection{Representative structural examples}
+\indent\indent\indent The following structural examples are used to test the damage model developed in UMAT in the ANSYS environment
+\begin{itemize}
+\item Notched tensile specimen (2D-Plane stress)
+\item Compact tension(CT) specimen (2D-Plane stress)
+\item Plate with hole (3D)
+\end{itemize}
+Each model is chosen to represent specific features of the damage model. These features include at first the capability of the model to represent damage initiation and propagation and secondly the ability to show anisotropic damage(damage plots of multiple damage variable) in both 2D and 3D. Furthermore, mesh convergence studies are done in order to show that the regularization scheme used gives better results than non-regularized model. For all the finite element simulations of the above models, linear quadrilateral elements are used (both 2D and 3D) with full Gauss integration. Line search option has been enabled during all simulations in order to get good convergence. The material parameters used for the finite element simulations are given in the Table 
 
 \end{document}
